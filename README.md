@@ -17,12 +17,12 @@
 # فهرست مطالب
 
 1. **[تحریک اشتها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/1/1.md)**
-2. **استفاده از مفسر پایتون**
-   - 2.1 **فراخوانی مفسر**
-      - 2.1.1 **عبور آرگومان‌ها**
-      - 2.1.2 **حالت تعاملی**
-   - 2.2 **مفسر و محیط آن**
-      - 2.2.1 **کدگذاری کد منبع**
+2. **[استفاده از مفسر پایتون](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md)**
+   - 2.1 **[فراخوانی مفسر](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#21-%D9%81%D8%B1%D8%A7%D8%AE%D9%88%D8%A7%D9%86%DB%8C-%D9%85%D9%81%D8%B3%D8%B1)**
+      - 2.1.1 **[انتقال آرگومان‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#211-%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86%D9%87%D8%A7)**
+      - 2.1.2 **[حالت تعاملی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#212-%D8%AD%D8%A7%D9%84%D8%AA-%D8%AA%D8%B9%D8%A7%D9%85%D9%84%DB%8C)**
+   - 2.2 **[مترجم و محیط آن](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#22-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D9%88-%D9%85%D8%AD%DB%8C%D8%B7-%D8%A2%D9%86)**
+      - 2.2.1 **[کدگذاری کد منبع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#22-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D9%88-%D9%85%D8%AD%DB%8C%D8%B7-%D8%A2%D9%86)**
 3. **معرفی غیررسمی به پایتون**
    - 3.1 **استفاده از پایتون به‌عنوان یک ماشین حساب**
       - 3.1.1 **اعداد**
