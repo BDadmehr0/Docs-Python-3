@@ -100,3 +100,198 @@ NameError: name 'n' is not defined
 
 علاوه بر [int](https://docs.python.org/3/library/functions.html#int) و [float](https://docs.python.org/3/library/functions.html#float)، پایتون از انواع دیگری از اعداد مانند [Decimal](https://docs.python.org/3/library/decimal.html#decimal.Decimal) و [Fraction](https://docs.python.org/3/library/fractions.html#fractions.Fraction) نیز پشتیبانی می‌کند. پایتون همچنین پشتیبانی داخلی از [اعداد مختلط (complex)](https://docs.python.org/3/library/stdtypes.html#typesnumeric) دارد و از پسوند `j` یا `J` برای نشان دادن بخش موهومی استفاده می‌کند (مثلاً `3+5j`).
 
+### 3.1.2. متن
+
+پایتون می‌تواند متون (که با نوع [str](https://docs.python.org/3/library/stdtypes.html#str) نمایش داده می‌شوند و به آن‌ها «رشته» گفته می‌شود) را همانند اعداد مدیریت کند. این شامل کاراکترهایی مانند "`!`"، کلماتی مانند "`rabbit`"، نام‌هایی مانند "`Paris`"، جملاتی مانند "`Got your back.`" و غیره، همچنین "`Yay! :)`". این متون می‌توانند درون گیومه‌های تکی (`'...'`) یا گیومه‌های دوتایی (`"..."`) قرار گیرند و نتیجه یکسانی داشته باشند.
+
+``` python
+>>> 'spam eggs'  # single quotes
+'spam eggs'
+>>> "Paris rabbit got your back :)! Yay!"  # double quotes
+'Paris rabbit got your back :)! Yay!'
+>>> '1975'  # digits and numerals enclosed in quotes are also strings
+'1975'
+```
+
+برای نقل قول درون یک نقل قول، باید آن را با یک `\` "فاصله" دهیم (escape)، یعنی قبل از آن \ قرار دهیم. به‌طور جایگزین، می‌توانیم از نوع دیگر علامت نقل قول استفاده کنیم.
+
+``` python
+>>> 'doesn\'t'  # use \' to escape the single quote...
+"doesn't"
+>>> "doesn't"  # ...or use double quotes instead
+"doesn't"
+>>> '"Yes," they said.'
+'"Yes," they said.'
+>>> "\"Yes,\" they said."
+'"Yes," they said.'
+>>> '"Isn\'t," they said.'
+'"Isn\'t," they said.'
+```
+
+در شل پایتون، تعریف رشته و خروجی رشته می‌تواند متفاوت به نظر برسد. تابع `print()` خروجی قابل‌خواندنی‌تری تولید می‌کند، با حذف گیومه‌های دور رشته و چاپ کاراکترهای فرار و کاراکترهای ویژه.
+``` python
+>>> s = 'First line.\nSecond line.'  # \n means newline
+>>> s  # without print(), special characters are included in the string
+'First line.\nSecond line.'
+>>> print(s)  # with print(), special characters are interpreted, so \n produces new line
+First line.
+Second line.
+```
+
+اگر نمی‌خواهید کاراکترهایی که با `\` آغاز می‌شوند به‌عنوان کاراکترهای ویژه تفسیر شوند، می‌توانید از رشته‌های خام استفاده کنید و با افزودن `r` قبل از اولین گیومه این کار را انجام دهید:
+
+``` python
+>>> print('C:\some\name')  # here \n means newline!
+C:\some
+ame
+>>> print(r'C:\some\name')  # note the r before the quote
+C:\some\name
+```
+
+یک جنبه ظریف در رشته‌های خام وجود دارد: یک رشته خام نمی‌تواند با یک تعداد فرد از کاراکترهای `\` خاتمه یابد؛ برای اطلاعات بیشتر و راه‌حل‌ها به بخش [پرسش‌های متداول](https://docs.python.org/3/faq/programming.html#faq-programming-raw-string-backslash) مراجعه کنید.
+
+لیترال‌های رشته‌ای می‌توانند شامل چندین خط باشند. یکی از روش‌ها استفاده از گیومه‌های سه‌گانه است: `"""..."""` یا `'''...'''`. پایان خط‌ها به‌طور خودکار در رشته گنجانده می‌شوند، اما می‌توان با افزودن یک `\` در انتهای خط، از این کار جلوگیری کرد. در مثال زیر، خط جدید اولیه شامل نمی‌شود:
+
+
+``` python
+>>> print("""\
+... Usage: thingy [OPTIONS]
+...      -h                        Display this usage message
+...      -H hostname               Hostname to connect to
+... """)
+Usage: thingy [OPTIONS]
+     -h                        Display this usage message
+     -H hostname               Hostname to connect to
+```
+
+رشته‌ها می‌توانند با عملگر `+` به هم متصل (چسبانده) شوند و با `*` تکرار شوند:
+
+``` python
+>>> # 3 times 'un', followed by 'ium'
+>>> 3 * 'un' + 'ium'
+'unununium'
+```
+
+دو یا چند لیترال رشته‌ای (یعنی آن‌هایی که بین گیومه‌ها قرار دارند) که در کنار یکدیگر قرار دارند، به‌طور خودکار به هم متصل می‌شوند.
+
+``` python
+>>> 'Py' 'thon'
+'Python'
+```
+
+این ویژگی به‌ویژه زمانی مفید است که بخواهید رشته‌های طولانی را بشکنید:
+
+``` python
+>>> text = ('Put several strings within parentheses '
+...         'to have them joined together.')
+>>> text
+'Put several strings within parentheses to have them joined together.'
+```
+
+این تنها با دو لیترال کار می‌کند، نه با متغیرها یا عبارات:
+
+``` python
+>>> prefix = 'Py'
+>>> prefix 'thon'  # can't concatenate a variable and a string literal
+  File "<stdin>", line 1
+    prefix 'thon'
+           ^^^^^^
+SyntaxError: invalid syntax
+>>> ('un' * 3) 'ium'
+  File "<stdin>", line 1
+    ('un' * 3) 'ium'
+               ^^^^^
+SyntaxError: invalid syntax
+```
+
+اگر می‌خواهید متغیرها یا یک متغیر و یک لیترال را به هم متصل کنید، از ‍`+` استفاده کنید:
+
+``` python
+>>> prefix + 'thon'
+'Python'
+```
+
+رشته‌ها می‌توانند ایندکس‌گذاری (زیرنویس‌گذاری) شوند، به‌طوری که اولین کاراکتر دارای ایندکس 0 باشد. نوع جداگانه‌ای برای کاراکتر وجود ندارد؛ یک کاراکتر در واقع یک رشته با اندازه یک است:
+
+``` python
+>>> word = 'Python'
+>>> word[0]  # character in position 0
+'P'
+>>> word[5]  # character in position 5
+'n'
+```
+
+ایندکس‌ها همچنین می‌توانند اعداد منفی باشند تا شمارش از سمت راست آغاز شود:
+
+``` python
+>>> word[-1]  # last character
+'n'
+>>> word[-2]  # second-last character
+'o'
+>>> word[-6]
+'P'
+```
+
+توجه داشته باشید که از آنجایی که -0 با 0 برابر است، ایندکس‌های منفی از -1 آغاز می‌شوند.
+
+علاوه بر ایندکس‌گذاری، برش (slicing) نیز پشتیبانی می‌شود. در حالی که ایندکس‌گذاری برای به‌دست‌آوردن کاراکترهای فردی استفاده می‌شود، برش به شما این امکان را می‌دهد که یک زیررشته (substring) به‌دست آورید:
+
+``` python
+>>> word[0:2]  # characters from position 0 (included) to 2 (excluded)
+'Py'
+>>> word[2:5]  # characters from position 2 (included) to 5 (excluded)
+'tho'
+```
+
+ایندکس‌های برش دارای مقادیر پیش‌فرض مفیدی هستند؛ اگر ایندکس اول حذف شود، به‌طور پیش‌فرض به صفر تنظیم می‌شود و اگر ایندکس دوم حذف شود، به اندازه رشته‌ای که برش می‌خورد تنظیم می‌شود.
+
+``` python
+>>> word[:2]   # character from the beginning to position 2 (excluded)
+'Py'
+>>> word[4:]   # characters from position 4 (included) to the end
+'on'
+>>> word[-2:]  # characters from the second-last (included) to the end
+'on'
+```
+
+توجه داشته باشید که شروع همیشه شامل می‌شود و انتها همیشه مستثنی است. این اطمینان حاصل می‌کند که `s[:i] + s[i:]` همیشه برابر با `s` است:+
+
+``` python
+>>> word[:2] + word[2:]
+'Python'
+>>> word[:4] + word[4:]
+'Python'
+```
+
+یکی از راه‌های به خاطر سپردن نحوه کار برش‌ها این است که به ایندکس‌ها به‌عنوان اشاره‌گرهایی بین کاراکترها فکر کنید، به‌طوری که لبه چپ اولین کاراکتر شماره 0 داشته باشد. سپس لبه راست آخرین کاراکتر یک رشته با n کاراکتر، ایندکس n را دارد. برای مثال:
+
+``` python
+ +---+---+---+---+---+---+
+ | P | y | t | h | o | n |
+ +---+---+---+---+---+---+
+ 0   1   2   3   4   5   6
+-6  -5  -4  -3  -2  -1
+```
+
+ردیف اول اعداد، موقعیت ایندکس‌های 0…6 در رشته را نشان می‌دهد؛ ردیف دوم ایندکس‌های منفی متناظر را می‌دهد. برش از i تا j شامل تمام کاراکترهای بین لبه‌های مشخص‌شده با i و j به ترتیب است.
+
+برای ایندکس‌های غیرمنفی، طول یک برش برابر با تفاوت ایندکس‌هاست، به شرطی که هر دو در محدوده مجاز باشند. برای مثال، طول `word[1:3]` برابر با 2 است.
+
+تلاش برای استفاده از ایندکسی که بیش از حد بزرگ است، منجر به بروز خطا خواهد شد:
+
+``` python
+>>> word[42]  # the word only has 6 characters
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+```
+
+با این حال، ایندکس‌های برش خارج از محدوده به‌خوبی مدیریت می‌شوند وقتی برای برش استفاده شوند:
+
+``` python
+>>> word[4:42]
+'on'
+>>> word[42:]
+''
+```
+
