@@ -295,3 +295,49 @@ IndexError: string index out of range
 ''
 ```
 
+رشته‌های پایتون قابل تغییر نیستند — آن‌ها غیرقابل تغییر [immutable](https://docs.python.org/3/glossary.html#term-immutable) هستند. بنابراین، اختصاص دادن مقداری به یک موقعیت ایندکس‌شده در رشته منجر به بروز خطا می‌شود:
+
+``` python
+>>> word[0] = 'J'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> word[2:] = 'py'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+```
+
+اگر به یک رشته متفاوت نیاز دارید، باید یک رشته جدید ایجاد کنید:
+
+``` python
+>>> 'J' + word[1:]
+'Jython'
+>>> word[:2] + 'py'
+'Pypy'
+```
+
+تابع داخلی `len()` طول یک رشته را برمی‌گرداند:
+
+``` python
+>>> s = 'supercalifragilisticexpialidocious'
+>>> len(s)
+34
+```
+
+## همچنین ببینید
+
+- [نوع دنباله متن — str](../library/stdtypes.html#textseq): 
+  رشته‌ها نمونه‌هایی از *نوع‌های دنباله‌ای* هستند و عملیات‌های مشترکی که توسط این نوع‌ها پشتیبانی می‌شوند را پشتیبانی می‌کنند.
+
+- [روش‌های رشته](../library/stdtypes.html#string-methods): 
+  رشته‌ها از تعداد زیادی روش برای تبدیل‌های پایه و جستجو پشتیبانی می‌کنند.
+
+- [f-strings](../reference/lexical_analysis.html#f-strings): 
+  ادبیات رشته‌ای که شامل عبارات تو در تو است.
+
+- [نحو فرمت رشته](../library/string.html#formatstrings): 
+  اطلاعاتی درباره فرمت‌بندی رشته با استفاده از [`str.format()`](../library/stdtypes.html#str.format).
+
+- [فرمت‌بندی رشته به سبک printf](../library/stdtypes.html#old-string-formatting): 
+  عملیات‌های فرمت‌بندی قدیمی که زمانی که رشته‌ها عملوند چپ اپراتور `%` هستند فراخوانی می‌شوند، در اینجا به تفصیل توضیح داده شده است.
