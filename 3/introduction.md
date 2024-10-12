@@ -341,3 +341,6 @@ TypeError: 'str' object does not support item assignment
 
 - [فرمت‌بندی رشته به سبک printf](../library/stdtypes.html#old-string-formatting): 
   عملیات‌های فرمت‌بندی قدیمی که زمانی که رشته‌ها عملوند چپ اپراتور `%` هستند فراخوانی می‌شوند، در اینجا به تفصیل توضیح داده شده است.
+
+
+https://docs.python.org/3/tutorial/introduction.html#lists
