@@ -9,10 +9,10 @@
 چند مثال:
 
 ``` python
-# این اولین کامنت است
-spam = 1  # و این کامنت دوم است
-          # ... و حالا سوم!
-text = "# این یک کامنت نیست زیرا داخل نقل قول است."
+# this is the first comment
+spam = 1  # and this is the second comment
+          # ... and now a third!
+text = "# This is not a comment because it's inside quotes."
 ```
 
 ## 3.1. استفاده از پایتون به عنوان ماشین حساب
