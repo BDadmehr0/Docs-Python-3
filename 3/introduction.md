@@ -333,7 +333,7 @@ TypeError: 'str' object does not support item assignment
 - [روش‌های رشته](../library/stdtypes.html#string-methods): 
   رشته‌ها از تعداد زیادی روش برای تبدیل‌های پایه و جستجو پشتیبانی می‌کنند.
 
-- [f-strings](../reference/lexical_analysis.html#f-strings): 
+- [اف-استرینگ (f-strings)](../reference/lexical_analysis.html#f-strings): 
   ادبیات رشته‌ای که شامل عبارات تو در تو است.
 
 - [نحو فرمت رشته](../library/string.html#formatstrings): 
