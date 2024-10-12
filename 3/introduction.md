@@ -35,3 +35,68 @@ text = "# This is not a comment because it's inside quotes."
 ```
 اعداد صحیح (به عنوان مثال `2`، `4`، `20`) دارای نوع [int](https://docs.python.org/3/library/functions.html#int) هستند، آنهایی که دارای قسمت کسری هستند (به عنوان مثال `5.0`، `1.6`) دارای نوع [float](https://docs.python.org/3/library/functions.html#float) هستند. در ادامه آموزش اطلاعات بیشتری در مورد انواع عددی خواهیم دید.
 
+
+تقسیم (`/`) همیشه یک عدد اعشاری را برمی‌گرداند. برای انجام تقسیم طبقه و به دست آوردن نتیجه عدد صحیح می توانید از عملگر `//` استفاده کنید. برای محاسبه باقی مانده می توانید از `%` استفاده کنید:
+
+``` python
+>>> 17 / 3  # classic division returns a float
+5.666666666666667
+>>> 17 // 3  # floor division discards the fractional part
+5
+>>> 17 % 3  # the % operator returns the remainder of the division
+2
+>>> 5 * 3 + 2  # floored quotient * divisor + remainder
+17
+```
+
+با پایتون، می توان از عملگر ** برای محاسبه توان ها استفاده کرد [^1]:
+
+``` python
+>>> 5 ** 2  # 5 squared
+25
+>>> 2 ** 7  # 2 to the power of 7
+128
+```
+
+علامت مساوی (`=`) برای اختصاص دادن یک مقدار به یک متغیر استفاده می‌شود. پس از آن، هیچ نتیجه‌ای قبل از نمایش اعلان تعاملی بعدی نشان داده نمی‌شود.
+
+``` python
+>>> width = 20
+>>> height = 5 * 9
+>>> width * height
+900
+```
+
+اگر یک متغیر "تعریف" نشده باشد (مقداری به آن اختصاص داده نشده باشد)، تلاش برای استفاده از آن باعث بروز خطا می‌شود.
+
+``` python
+>>> n  # try to access an undefined variable
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'n' is not defined
+```
+
+پشتیبانی کامل از اعداد اعشاری وجود دارد؛ عملگرهایی که با عملوندهای مختلط (عدد صحیح و اعشاری) کار می‌کنند، عملوند عدد صحیح را به عدد اعشاری تبدیل می‌کنند.
+
+``` python
+>>> 4 * 3.75 - 1
+14.0
+```
+
+در حالت تعاملی، آخرین عبارت چاپ‌شده به متغیر `_` اختصاص داده می‌شود. این به این معناست که وقتی از پایتون به عنوان یک ماشین حساب رومیزی استفاده می‌کنید، ادامه دادن محاسبات تا حدودی آسان‌تر است. برای مثال:
+
+``` python
+>>> tax = 12.5 / 100
+>>> price = 100.50
+>>> price * tax
+12.5625
+>>> price + _
+113.0625
+>>> round(_, 2)
+113.06
+```
+
+این متغیر باید توسط کاربر به‌عنوان فقط خواندنی در نظر گرفته شود. به‌طور صریح مقداری به آن اختصاص ندهید—این کار یک متغیر محلی مستقل با همان نام ایجاد می‌کند که رفتار جادویی متغیر داخلی را مخفی می‌کند.
+
+علاوه بر [int](https://docs.python.org/3/library/functions.html#int) و [float](https://docs.python.org/3/library/functions.html#float)، پایتون از انواع دیگری از اعداد مانند [Decimal](https://docs.python.org/3/library/decimal.html#decimal.Decimal) و [Fraction](https://docs.python.org/3/library/fractions.html#fractions.Fraction) نیز پشتیبانی می‌کند. پایتون همچنین پشتیبانی داخلی از [اعداد مختلط (complex)](https://docs.python.org/3/library/stdtypes.html#typesnumeric) دارد و از پسوند `j` یا `J` برای نشان دادن بخش موهومی استفاده می‌کند (مثلاً `3+5j`).
+
