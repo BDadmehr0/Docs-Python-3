@@ -24,11 +24,11 @@
    - 2.2 **[مترجم و محیط آن](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#22-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D9%88-%D9%85%D8%AD%DB%8C%D8%B7-%D8%A2%D9%86)**
       - 2.2.1 **[کدگذاری کد منبع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#22-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D9%88-%D9%85%D8%AD%DB%8C%D8%B7-%D8%A2%D9%86)**
 3. **[آشنایی غیررسمی با پایتون](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3%2Fintroduction.md)**
-   - 3.1 **استفاده از پایتون به‌عنوان یک ماشین حساب**
-      - 3.1.1 **اعداد**
-      - 3.1.2 **متن**
-      - 3.1.3 **لیست‌ها**
-   - 3.2 **اولین قدم‌ها به‌سوی برنامه‌نویسی**
+   - 3.1 **[استفاده از پایتون به‌عنوان یک ماشین حساب](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#31-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-%D8%A8%D9%87-%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D8%AD%D8%B3%D8%A7%D8%A8)**
+      - 3.1.1 **[اعداد](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#311-%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF)**
+      - 3.1.2 **[متن](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#312-%D9%85%D8%AA%D9%86)**
+      - 3.1.3 **[لیست‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#313-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7)**
+   - 3.2 **[اولین قدم‌ها به‌سوی برنامه‌نویسی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#32-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D9%82%D8%AF%D9%85%D9%87%D8%A7-%D8%A8%D9%87%D8%B3%D9%88%DB%8C-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%D9%86%D9%88%DB%8C%D8%B3%DB%8C)**
 4. **ابزارهای بیشتر برای کنترل جریان**
    - 4.1 **عبارات if**
    - 4.2 **عبارات for**
