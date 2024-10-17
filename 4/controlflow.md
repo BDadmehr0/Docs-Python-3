@@ -60,3 +60,60 @@ for user, status in users.items():
         active_users[user] = status
 ```
 
+## 4.3. تابع [()range](https://docs.python.org/3/library/stdtypes.html#range)
+
+اگر نیاز دارید که بر روی دنباله‌ای از اعداد تکرار کنید، تابع داخلی [()range](https://docs.python.org/3/library/stdtypes.html#range) به کارتان می‌آید. این تابع پیشرفت‌های حسابی را تولید می‌کند:
+``` python
+>>> for i in range(5):
+...     print(i)
+...
+0
+1
+2
+3
+4
+```
+
+نقطه انتهایی داده شده هرگز بخشی از دنباله تولید شده نیست؛ `range(10)` ده مقدار تولید می‌کند که شاخص‌های قانونی برای آیتم‌های یک دنباله به طول 10 هستند. این امکان وجود دارد که بازه از یک عدد دیگر شروع شود یا افزایش (حتی منفی؛ که گاهی "گام" نامیده می‌شود) دیگری را مشخص کنید:
+
+``` python
+>>> list(range(5, 10))
+[5, 6, 7, 8, 9]
+>>> list(range(0, 10, 3))
+[0, 3, 6, 9]
+>>> list(range(-10, -100, -30))
+[-10, -40, -70]
+```
+
+برای تکرار بر روی شاخص‌های یک دنباله، می‌توانید [()range](https://docs.python.org/3/library/stdtypes.html#range) را با [()len](https://docs.python.org/3/library/functions.html#len) به این صورت ترکیب کنید:
+``` python
+>>> a = ['Mary', 'had', 'a', 'little', 'lamb']
+>>> for i in range(len(a)):
+...     print(i, a[i])
+...
+0 Mary
+1 had
+2 a
+3 little
+4 lamb
+```
+
+در بیشتر چنین مواردی، استفاده از تابع [()enumerate](https://docs.python.org/3/library/functions.html#enumerate) که در بخش **[تکنیک‌های حلقه‌زنی](https://docs.python.org/3/tutorial/datastructures.html#tut-loopidioms)** توضیح داده می‌شود، راحت‌تر است.
+
+یک اتفاق عجیب رخ می‌دهد اگر فقط یک بازه را چاپ کنید:
+
+```python
+range(10)
+range(0, 10)
+```
+
+در بسیاری از موارد، شیء بازگشتی از [()range](https://docs.python.org/3/library/stdtypes.html#range) مانند یک لیست رفتار می‌کند، اما در واقع این‌طور نیست. این یک شیء است که آیتم‌های متوالی دنباله مورد نظر را زمانی که روی آن تکرار می‌کنید برمی‌گرداند، اما لیست واقعی را نمی‌سازد، بنابراین در فضا صرفه‌جویی می‌کند.
+
+ما به چنین شیئی می‌گوییم **[iterable](https://docs.python.org/3/glossary.html#term-iterable)** (قابل پیمایش)، یعنی مناسب به عنوان هدف برای توابع و ساختارهایی که انتظار دارند چیزی که می‌توانند از آن آیتم‌های متوالی را دریافت کنند تا زمانی که تمام شوند. ما قبلاً دیده‌ایم که دستور **[for](https://docs.python.org/3/reference/compound_stmts.html#for)** چنین ساختاری است، در حالی که مثالی از تابعی که یک iterable می‌گیرد، تابع [()sum](https://docs.python.org/3/library/functions.html#sum) است:
+
+```python
+sum(range(4))  # 0 + 1 + 2 + 3
+6
+```
+
+بعداً توابع بیشتری خواهیم دید که iterableها را برمی‌گردانند و iterableها را به عنوان آرگومان‌ها می‌پذیرند. در فصل **[ساختارهای داده](https://docs.python.org/3/tutorial/datastructures.html#tut-structures)**، در مورد [()list](https://docs.python.org/3/library/stdtypes.html#list) به تفصیل بیشتری بحث خواهیم کرد.
