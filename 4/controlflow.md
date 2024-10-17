@@ -117,3 +117,6 @@ sum(range(4))  # 0 + 1 + 2 + 3
 ```
 
 بعداً توابع بیشتری خواهیم دید که iterableها را برمی‌گردانند و iterableها را به عنوان آرگومان‌ها می‌پذیرند. در فصل **[ساختارهای داده](https://docs.python.org/3/tutorial/datastructures.html#tut-structures)**، در مورد [()list](https://docs.python.org/3/library/stdtypes.html#list) به تفصیل بیشتری بحث خواهیم کرد.
+
+
+https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements
