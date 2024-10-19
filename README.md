@@ -29,14 +29,14 @@
       - 3.1.2 **[متن](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#312-%D9%85%D8%AA%D9%86)**
       - 3.1.3 **[لیست‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#313-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7)**
    - 3.2 **[اولین قدم‌ها به‌سوی برنامه‌نویسی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/3/introduction.md#32-%D8%A7%D9%88%D9%84%DB%8C%D9%86-%D9%82%D8%AF%D9%85%D9%87%D8%A7-%D8%A8%D9%87%D8%B3%D9%88%DB%8C-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%D9%86%D9%88%DB%8C%D8%B3%DB%8C)**
-4. **ابزارهای بیشتر برای کنترل جریان**
-   - 4.1 **عبارات if**
-   - 4.2 **عبارات for**
-   - 4.3 **تابع range()**
-   - 4.4 **عبارات break و continue**
-   - 4.5 **عبارات else در حلقه‌ها**
-   - 4.6 **عبارات pass**
-   - 4.7 **عبارات match**
+4. **[ابزارهای بیشتر برای کنترل جریان](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md)**
+   - 4.1 **[عبارات if](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#41-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-if)**
+   - 4.2 **[عبارات for](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#42-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-for)**
+   - 4.3 **[تابع range()](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#43-%D8%AA%D8%A7%D8%A8%D8%B9-range)**
+   - 4.4 **[عبارات break و continue](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#44-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-break-%D9%88-continue)**
+   - 4.5 **[عبارات else در حلقه‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#45-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-else-%D8%AF%D8%B1-%D8%AD%D9%84%D9%82%D9%87%D9%87%D8%A7)**
+   - 4.6 **[عبارات pass](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#46-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-pass)**
+   - 4.7 **[عبارات match](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#47-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-match)**
    - 4.8 **تعریف توابع**
    - 4.9 **اطلاعات بیشتر در مورد تعریف توابع**
       - 4.9.1 **مقادیر پیش‌فرض آرگومان‌ها**
