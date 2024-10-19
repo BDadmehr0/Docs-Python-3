@@ -376,3 +376,6 @@ match point:
   ```
 
 برای توضیحات دقیق‌تر و مثال‌های بیشتر، می‌توانید به [PEP 636](https://peps.python.org/pep-0636/) مراجعه کنید که به‌صورت یک آموزش نوشته شده است.
+
+
+https://docs.python.org/3/tutorial/controlflow.html#defining-functions
