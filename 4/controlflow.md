@@ -377,5 +377,245 @@ match point:
 
 برای توضیحات دقیق‌تر و مثال‌های بیشتر، می‌توانید به [PEP 636](https://peps.python.org/pep-0636/) مراجعه کنید که به‌صورت یک آموزش نوشته شده است.
 
+## 4.8. تعریف توابع
 
-https://docs.python.org/3/tutorial/controlflow.html#defining-functions
+ما می‌توانیم یک تابع ایجاد کنیم که سری فیبوناچی را تا یک مرز دلخواه بنویسد:
+
+``` python
+>>> def fib(n):    # write Fibonacci series less than n
+...     """Print a Fibonacci series less than n."""
+...     a, b = 0, 1
+...     while a < n:
+...         print(a, end=' ')
+...         a, b = b, a+b
+...     print()
+...
+>>> # Now call the function we just defined:
+>>> fib(2000)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+```
+
+ترجمه:
+
+کلمه کلیدی ‌[def](https://docs.python.org/3/reference/compound_stmts.html#def) یک تعریف تابع را معرفی می‌کند. باید با نام تابع و فهرست پارامترهای رسمی داخل پرانتز دنبال شود. دستورات تشکیل‌دهنده بدنه تابع در خط بعدی شروع می‌شوند و باید تورفتگی داشته باشند.
+
+اولین دستور در بدنه تابع می‌تواند به‌صورت اختیاری یک رشته (string literal) باشد؛ این رشته، مستندات تابع (یا docstring) است. (اطلاعات بیشتر درباره docstring‌ها را می‌توانید در بخش "[مستندات رشته‌ها](https://docs.python.org/3/tutorial/controlflow.html#tut-docstrings)" پیدا کنید.) ابزارهایی وجود دارند که از docstring‌ها برای تولید خودکار مستندات آنلاین یا چاپی استفاده می‌کنند، یا به کاربر اجازه می‌دهند تا به‌صورت تعاملی در کد مرور کند؛ بنابراین، بهتر است در کدی که می‌نویسید docstring‌ها را درج کنید و این را به یک عادت تبدیل کنید.
+
+اجرای یک تابع یک جدول نماد جدید برای متغیرهای محلی تابع معرفی می‌کند. به طور دقیق‌تر، تمام انتساب‌های متغیر در یک تابع مقدار را در جدول نماد محلی ذخیره می‌کنند؛ در حالی که ارجاعات متغیر ابتدا در جدول نماد محلی جستجو می‌شوند، سپس در جداول نماد محلی توابع بیرونی، سپس در جدول نماد سراسری و در نهایت در جدول نام‌های داخلی. بنابراین، نمی‌توان مستقیماً به متغیرهای سراسری و متغیرهای توابع بیرونی درون یک تابع مقدار داد (مگر اینکه متغیرهای سراسری در یک دستور ‌[global](https://docs.python.org/3/reference/simple_stmts.html#global) و متغیرهای توابع بیرونی در یک دستور ‌[nonlocal](https://docs.python.org/3/reference/simple_stmts.html#nonlocal) نام‌گذاری شوند)، هرچند می‌توان به آنها ارجاع داد.
+
+پارامترهای واقعی (آرگومان‌ها) به‌هنگام فراخوانی تابع در جدول نماد محلی تابع فراخوانی‌شده وارد می‌شوند؛ بنابراین، آرگومان‌ها به‌صورت "فراخوانی با مقدار" ارسال می‌شوند (که در آن مقدار همیشه یک ارجاع به شیء است، نه مقدار خود شیء). [^1] هنگامی که یک تابع تابع دیگری را فراخوانی می‌کند یا خود را به‌صورت بازگشتی فراخوانی می‌کند، یک جدول نماد محلی جدید برای آن فراخوانی ایجاد می‌شود.
+
+تعریف تابع، نام تابع را با شیء تابع در جدول نماد فعلی پیوند می‌دهد. مفسر شیء‌ای را که به آن نام اشاره دارد به‌عنوان یک تابع کاربر تعریف‌شده تشخیص می‌دهد. نام‌های دیگر نیز می‌توانند به همان شیء تابع اشاره کنند و از طریق آنها می‌توان به تابع دسترسی پیدا کرد.
+
+``` python
+>>> fib
+<function fib at 10042ed0>
+>>> f = fib
+>>> f(100)
+0 1 1 2 3 5 8 13 21 34 55 89
+```
+
+اگر از زبان‌های برنامه‌نویسی دیگر آمده باشید، ممکن است اعتراض کنید که `fib` یک تابع نیست بلکه یک رویه است، زیرا مقداری را برنمی‌گرداند. در واقع، حتی توابعی که دستور ‌[return](https://docs.python.org/3/reference/simple_stmts.html#return) ندارند نیز مقداری برمی‌گردانند، هرچند که این مقدار نسبتاً ساده و خسته‌کننده است. این مقدار ‌`None` نامیده می‌شود (که یک نام داخلی است). مفسر نوشتن مقدار `None` را معمولاً سرکوب می‌کند، اگر این تنها مقداری باشد که قرار است نوشته شود. با این حال، اگر واقعاً بخواهید آن را ببینید، می‌توانید از تابع [print()](https://docs.python.org/3/library/functions.html#print) استفاده کنید:
+
+``` python
+>>> fib(0)
+>>> print(fib(0))
+None
+```
+
+نوشتن تابعی که به‌جای چاپ کردن، یک لیست از اعداد سری فیبوناچی را برگرداند، ساده است:
+
+``` python
+>>> def fib2(n):  # return Fibonacci series up to n
+...     """Return a list containing the Fibonacci series up to n."""
+...     result = []
+...     a, b = 0, 1
+...     while a < n:
+...         result.append(a)    # see below
+...         a, b = b, a+b
+...     return result
+...
+>>> f100 = fib2(100)    # call it
+>>> f100                # write the result
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+```
+
+این مثال، مانند همیشه، برخی از ویژگی‌های جدید پایتون را نشان می‌دهد:
+
+- دستور [return](https://docs.python.org/3/reference/simple_stmts.html#return) مقداری را از یک تابع برمی‌گرداند. استفاده از `return` بدون آرگومان، مقدار `None` را برمی‌گرداند. پایان یافتن تابع نیز باعث بازگشت مقدار `None` می‌شود.
+
+- دستور `result.append(a)` یک متد از شیء لیست `result` را فراخوانی می‌کند. یک متد تابعی است که به یک شیء «تعلق» دارد و به‌صورت `obj.methodname` نام‌گذاری می‌شود، که در آن `obj` یک شیء است (که می‌تواند یک عبارت باشد) و `methodname` نام متدی است که توسط نوع شیء تعریف شده است. انواع مختلف متدهای متفاوتی را تعریف می‌کنند. متدهای انواع مختلف می‌توانند نام یکسانی داشته باشند بدون اینکه ابهامی ایجاد شود. (با استفاده از [کلاس‌ها](https://docs.python.org/3/tutorial/classes.html#tut-classes) می‌توان انواع شیء و متدهای خود را تعریف کرد؛ برای اطلاعات بیشتر، به بخش کلاس‌ها مراجعه کنید). متد `append()` که در مثال نشان داده شده، برای اشیاء لیست تعریف شده است؛ این متد یک عنصر جدید را به انتهای لیست اضافه می‌کند. در این مثال، معادل با `result = result + [a]` است، اما کارآمدتر است.
+
+## 4.9. اطلاعات بیشتر در مورد تعریف توابع 
+
+همچنین می‌توان توابعی با تعداد متغیری از آرگومان‌ها تعریف کرد. سه شکل مختلف وجود دارد که می‌توان آنها را با هم ترکیب کرد.
+
+### 4.9.1. مقادیر پیش‌فرض آرگومان‌ها
+
+مفیدترین شکل، مشخص کردن یک مقدار پیش‌فرض برای یک یا چند آرگومان است. این کار تابعی ایجاد می‌کند که می‌تواند با تعداد کمتری آرگومان از آنچه که برای آن تعریف شده است فراخوانی شود. برای مثال:
+
+``` python
+def ask_ok(prompt, retries=4, reminder='Please try again!'):
+    while True:
+        reply = input(prompt)
+        if reply in {'y', 'ye', 'yes'}:
+            return True
+        if reply in {'n', 'no', 'nop', 'nope'}:
+            return False
+        retries = retries - 1
+        if retries < 0:
+            raise ValueError('invalid user response')
+        print(reminder)
+```
+
+این تابع را می‌توان به چندین روش فراخوانی کرد:
+
+- با دادن فقط آرگومان اجباری: `ask_ok('Do you really want to quit?')`
+
+- با دادن یکی از آرگومان‌های اختیاری: `ask_ok('OK to overwrite the file?', 2)`
+
+- یا حتی با دادن تمام آرگومان‌ها: `ask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')`
+
+این مثال همچنین کلیدواژه [in](https://docs.python.org/3/reference/expressions.html#in) را معرفی می‌کند. این کلیدواژه بررسی می‌کند که آیا یک دنباله شامل یک مقدار خاص است یا خیر.
+
+مقدارهای پیش‌فرض در نقطه تعریف تابع در دامنه تعریف‌شده ارزیابی می‌شوند، بنابراین
+
+``` python
+i = 5
+
+def f(arg=i):
+    print(arg)
+
+i = 6
+f()
+```
+
+5 را چاپ می‌کند.
+
+هشدار مهم: مقدار پیش‌فرض تنها یک‌بار ارزیابی می‌شود. این موضوع زمانی که مقدار پیش‌فرض یک شیء قابل تغییر (mutable) مانند یک لیست، دیکشنری یا نمونه‌هایی از بیشتر کلاس‌ها باشد، تفاوت ایجاد می‌کند. به‌عنوان مثال، تابع زیر آرگومان‌های ارسال‌شده به خود را در تماس‌های بعدی جمع‌آوری می‌کند:
+
+``` python
+def f(a, L=[]):
+    L.append(a)
+    return L
+
+print(f(1))
+print(f(2))
+print(f(3))
+```
+این را چاپ خواهد کرد :
+
+``` python
+[1]
+[1, 2]
+[1, 2, 3]
+```
+
+اگر نمی‌خواهید مقدار پیش‌فرض بین تماس‌های بعدی به اشتراک گذاشته شود، می‌توانید تابع را به این شکل بنویسید:
+
+``` python
+def f(a, L=None):
+    if L is None:
+        L = []
+    L.append(a)
+    return L
+```
+
+### 4.9.2. آرگومان‌های کلیدی
+
+توابع همچنین می‌توانند با استفاده از [آرگومان‌های کلیدی](https://docs.python.org/3/glossary.html#term-keyword-argument) به شکل kwarg=value فراخوانی شوند. به‌عنوان مثال، تابع زیر:
+
+``` python
+def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+    print("-- This parrot wouldn't", action, end=' ')
+    print("if you put", voltage, "volts through it.")
+    print("-- Lovely plumage, the", type)
+    print("-- It's", state, "!")
+```
+
+یک آرگومان اجباری (`ولتاژ`) و سه آرگومان اختیاری (`وضعیت`، `عمل` و `نوع`) را می‌پذیرد. این تابع می‌تواند به هر یک از روش‌های زیر فراخوانی شود:
+
+``` python
+parrot(1000)                                          # 1 positional argument
+parrot(voltage=1000)                                  # 1 keyword argument
+parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
+parrot(action='VOOOOOM', voltage=1000000)             # 2 keyword arguments
+parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
+parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
+```
+
+اما تمام فراخوانی های زیر نامعتبر خواهند بود:
+
+``` python
+parrot()                     # required argument missing
+parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
+parrot(110, voltage=220)     # duplicate value for the same argument
+parrot(actor='John Cleese')  # unknown keyword argument
+```
+
+در یک فراخوانی تابع، آرگومان‌های کلیدی باید پس از آرگومان‌های موقعیتی بیایند. تمام آرگومان‌های کلیدی که ارسال می‌شوند باید با یکی از آرگومان‌هایی که تابع قبول می‌کند مطابقت داشته باشند (برای مثال، `actor` آرگومان معتبری برای تابع `parrot` نیست) و ترتیب آنها مهم نیست. این شامل آرگومان‌های غیر اختیاری نیز می‌شود (برای مثال، `parrot(voltage=1000)` نیز معتبر است). هیچ آرگومانی نباید بیشتر از یک بار مقدار بگیرد. در اینجا مثالی وجود دارد که به دلیل این محدودیت شکست می‌خورد:
+
+``` python
+>>> def function(a):
+...     pass
+...
+>>> function(0, a=0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: function() got multiple values for argument 'a'
+```
+
+ترجمه:
+
+هنگامی که یک پارامتر رسمی نهایی به‌صورت `**name` وجود داشته باشد، یک دیکشنری (به بخش [انواع نگاشت‌ها — dict](https://docs.python.org/3/library/stdtypes.html#typesmapping) مراجعه کنید) را دریافت می‌کند که شامل تمام آرگومان‌های کلیدی به‌جز آنهایی است که به یک پارامتر رسمی مربوط می‌شوند. این می‌تواند با یک پارامتر رسمی به‌صورت `*name` (که در زیر بخش بعدی توصیف شده است) ترکیب شود که یک [تاپل](https://docs.python.org/3/tutorial/datastructures.html#tut-tuples) شامل آرگومان‌های موقعیتی فراتر از فهرست پارامترهای رسمی را دریافت می‌کند. (`*name` باید قبل از `**name` بیاید.) به‌عنوان مثال، اگر تابعی به این شکل تعریف کنیم:
+
+``` python
+def cheeseshop(kind, *arguments, **keywords):
+    print("-- Do you have any", kind, "?")
+    print("-- I'm sorry, we're all out of", kind)
+    for arg in arguments:
+        print(arg)
+    print("-" * 40)
+    for kw in keywords:
+        print(kw, ":", keywords[kw])
+```
+
+می‌توان آن را به این شکل فراخوانی کرد:
+
+``` python
+cheeseshop("Limburger", "It's very runny, sir.",
+           "It's really very, VERY runny, sir.",
+           shopkeeper="Michael Palin",
+           client="John Cleese",
+           sketch="Cheese Shop Sketch")
+```
+
+و البته این مقدار را چاپ می‌کند:
+
+``` python
+-- Do you have any Limburger ?
+-- I'm sorry, we're all out of Limburger
+It's very runny, sir.
+It's really very, VERY runny, sir.
+----------------------------------------
+shopkeeper : Michael Palin
+client : John Cleese
+sketch : Cheese Shop Sketch
+```
+
+توجه داشته باشید که ترتیب آرگومان‌های کلیدی که چاپ می‌شوند، تضمین شده است که با ترتیبی که در فراخوانی تابع ارائه شده‌اند، مطابقت دارد.
+
+### 4.9.3. پارامترهای خاص 
+
+به‌طور پیش‌فرض، آرگومان‌ها می‌توانند به یک تابع پایتون به‌صورت موقعیتی یا به‌طور صریح با کلیدواژه ارسال شوند. برای بهبود خوانایی و کارایی، منطقی است که روش‌هایی را که آرگومان‌ها می‌توانند ارسال شوند محدود کنیم تا یک توسعه‌دهنده تنها با نگاه کردن به تعریف تابع بتواند تعیین کند که آیا آیتم‌ها به‌صورت موقعیتی، به‌صورت موقعیتی یا کلیدواژه‌ای، یا به‌صورت کلیدواژه‌ای ارسال می‌شوند.
+
+تعریف یک تابع ممکن است به شکل زیر باشد:
+
+``` ascii
+def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+      -----------    ----------     ----------
+        |             |                  |
+        |        Positional or keyword   |
+        |                                - Keyword only
+         -- Positional only
+```
