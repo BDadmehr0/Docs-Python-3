@@ -37,22 +37,22 @@
    - 4.5 **[عبارات else در حلقه‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#45-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-else-%D8%AF%D8%B1-%D8%AD%D9%84%D9%82%D9%87%D9%87%D8%A7)**
    - 4.6 **[عبارات pass](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#46-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-pass)**
    - 4.7 **[عبارات match](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#47-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-match)**
-   - 4.8 **تعریف توابع**
-   - 4.9 **اطلاعات بیشتر در مورد تعریف توابع**
-      - 4.9.1 **مقادیر پیش‌فرض آرگومان‌ها**
-      - 4.9.2 **آرگومان‌های کلیدی**
-      - 4.9.3 **پارامترهای خاص**
-         - 4.9.3.1 **آرگومان‌های موقعیتی یا کلیدی**
-         - 4.9.3.2 **پارامترهای فقط موقعیتی**
-         - 4.9.3.3 **آرگومان‌های فقط کلیدی**
-         - 4.9.3.4 **مثال‌های تابع**
-         - 4.9.3.5 **خلاصه**
-      - 4.9.4 **لیست‌های آرگومان دلخواه**
-      - 4.9.5 **پک کردن لیست‌های آرگومان**
-      - 4.9.6 **عبارات لامبدا**
-      - 4.9.7 **رشته‌های مستندات**
-      - 4.9.8 **حاشیه‌نویسی توابع**
-   - 4.10 **بینابین (Intermezzo): سبک کدنویسی**
+   - 4.8 **[تعریف توابع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#48-%D8%AA%D8%B9%D8%B1%DB%8C%D9%81-%D8%AA%D9%88%D8%A7%D8%A8%D8%B9)**
+   - 4.9 **[اطلاعات بیشتر در مورد تعریف توابع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#49-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1-%D8%AF%D8%B1-%D9%85%D9%88%D8%B1%D8%AF-%D8%AA%D8%B9%D8%B1%DB%8C%D9%81-%D8%AA%D9%88%D8%A7%D8%A8%D8%B9)**
+      - 4.9.1 **[مقادیر پیش‌فرض آرگومان‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#491-%D9%85%D9%82%D8%A7%D8%AF%DB%8C%D8%B1-%D9%BE%DB%8C%D8%B4%D9%81%D8%B1%D8%B6-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86%D9%87%D8%A7)**
+      - 4.9.2 **[آرگومان‌های کلیدی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#492-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86%D9%87%D8%A7%DB%8C-%DA%A9%D9%84%DB%8C%D8%AF%DB%8C)**
+      - 4.9.3 **[پارامترهای خاص](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#493-%D9%BE%D8%A7%D8%B1%D8%A7%D9%85%D8%AA%D8%B1%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B5)**
+         - 4.9.3.1 **[آرگومان‌های موقعیتی یا کلیدی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#4931-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D9%82%D8%B9%DB%8C%D8%AA%DB%8C-%DB%8C%D8%A7-%DA%A9%D9%84%DB%8C%D8%AF%DB%8C)**
+         - 4.9.3.2 **[پارامترهای فقط موقعیتی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#4932-%D9%BE%D8%A7%D8%B1%D8%A7%D9%85%D8%AA%D8%B1%D9%87%D8%A7%DB%8C-%D9%81%D9%82%D8%B7-%D9%85%D9%88%D9%82%D8%B9%DB%8C%D8%AA%DB%8C)**
+         - 4.9.3.3 **[آرگومان‌های فقط کلیدی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#4933-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86%D9%87%D8%A7%DB%8C-%D9%81%D9%82%D8%B7-%DA%A9%D9%84%DB%8C%D8%AF%DB%8C)**
+         - 4.9.3.4 **[مثال‌های تابع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#4934-%D9%85%D8%AB%D8%A7%D9%84%D9%87%D8%A7%DB%8C-%D8%AA%D8%A7%D8%A8%D8%B9)**
+         - 4.9.3.5 **[خلاصه](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#4935-%D8%AE%D9%84%D8%A7%D8%B5%D9%87)**
+      - 4.9.4 **[لیست‌های آرگومان دلخواه](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#494-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7%DB%8C-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86-%D8%AF%D9%84%D8%AE%D9%88%D8%A7%D9%87)**
+      - 4.9.5 **[پک کردن لیست‌های آرگومان](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#495-%D9%BE%DA%A9-%DA%A9%D8%B1%D8%AF%D9%86-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7%DB%8C-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86)**
+      - 4.9.6 **[عبارات لامبدا](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#496-%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-%D9%84%D8%A7%D9%85%D8%A8%D8%AF%D8%A7)**
+      - 4.9.7 **[رشته‌های مستندات](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#497-%D8%B1%D8%B4%D8%AA%D9%87%D9%87%D8%A7%DB%8C-%D9%85%D8%B3%D8%AA%D9%86%D8%AF%D8%A7%D8%AA)**
+      - 4.9.8 **[حاشیه‌نویسی توابع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#498-%D8%AD%D8%A7%D8%B4%DB%8C%D9%87%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%AA%D9%88%D8%A7%D8%A8%D8%B9)**
+   - 4.10 **[بینابین (Intermezzo): سبک کدنویسی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#410-%D8%A8%DB%8C%D9%86%D8%A7%D8%A8%DB%8C%D9%86-intermezzo-%D8%B3%D8%A8%DA%A9-%DA%A9%D8%AF%D9%86%D9%88%DB%8C%D8%B3%DB%8C)**
 5. **ساختارهای داده**
    - 5.1 **اطلاعات بیشتر در مورد لیست‌ها**
       - 5.1.1 **استفاده از لیست‌ها به‌عنوان پشته‌ها**
