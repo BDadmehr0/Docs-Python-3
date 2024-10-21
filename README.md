@@ -16,7 +16,7 @@
 
 # فهرست مطالب
 
-1. **[تحریک اشتها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/1/1.md)**
+1. **[تحریک اشتها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/1/appetite.md)**
 2. **[استفاده از مفسر پایتون](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md)**
    - 2.1 **[فراخوانی مفسر](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#21-%D9%81%D8%B1%D8%A7%D8%AE%D9%88%D8%A7%D9%86%DB%8C-%D9%85%D9%81%D8%B3%D8%B1)**
       - 2.1.1 **[انتقال آرگومان‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#211-%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86%D9%87%D8%A7)**
@@ -53,12 +53,12 @@
       - 4.9.7 **[رشته‌های مستندات](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#497-%D8%B1%D8%B4%D8%AA%D9%87%D9%87%D8%A7%DB%8C-%D9%85%D8%B3%D8%AA%D9%86%D8%AF%D8%A7%D8%AA)**
       - 4.9.8 **[حاشیه‌نویسی توابع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#498-%D8%AD%D8%A7%D8%B4%DB%8C%D9%87%D9%86%D9%88%DB%8C%D8%B3%DB%8C-%D8%AA%D9%88%D8%A7%D8%A8%D8%B9)**
    - 4.10 **[بینابین (Intermezzo): سبک کدنویسی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/4/controlflow.md#410-%D8%A8%DB%8C%D9%86%D8%A7%D8%A8%DB%8C%D9%86-intermezzo-%D8%B3%D8%A8%DA%A9-%DA%A9%D8%AF%D9%86%D9%88%DB%8C%D8%B3%DB%8C)**
-5. **ساختارهای داده**
-   - 5.1 **اطلاعات بیشتر در مورد لیست‌ها**
-      - 5.1.1 **استفاده از لیست‌ها به‌عنوان پشته‌ها**
-      - 5.1.2 **استفاده از لیست‌ها به‌عنوان صف‌ها**
-      - 5.1.3 **فهم لیست‌ها**
-      - 5.1.4 **فهم لیست‌های تو در تو**
+5. **[ساختارهای داده](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md)**
+   - 5.1 **[اطلاعات بیشتر در مورد لیست‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#51-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1-%D8%AF%D8%B1-%D9%85%D9%88%D8%B1%D8%AF-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7)**
+      - 5.1.1 **[استفاده از لیست‌ها به‌عنوان پشته‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#511-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7-%D8%A8%D9%87%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D9%BE%D8%B4%D8%AA%D9%87%D9%87%D8%A7)**
+      - 5.1.2 **[استفاده از لیست‌ها به‌عنوان صف‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#512-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7-%D8%A8%D9%87%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D8%B5%D9%81%D9%87%D8%A7)**
+      - 5.1.3 **[درک لیست‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#513-%D8%AF%D8%B1%DA%A9-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7)**
+      - 5.1.4 **[درک لیست‌های تو در تو](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#514-%D8%AF%D8%B1%DA%A9-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7%DB%8C-%D8%AA%D9%88-%D8%AF%D8%B1-%D8%AA%D9%88)**
    - 5.2 **عبارت del**
    - 5.3 **تاپل‌ها و دنباله‌ها**
    - 5.4 **مجموعه‌ها**
