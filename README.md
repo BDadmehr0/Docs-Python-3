@@ -59,13 +59,13 @@
       - 5.1.2 **[استفاده از لیست‌ها به‌عنوان صف‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#512-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7-%D8%A8%D9%87%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D8%B5%D9%81%D9%87%D8%A7)**
       - 5.1.3 **[درک لیست‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#513-%D8%AF%D8%B1%DA%A9-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7)**
       - 5.1.4 **[درک لیست‌های تو در تو](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#514-%D8%AF%D8%B1%DA%A9-%D9%84%DB%8C%D8%B3%D8%AA%D9%87%D8%A7%DB%8C-%D8%AA%D9%88-%D8%AF%D8%B1-%D8%AA%D9%88)**
-   - 5.2 **عبارت del**
-   - 5.3 **تاپل‌ها و دنباله‌ها**
-   - 5.4 **مجموعه‌ها (Sets)**
-   - 5.5 **دیکشنری‌ها**
-   - 5.6 **تکنیک‌های حلقه‌زنی**
-   - 5.7 **اطلاعات بیشتر در مورد شرایط**
-   - 5.8 **مقایسه دنباله‌ها و سایر انواع**
+   - 5.2 **[عبارت del](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#52-%D8%B9%D8%A8%D8%A7%D8%B1%D8%AA-del)**
+   - 5.3 **[تاپل‌ها و دنباله‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#53-%D8%AA%D8%A7%D9%BE%D9%84%D9%87%D8%A7-%D9%88-%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%D9%87%D8%A7)**
+   - 5.4 **[مجموعه‌ها (Sets)](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#54-%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%D9%87%D8%A7-sets)**
+   - 5.5 **[دیکشنری‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#55-%D8%AF%DB%8C%DA%A9%D8%B4%D9%86%D8%B1%DB%8C%D9%87%D8%A7)**
+   - 5.6 **[تکنیک‌های حلقه‌زنی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#56-%D8%AA%DA%A9%D9%86%DB%8C%DA%A9%D9%87%D8%A7%DB%8C-%D8%AD%D9%84%D9%82%D9%87%D8%B2%D9%86%DB%8C)**
+   - 5.7 **[اطلاعات بیشتر در مورد شرایط](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#57-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1-%D8%AF%D8%B1-%D9%85%D9%88%D8%B1%D8%AF-%D8%B4%D8%B1%D8%A7%DB%8C%D8%B7)**
+   - 5.8 **[مقایسه دنباله‌ها و سایر انواع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#58-%D9%85%D9%82%D8%A7%DB%8C%D8%B3%D9%87-%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%D9%87%D8%A7-%D9%88-%D8%B3%D8%A7%DB%8C%D8%B1-%D8%A7%D9%86%D9%88%D8%A7%D8%B9)**
 6. **ماژول‌ها**
    - 6.1 **اطلاعات بیشتر در مورد ماژول‌ها**
       - 6.1.1 **اجرای ماژول‌ها به‌عنوان اسکریپت**
