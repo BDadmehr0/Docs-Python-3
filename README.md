@@ -66,9 +66,9 @@
    - 5.6 **[تکنیک‌های حلقه‌زنی](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#56-%D8%AA%DA%A9%D9%86%DB%8C%DA%A9%D9%87%D8%A7%DB%8C-%D8%AD%D9%84%D9%82%D9%87%D8%B2%D9%86%DB%8C)**
    - 5.7 **[اطلاعات بیشتر در مورد شرایط](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#57-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1-%D8%AF%D8%B1-%D9%85%D9%88%D8%B1%D8%AF-%D8%B4%D8%B1%D8%A7%DB%8C%D8%B7)**
    - 5.8 **[مقایسه دنباله‌ها و سایر انواع](https://github.com/BDadmehr0/Docs-Python-3/blob/main/5/datastructures.md#58-%D9%85%D9%82%D8%A7%DB%8C%D8%B3%D9%87-%D8%AF%D9%86%D8%A8%D8%A7%D9%84%D9%87%D9%87%D8%A7-%D9%88-%D8%B3%D8%A7%DB%8C%D8%B1-%D8%A7%D9%86%D9%88%D8%A7%D8%B9)**
-6. **ماژول‌ها**
-   - 6.1 **اطلاعات بیشتر در مورد ماژول‌ها**
-      - 6.1.1 **اجرای ماژول‌ها به‌عنوان اسکریپت**
+6. **[ماژول‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#6-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7)**
+   - 6.1 **[اطلاعات بیشتر در مورد ماژول‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#61-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1-%D8%AF%D8%B1-%D9%85%D9%88%D8%B1%D8%AF-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7)**
+      - 6.1.1 **[اجرای ماژول‌ها به‌عنوان اسکریپت](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#611-%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7-%D8%A8%D9%87%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA)**
       - 6.1.2 **مسیر جستجوی ماژول**
       - 6.1.3 **فایل‌های پایتون «کامپایل‌شده»**
    - 6.2 **ماژول‌های استاندارد**
