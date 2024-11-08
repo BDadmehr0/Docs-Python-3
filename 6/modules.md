@@ -100,7 +100,7 @@ def fib2(n):   # return Fibonacci series up to n
 
 ### 6.1.1. اجرای ماژول‌ها به‌عنوان اسکریپت
 
-هنگامی که یک ماژول پایتون را با
+هنگامی که یک ماژول پایتون را با اجرا کنید :
 
 ``` bash
 python fibo.py <arguments>
