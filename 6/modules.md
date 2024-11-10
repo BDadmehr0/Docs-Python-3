@@ -140,7 +140,224 @@ if __name__ == "__main__":
 
 جزئیات بیشتر در مستندات «[مقداردهی اولیه مسیر جستجوی ماژول sys.path](https://docs.python.org/3/library/sys_path_init.html#sys-path-init)» وجود دارد.
 
-> [!نکته]  
+> نکته
 > در سیستم‌های فایلی که از لینک‌های نمادین (symlinks) پشتیبانی می‌کنند، پوشه حاوی اسکریپت ورودی پس از دنبال کردن لینک نمادین محاسبه می‌شود. به عبارت دیگر، پوشه‌ای که لینک نمادین در آن قرار دارد به مسیر جستجوی ماژول اضافه نمی‌شود. 
 
-پس از مقداردهی اولیه، برنامه‌های پایتون می‌توانند `sys.path` را تغییر دهند. پوشه‌ای که اسکریپت اجرا شده در آن قرار دارد در ابتدای مسیر جستجو قرار می‌گیرد، جلوتر از مسیر کتابخانه استاندارد. این بدان معناست که اسکریپت‌های آن پوشه به جای ماژول‌هایی با همان نام در پوشه کتابخانه بارگذاری خواهند شد. این کار یک خطا محسوب می‌شود مگر اینکه جایگزینی عمداً صورت گرفته باشد. برای اطلاعات بیشتر، بخش «ماژول‌های استاندارد» را ببینید.
+پس از مقداردهی اولیه، برنامه‌های پایتون می‌توانند [sys.path](https://docs.python.org/3/library/sys.html#sys.path) را تغییر دهند. پوشه‌ای که اسکریپت اجرا شده در آن قرار دارد در ابتدای مسیر جستجو قرار می‌گیرد، جلوتر از مسیر کتابخانه استاندارد. این بدان معناست که اسکریپت‌های آن پوشه به جای ماژول‌هایی با همان نام در پوشه کتابخانه بارگذاری خواهند شد. این کار یک خطا محسوب می‌شود مگر اینکه جایگزینی عمداً صورت گرفته باشد. برای اطلاعات بیشتر، بخش «[ماژول‌های استاندارد](https://docs.python.org/3/tutorial/modules.html#tut-standardmodules)» را ببینید.
+
+### 6.1.3. فایل‌های پایتون «کامپایل‌شده»
+
+برای سرعت بخشیدن به بارگذاری ماژول‌ها، پایتون نسخه کامپایل‌شده هر ماژول را در پوشه `__pycache__` ذخیره می‌کند. این فایل با نام `module.version.pyc` ذخیره می‌شود، که `version` نشان‌دهنده فرمت فایل کامپایل‌شده است و معمولاً شامل شماره نسخه پایتون است. برای مثال، در نسخه 3.3 از CPython، نسخه کامپایل‌شده `spam.py` به صورت `__pycache__/spam.cpython-33.pyc` ذخیره می‌شود. این روش نام‌گذاری به ماژول‌های کامپایل‌شده اجازه می‌دهد که از نسخه‌ها و نسخه‌های مختلف پایتون در کنار یکدیگر وجود داشته باشند.
+
+پایتون تاریخ تغییرات سورس را با نسخه کامپایل‌شده مقایسه می‌کند تا ببیند آیا نیاز به کامپایل مجدد دارد یا نه. این فرایند به صورت کاملاً خودکار انجام می‌شود. همچنین، ماژول‌های کامپایل‌شده مستقل از پلتفرم هستند، بنابراین همان کتابخانه را می‌توان در سیستم‌هایی با معماری‌های مختلف به اشتراک گذاشت.
+
+پایتون در دو حالت حافظه کش را بررسی نمی‌کند. اول، زمانی که ماژول مستقیماً از خط فرمان بارگذاری می‌شود، همیشه آن را کامپایل کرده و نتیجه را ذخیره نمی‌کند. دوم، اگر هیچ ماژول سورسی وجود نداشته باشد، کش را بررسی نمی‌کند. برای پشتیبانی از توزیع‌های بدون سورس (فقط کامپایل‌شده)، ماژول کامپایل‌شده باید در پوشه سورس قرار گیرد و نباید هیچ ماژول سورسی وجود داشته باشد.
+
+نکاتی برای افراد حرفه‌ای:
+
+- می‌توانید از گزینه‌های [-O](https://docs.python.org/3/using/cmdline.html#cmdoption-O) یا [-OO](https://docs.python.org/3/using/cmdline.html#cmdoption-OO) در فرمان پایتون استفاده کنید تا اندازه یک ماژول کامپایل‌شده را کاهش دهید. گزینه `-O` عبارت‌های `assert` را حذف می‌کند و گزینه `-OO` هم عبارت‌های `assert` و هم رشته‌های `__doc__` را حذف می‌کند. از آنجا که برخی از برنامه‌ها ممکن است به این موارد نیاز داشته باشند، تنها زمانی از این گزینه‌ها استفاده کنید که بدانید چه کاری انجام می‌دهید. ماژول‌های «بهینه‌شده» دارای تگ `opt-` هستند و معمولاً کوچکترند. نسخه‌های آینده ممکن است اثرات این بهینه‌سازی را تغییر دهند.
+
+- برنامه‌ای که از فایل `.pyc` خوانده می‌شود، سریع‌تر از وقتی که از فایل `.py` خوانده می‌شود اجرا نمی‌شود؛ تنها مزیت فایل‌های `.pyc` سرعت بارگذاری آن‌هاست.
+
+- ماژول [compileall](https://docs.python.org/3/library/compileall.html#module-compileall) می‌تواند فایل‌های `.pyc` را برای همه ماژول‌های موجود در یک پوشه ایجاد کند.
+
+- جزئیات بیشتری درباره این فرایند، شامل یک نمودار جریان تصمیمات، در [PEP 3147](https://peps.python.org/pep-3147/) موجود است.
+
+## 6.2. ماژول‌های استاندارد
+
+پایتون همراه با یک کتابخانه از ماژول‌های استاندارد ارائه می‌شود که در سند جداگانه‌ای به نام *مرجع کتابخانه پایتون* (که در ادامه به آن «مرجع کتابخانه» گفته می‌شود) توصیف شده است. برخی از این ماژول‌ها در مفسر پایتون تعبیه شده‌اند؛ این ماژول‌ها به عملیات‌هایی دسترسی می‌دهند که بخشی از هسته زبان نیستند اما برای بهبود کارایی یا دسترسی به توابع پایه سیستم عامل، مانند فراخوانی‌های سیستمی، به صورت داخلی پیاده‌سازی شده‌اند. مجموعه این ماژول‌ها به عنوان یک گزینه پیکربندی محسوب می‌شود و همچنین به پلتفرم زیرین بستگی دارد. برای مثال، ماژول `winreg` فقط در سیستم‌های ویندوز ارائه می‌شود.
+
+یک ماژول خاص که شایسته توجه است، `sys` نام دارد که در هر مفسر پایتون تعبیه شده است. متغیرهای `sys.ps1` و `sys.ps2` رشته‌هایی را تعریف می‌کنند که به ترتیب به عنوان اعلان اولیه و اعلان ثانویه استفاده می‌شوند:
+
+``` python
+>>> import sys
+>>> sys.ps1
+'>>> '
+>>> sys.ps2
+'... '
+>>> sys.ps1 = 'C> '
+C> print('Yuck!')
+Yuck!
+C>
+```
+
+این دو متغیر فقط زمانی تعریف می‌شوند که مفسر در حالت تعاملی (interactive mode) باشد.
+
+متغیر `sys.path` یک فهرست از رشته‌ها است که مسیر جستجوی مفسر برای ماژول‌ها را تعیین می‌کند. این متغیر با مسیری پیش‌فرض که از متغیر محیطی [PYTHONPATH](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH) گرفته می‌شود (یا در صورت تنظیم نشدن [PYTHONPATH](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH)، از یک مقدار پیش‌فرض داخلی)، مقداردهی اولیه می‌شود. شما می‌توانید آن را با استفاده از عملیات استاندارد لیست‌ها تغییر دهید:
+
+``` python
+>>> import sys
+>>> sys.path.append('/ufs/guido/lib/python')
+```
+
+## 6.3. تابع [dir()](https://docs.python.org/3/library/functions.html#dir)
+
+تابع داخلی [dir()](https://docs.python.org/3/library/functions.html#dir) برای یافتن نام‌هایی که یک ماژول تعریف می‌کند، استفاده می‌شود. این تابع یک فهرست مرتب از رشته‌ها را برمی‌گرداند:
+
+
+``` python
+>>> import fibo, sys
+>>> dir(fibo)
+['__name__', 'fib', 'fib2']
+>>> dir(sys)  
+['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',
+ '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',
+ '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',
+ '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',
+ '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',
+ 'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',
+ 'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',
+ 'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',
+ 'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',
+ 'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',
+ 'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',
+ 'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',
+ 'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',
+ 'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',
+ 'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',
+ 'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',
+ 'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',
+ 'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',
+ 'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',
+ 'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',
+ 'warnoptions']
+```
+
+بدون آرگومان، تابع [dir()](https://docs.python.org/3/library/functions.html#dir) نام‌هایی را که در حال حاضر تعریف کرده‌اید، فهرست می‌کند:
+
+``` python
+>>> a = [1, 2, 3, 4, 5]
+>>> import fibo
+>>> fib = fibo.fib
+>>> dir()
+['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']
+```
+
+توجه داشته باشید که این تابع تمام انواع نام‌ها را فهرست می‌کند: متغیرها، ماژول‌ها، توابع و غیره.
+
+تابع `dir()` نام توابع و متغیرهای داخلی را فهرست نمی‌کند. اگر فهرستی از این موارد می‌خواهید، آن‌ها در ماژول استاندارد `builtins` تعریف شده‌اند:
+
+``` python
+>>> import builtins
+>>> dir(builtins)  
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',
+ 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',
+ 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',
+ 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',
+ 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',
+ 'FileExistsError', 'FileNotFoundError', 'FloatingPointError',
+ 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',
+ 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',
+ 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',
+ 'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',
+ 'NotImplementedError', 'OSError', 'OverflowError',
+ 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',
+ 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',
+ 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',
+ 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',
+ 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',
+ 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',
+ 'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',
+ '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',
+ 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',
+ 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',
+ 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',
+ 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',
+ 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',
+ 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',
+ 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',
+ 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',
+ 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',
+ 'zip']
+```
+
+## 6.4. بسته‌ها 
+
+پکیج‌ها راهی برای ساختاربندی فضای نام ماژول‌های پایتون با استفاده از «نام‌های نقطه‌دار ماژول» هستند. برای مثال، نام ماژول `A.B` یک زیرماژول به نام `B` را در یک پکیج به نام `A` مشخص می‌کند. همان‌طور که استفاده از ماژول‌ها نویسندگان مختلف را از نگرانی درباره تداخل نام متغیرهای سراسری بی‌نیاز می‌کند، استفاده از نام‌های نقطه‌دار در ماژول‌ها، نویسندگان پکیج‌های چندماژوله مانند NumPy یا Pillow را از نگرانی درباره تداخل نام ماژول‌ها بی‌نیاز می‌کند.
+
+فرض کنید می‌خواهید مجموعه‌ای از ماژول‌ها (یک «پکیج») را برای مدیریت یکنواخت فایل‌های صوتی و داده‌های صوتی طراحی کنید. فرمت‌های مختلفی برای فایل‌های صوتی وجود دارند (که معمولاً از طریق پسوندشان شناسایی می‌شوند، برای مثال: `.wav`، `.aiff`، `.au`)، بنابراین ممکن است نیاز به ایجاد و نگهداری مجموعه‌ای رو به رشد از ماژول‌ها برای تبدیل بین این فرمت‌ها داشته باشید. همچنین عملیات مختلفی وجود دارند که ممکن است بخواهید روی داده‌های صوتی انجام دهید (مانند میکس کردن، اضافه کردن اکو، اعمال یک تابع اکولایزر، ایجاد یک افکت استریوی مصنوعی). بنابراین، در کنار آن، به نوشتن مجموعه‌ای مداوم از ماژول‌ها برای انجام این عملیات نیاز خواهید داشت. ساختار احتمالی برای پکیج شما می‌تواند به صورت زیر باشد (که به صورت یک سیستم فایل سلسله‌مراتبی بیان شده است):
+
+``` ascii
+sound/                          Top-level package
+      __init__.py               Initialize the sound package
+      formats/                  Subpackage for file format conversions
+              __init__.py
+              wavread.py
+              wavwrite.py
+              aiffread.py
+              aiffwrite.py
+              auread.py
+              auwrite.py
+              ...
+      effects/                  Subpackage for sound effects
+              __init__.py
+              echo.py
+              surround.py
+              reverse.py
+              ...
+      filters/                  Subpackage for filters
+              __init__.py
+              equalizer.py
+              vocoder.py
+              karaoke.py
+              ...
+```
+
+هنگام وارد کردن (import) یک پکیج، پایتون پوشه‌های موجود در `sys.path` را جستجو می‌کند تا پوشه زیرمجموعه پکیج را پیدا کند.
+
+فایل‌های `__init__.py` برای این لازم هستند که پایتون پوشه‌هایی که این فایل را دارند به عنوان پکیج در نظر بگیرد (مگر اینکه از [namespace packages](https://docs.python.org/3/glossary.html#term-namespace-package) استفاده شود، که یک ویژگی نسبتاً پیشرفته است). این کار مانع از آن می‌شود که پوشه‌هایی با نام‌های رایج، مانند `string`، به‌طور ناخواسته ماژول‌های معتبر دیگری که در مسیر جستجوی ماژول قرار دارند را پنهان کنند. در ساده‌ترین حالت، `__init__.py` می‌تواند یک فایل خالی باشد، اما همچنین می‌تواند کد اولیه برای پکیج اجرا کند یا متغیر `__all__` را تنظیم کند که بعداً توضیح داده خواهد شد.
+
+کاربران پکیج می‌توانند ماژول‌های مجزا را از درون پکیج ایمپورت کنند، برای مثال:
+``` python
+import sound.effects.echo
+```
+
+این دستور زیرماژول `sound.effects.echo` را بارگذاری می‌کند. برای استفاده از آن، باید به‌طور کامل با نام کاملش ارجاع داده شود.
+
+``` python
+sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
+```
+
+یک روش جایگزین برای وارد کردن زیرماژول به شکل زیر است:
+
+``` python
+from sound.effects import echo
+```
+
+این روش همچنین زیرماژول `echo` را بارگذاری می‌کند و آن را بدون پیشوند پکیج در دسترس قرار می‌دهد، بنابراین می‌توان از آن به صورت زیر استفاده کرد:
+
+``` python
+echo.echofilter(input, output, delay=0.7, atten=4)
+```
+
+یکی دیگر از روش‌ها این است که تابع یا متغیر مورد نظر را به‌طور مستقیم وارد کنید:
+``` python
+from sound.effects.echo import echofilter
+```
+
+باز هم، این روش زیرماژول `echo` را بارگذاری می‌کند، اما این بار تابع `echofilter()` را به‌طور مستقیم در دسترس قرار می‌دهد:
+
+``` python
+echofilter(input, output, delay=0.7, atten=4)
+```
+
+توجه داشته باشید که هنگام استفاده از دستور `from package import item`، آیتم می‌تواند یا یک زیرماژول (یا زیرپکیج) از پکیج باشد، یا نام دیگری که در پکیج تعریف شده است، مانند یک تابع، کلاس یا متغیر. دستور وارد کردن ابتدا بررسی می‌کند که آیا آیتم در پکیج تعریف شده است یا خیر؛ اگر تعریف نشده باشد، فرض می‌کند که آیتم یک ماژول است و سعی می‌کند آن را بارگذاری کند. اگر نتواند آن را پیدا کند، یک استثنا به نام [ImportError](https://docs.python.org/3/library/exceptions.html#ImportError) رخ می‌دهد.
+
+برعکس، هنگام استفاده از سینتکس‌هایی مانند `import item.subitem.subsubitem`، هر آیتم به جز آخرین باید یک پکیج باشد؛ آخرین آیتم می‌تواند یک ماژول یا پکیج باشد، اما نمی‌تواند یک کلاس یا تابع یا متغیر تعریف شده در آیتم قبلی باشد.
+
+
+### 6.4.1. وارد کردن * از یک بسته
+
+حال، وقتی کاربر دستور `from sound.effects import *` را می‌نویسد، چه اتفاقی می‌افتد؟ ایده‌آل این است که امیدوار باشیم این دستور به‌طور خودکار به سیستم فایل مراجعه کند، زیرماژول‌های موجود در پکیج را پیدا کند و همه آن‌ها را وارد کند. این فرآیند ممکن است زمان زیادی ببرد و وارد کردن زیرماژول‌ها ممکن است عوارض جانبی ناخواسته‌ای داشته باشد که تنها باید زمانی رخ دهند که زیرماژول به‌طور صریح وارد شود.
+
+تنها راه حل این است که نویسنده پکیج یک فهرست صریح از پکیج فراهم کند. دستور [وارد](https://docs.python.org/3/reference/simple_stmts.html#import) کردن از این روش پیروی می‌کند: اگر کد `__init__.py` یک پکیج، فهرستی به نام `__all__` تعریف کند، این فهرست به‌عنوان فهرست نام‌های ماژول‌هایی در نظر گرفته می‌شود که باید زمانی که دستور `from package import *` اجرا می‌شود، وارد شوند. به عهده نویسنده پکیج است که این فهرست را هنگام انتشار نسخه جدید پکیج به‌روز نگه دارد. نویسندگان پکیج‌ها همچنین ممکن است تصمیم بگیرند که این قابلیت را پشتیبانی نکنند، اگر نیازی به وارد کردن * از پکیج خود نبینند. به عنوان مثال، فایل `sound/effects/__init__.py` می‌تواند شامل کد زیر باشد:
+
+``` python
+__all__ = ["echo", "surround", "reverse"]
+```
+
+این بدین معناست که دستور `from sound.effects import *` سه زیرماژول نام‌برده شده از پکیج `sound.effects` را وارد می‌کند.
+
+توجه داشته باشید که زیرماژول‌ها ممکن است توسط نام‌های تعریف‌شده به صورت محلی پنهان شوند. برای مثال، اگر یک تابع `reverse` را به فایل `sound/effects/__init__.py` اضافه کنید، دستور `from sound.effects import *` تنها زیرماژول‌های `echo` و `surround` را وارد خواهد کرد، اما زیرماژول `reverse` وارد نمی‌شود زیرا توسط تابع `reverse` که به‌طور محلی تعریف شده، پنهان شده است:
+
+https://docs.python.org/3/tutorial/modules.html#importing-from-a-package
