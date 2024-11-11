@@ -1,0 +1,607 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A simple static site for your documentation.">
+      
+      
+        <meta name="author" content="Your Name">
+      
+      
+      
+        <link rel="prev" href="../../1/appetite/">
+      
+      
+        <link rel="next" href="../../3/introduction/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Interpreter - My Documentation Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Documentation Site" class="md-header__button md-logo" aria-label="My Documentation Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Documentation Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interpreter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Documentation Site" class="md-nav__button md-logo" aria-label="My Documentation Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Documentation Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/appetite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appetite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Interpreter
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Interpreter
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. فراخوانی مفسر
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1. انتقال آرگومان‌ها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2. حالت تعاملی
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4/controlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5/datastructures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. فراخوانی مفسر
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1. انتقال آرگومان‌ها
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2. حالت تعاملی
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="2">2. استفاده از مفسر پایتون</h1>
+<h2 id="21">2.1. فراخوانی مفسر</h2>
+<p>مفسر پایتون معمولاً در مسیر <code>/usr/local/bin/python3.13</code> نصب شده است، در ماشین‌هایی که این برنامه در دسترس است؛ قرار دادن <code>/usr/local/bin</code> در مسیر جستجوی شل یونیکس شما این امکان را می‌دهد که با وارد کردن دستور زیر آن را شروع کنید:</p>
+<pre><code class="language-bash">python3.13
+</code></pre>
+<p>به شل. [^1] از آنجایی که انتخاب دایرکتوری که مفسر در آن قرار دارد یک گزینه نصب است، مکان‌های دیگری نیز ممکن است؛ با کارشناس محلی پایتون یا مدیر سیستم خود مشورت کنید. (به عنوان مثال، <code>/usr/local/python</code> یک مکان جایگزین محبوب است.)</p>
+<p>در ماشین‌های ویندوز که پایتون را از <a href="https://docs.python.org/3/using/windows.html#windows-store">فروشگاه مایکروسافت</a> نصب کرده‌اید، دستور <code>python3.13</code> در دسترس خواهد بود. اگر برنامه <a href="https://docs.python.org/3/using/windows.html#launcher">راه‌انداز py.exe</a> را نصب کرده‌اید، می‌توانید از دستور <code>py</code> استفاده کنید. برای روش‌های دیگر راه‌اندازی پایتون، به بخش «<a href="https://docs.python.org/3/using/windows.html#setting-envvars">پیش‌زمینه: تنظیم متغیرهای محیطی</a>» مراجعه کنید.</p>
+<p>نوشتن کاراکتر پایان فایل (<code>Control-D</code> در یونیکس و <code>Control-Z</code> در ویندوز) در پروپمت اصلی باعث خروج مفسر با وضعیت خروجی صفر می‌شود. اگر این کار نتیجه نداد، می‌توانید با نوشتن فرمان زیر مفسر را ترک کنید: <code>quit()</code>.</p>
+<p>ویژگی‌های ویرایش خط مفسر شامل ویرایش تعاملی، جایگزینی تاریخچه و تکمیل کد در سیستم‌هایی است که از کتابخانه <a href="https://tiswww.case.edu/php/chet/readline/rltop.html">GNU Readline</a> پشتیبانی می‌کنند. شاید سریع‌ترین راه برای بررسی اینکه آیا ویرایش خط فرمان پشتیبانی می‌شود یا نه، این باشد که <code>Control-P</code> را در اولین پروپمت پایتون که دریافت می‌کنید، تایپ کنید. اگر صدای بوق ایجاد شود، به این معنی است که ویرایش خط فرمان فعال است؛ به پیوست <a href="https://docs.python.org/3/tutorial/interactive.html#tut-interacting">ویرایش ورودی تعاملی و جایگزینی تاریخچه برای آشنایی با کلیدها</a> مراجعه کنید. اگر هیچ اتفاقی نیفتد یا <code>^P‍‍</code> بازتاب شود، به این معنی است که ویرایش خط فرمان در دسترس نیست؛ در این صورت تنها می‌توانید از کلید حذف (Backspace) برای حذف کاراکترها از خط فعلی استفاده کنید.</p>
+<p>مفسر به‌طور مشابهی مانند شل یونیکس عمل می‌کند: زمانی که با ورودی استاندارد متصل به یک دستگاه tty فراخوانی می‌شود، به‌صورت تعاملی دستورات را می‌خواند و اجرا می‌کند؛ و زمانی که با یک آرگومان نام فایل یا با یک فایل به‌عنوان ورودی استاندارد فراخوانی می‌شود، یک اسکریپت را از آن فایل می‌خواند و اجرا می‌کند.</p>
+<p>روش دوم شروع مفسر استفاده از دستور<code>python -c command [arg] ...</code> است که بیانیه‌های موجود در command را اجرا می‌کند و مشابه گزینه <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-c">-c</a> در شل است. از آنجا که دستورات پایتون معمولاً شامل فضاها یا کاراکترهای دیگری هستند که برای شل خاص هستند، معمولاً توصیه می‌شود که کل command را در داخل کوتیشن قرار دهید.</p>
+<p>برخی از ماژول‌های پایتون به عنوان اسکریپت نیز مفید هستند. این ماژول‌ها می‌توانند با استفاده از دستور <code>python -m module [arg] ...</code> فراخوانی شوند، که فایل منبع ماژول را به گونه‌ای اجرا می‌کند که گویی نام کامل آن را در خط فرمان نوشته‌اید.</p>
+<p>هنگامی که از یک فایل اسکریپت استفاده می‌شود، گاهی اوقات مفید است که بتوانید اسکریپت را اجرا کرده و سپس به حالت تعاملی بروید. این کار می‌تواند با قرار دادن <code>-i</code> قبل از اسکریپت انجام شود.</p>
+<p>تمام گزینه‌های خط فرمان در بخش "<a href="https://docs.python.org/3/using/cmdline.html#using-on-general">خط فرمان و محیط</a>" توضیح داده شده‌اند.</p>
+<h2 id="211">2.1.1. انتقال آرگومان‌ها</h2>
+<p>زمانی که نام اسکریپت و آرگومان‌های اضافی به مفسر شناخته می‌شوند، این موارد به یک لیست از رشته‌ها تبدیل شده و به متغیر <code>argv</code> در ماژول <code>sys</code> اختصاص داده می‌شوند. شما می‌توانید به این لیست با اجرای <code>import sys</code> دسترسی پیدا کنید. طول این لیست حداقل یک است؛ وقتی هیچ اسکریپت و هیچ آرگومانی داده نشود، <code>sys.argv[0]</code> یک رشته خالی خواهد بود. زمانی که نام اسکریپت به عنوان <code>'-'</code> (به معنای ورودی استاندارد) داده می‌شود، <code>sys.argv[0]</code> به <code>'-'</code> تنظیم می‌شود. زمانی که از <code>-c command</code> استفاده می‌شود، <code>sys.argv[0]</code> به <code>'-c'</code> تنظیم می‌شود. زمانی که از <code>-m module</code> استفاده می‌شود، <code>sys.argv[0]</code> به نام کامل ماژول شناسایی شده تنظیم می‌شود. گزینه‌هایی که پس از <code>-c command</code> یا <code>-m module</code> پیدا می‌شوند، توسط پردازش گزینه‌های مفسر پایتون مصرف نمی‌شوند و در <code>sys.argv</code> باقی می‌مانند تا توسط فرمان یا ماژول مدیریت شوند.</p>
+<h2 id="212">2.1.2. حالت تعاملی</h2>
+<p>زمانی که دستورات از یک دستگاه tty خوانده می‌شوند، گفته می‌شود که مفسر در حالت تعاملی است. در این حالت، مفسر با پروپمت اولیه، که معمولاً شامل سه علامت بزرگتر از (<code>&gt;&gt;&gt;</code>) است، برای دریافت فرمان بعدی درخواست می‌کند؛ برای خطوط ادامه‌دار، با پروپمت ثانویه که به‌طور پیش‌فرض شامل سه نقطه (<code>...</code>) است، درخواست می‌کند. مفسر قبل از نمایش اولین پروپمت، یک پیام خوش‌آمدگویی که شماره نسخه و یادداشت حق چاپ آن را اعلام می‌کند، چاپ می‌کند.</p>
+<pre><code class="language-bash">$ python3.13
+Python 3.13 (default, April 4 2023, 09:25:04)
+[GCC 10.2.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</code></pre>
+<p>خطوط ادامه‌دار زمانی نیاز هستند که شما یک ساختار چندخطی را وارد می‌کنید. به عنوان مثال، به این عبارت شرطی if نگاه کنید:</p>
+<pre><code class="language-bash">&gt;&gt;&gt; the_world_is_flat = True
+&gt;&gt;&gt; if the_world_is_flat:
+...     print(&quot;Be careful not to fall off!&quot;)
+...
+Be careful not to fall off!
+</code></pre>
+<p>برای اطلاعات بیشتر درباره حالت تعاملی، به <a href="https://docs.python.org/3/tutorial/appendix.html#tut-interac">حالت تعاملی</a> مراجعه کنید.</p>
+<h1 id="22">2.2. مترجم و محیط آن</h1>
+<h2 id="221">2.2.1. کدگذاری کد منبع</h2>
+<p>به طور پیش‌فرض، فایل‌های منبع پایتون به عنوان فایل‌های کدگذاری شده در UTF-8 در نظر گرفته می‌شوند. در این کدگذاری، کاراکترهای بیشتر زبان‌های دنیا می‌توانند به طور همزمان در رشته‌های متنی، شناسه‌ها و نظرات استفاده شوند — اگرچه کتابخانه استاندارد فقط از کاراکترهای ASCII برای شناسه‌ها استفاده می‌کند که یک قاعده است که هر کد قابل حملی باید از آن پیروی کند. برای نمایش صحیح همه این کاراکترها، ویرایشگر شما باید تشخیص دهد که فایل UTF-8 است و باید از فونتی استفاده کند که از همه کاراکترهای موجود در فایل پشتیبانی کند.</p>
+<p>برای اعلام یک کدگذاری غیر از کدگذاری پیش‌فرض، باید یک خط نظر ویژه به عنوان اولین خط فایل اضافه شود. نحو آن به صورت زیر است:</p>
+<pre><code class="language-python"># -*- coding: encoding -*-
+</code></pre>
+<p>جایی که رمزگذاری یکی از <a href="https://docs.python.org/3/library/codecs.html#module-codecs">codecs</a> های معتبر پشتیبانی شده توسط پایتون است.</p>
+<p>به عنوان مثال، برای اعلام اینکه از کدگذاری Windows-1252 استفاده خواهد شد، اولین خط فایل کد منبع شما باید به صورت زیر باشد:</p>
+<pre><code class="language-python"># -*- coding: cp1252 -*-
+</code></pre>
+<p>یک استثنا برای قاعده خط اول زمانی است که کد منبع با یک خط "شبانگ" یونیکس شروع می‌شود. در این حالت، اعلام کدگذاری باید به عنوان خط دوم فایل اضافه شود. به عنوان مثال:</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+# -*- coding: cp1252 -*-
+</code></pre>
+<h3 id="_1">پانویس‌ها</h3>
+<p>[^1]: در یونیکس، مفسر python 3.x به طور پیش فرض با فایل اجرایی به نام <code>python</code> نصب نشده است، به طوری که با یک فایل اجرایی python 2.x که به طور همزمان نصب شده است در تضاد نباشد.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

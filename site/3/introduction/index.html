@@ -1,0 +1,1014 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A simple static site for your documentation.">
+      
+      
+        <meta name="author" content="Your Name">
+      
+      
+      
+        <link rel="prev" href="../../2/interpreter/">
+      
+      
+        <link rel="next" href="../../4/controlflow/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Introduction - My Documentation Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Documentation Site" class="md-header__button md-logo" aria-label="My Documentation Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Documentation Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Documentation Site" class="md-nav__button md-logo" aria-label="My Documentation Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Documentation Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/appetite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appetite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2/interpreter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. استفاده از پایتون به عنوان ماشین حساب
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. استفاده از پایتون به عنوان ماشین حساب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1. اعداد
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2. متن
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3. لیست‌ها
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. اولین قدم‌ها به‌سوی برنامه‌نویسی
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. اولین قدم‌ها به‌سوی برنامه‌نویسی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      پانویس‌ها
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4/controlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5/datastructures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. استفاده از پایتون به عنوان ماشین حساب
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. استفاده از پایتون به عنوان ماشین حساب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1. اعداد
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2. متن
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3. لیست‌ها
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. اولین قدم‌ها به‌سوی برنامه‌نویسی
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. اولین قدم‌ها به‌سوی برنامه‌نویسی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      پانویس‌ها
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="3">3. آشنایی غیررسمی با پایتون</h1>
+<p>در مثال‌های زیر، ورودی و خروجی با حضور یا عدم حضور اعلان‌ها (<a href="https://docs.python.org/3/glossary.html#term-0">&gt;&gt;&gt;</a> و <a href="https://docs.python.org/3/glossary.html#term-...">...</a>) متمایز می‌شوند: برای تکرار مثال، باید همه چیز را بعد از اعلان، زمانی که اعلان ظاهر می‌شود، تایپ کنید؛ خطوطی که با اعلان شروع نمی‌شوند، خروجی از مفسر هستند. توجه داشته باشید که اگر یک اعلان ثانویه به تنهایی در خطی در مثالی ظاهر شود، به این معنی است که باید یک خط خالی تایپ کنید؛ این برای پایان دادن به یک دستور چندخطی استفاده می‌شود.</p>
+<p>می‌توانید نمایش اعلان‌ها و خروجی‌ها را با کلیک بر روی <code>&gt;&gt;&gt;</code> در گوشه بالا-راست جعبه مثال، فعال یا غیرفعال کنید. اگر اعلان‌ها و خروجی‌های یک مثال را مخفی کنید، می‌توانید به‌راحتی خطوط ورودی را کپی کرده و در مفسر خود پیست کنید.</p>
+<p>بسیاری از مثال‌های این راهنما، حتی آنهایی که در اعلان تعاملی وارد می‌شوند، شامل توضیحات (کامنت) هستند. در پایتون، توضیحات با کاراکتر هش <code>#</code> شروع می‌شوند و تا پایان خط فیزیکی ادامه می‌یابند. توضیح می‌تواند در ابتدای یک خط، بعد از فاصله یا کد ظاهر شود، اما نه در داخل یک رشته (استرینگ)؛ کاراکتر هش درون یک رشته فقط یک کاراکتر هش است. از آنجایی که توضیحات برای روشن کردن کد هستند و توسط پایتون تفسیر نمی‌شوند، می‌توان آنها را هنگام تایپ مثال‌ها حذف کرد.</p>
+<p>چند مثال:</p>
+<pre><code class="language-python"># this is the first comment
+spam = 1  # and this is the second comment
+          # ... and now a third!
+text = &quot;# This is not a comment because it's inside quotes.&quot;
+</code></pre>
+<h2 id="31">3.1. استفاده از پایتون به عنوان ماشین حساب</h2>
+<p>بیایید چند دستور ساده پایتون را امتحان کنیم. مفسر را راه‌اندازی کنید و منتظر اعلان اولیه (&gt;&gt;&gt;‌) باشید. (نباید زیاد طول بکشد.)</p>
+<h3 id="311">3.1.1. اعداد</h3>
+<p>مفسر مانند یک ماشین حساب ساده عمل می‌کند: می‌توانید یک عبارت را در آن تایپ کنید و مفسر مقدار آن را نمایش می‌دهد. نحو (سینتکس) عبارات ساده است: از عملگرهای <code>+</code>، <code>-</code>، <code>*</code> و <code>/</code> می‌توان برای انجام عملیات ریاضی استفاده کرد؛ پرانتزها (<code>()</code>) نیز برای گروه‌بندی به‌کار می‌روند. مثلا:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 2 + 2
+4
+&gt;&gt;&gt; 50 - 5*6
+20
+&gt;&gt;&gt; (50 - 5*6) / 4
+5.0
+&gt;&gt;&gt; 8 / 5  # تقسیم همیشه یک عدد ممیز شناور(اعشاری - float) را برمی گرداند
+1.6
+</code></pre>
+<p>اعداد صحیح (به عنوان مثال <code>2</code>، <code>4</code>، <code>20</code>) دارای نوع <a href="https://docs.python.org/3/library/functions.html#int">int</a> هستند، آنهایی که دارای قسمت کسری هستند (به عنوان مثال <code>5.0</code>، <code>1.6</code>) دارای نوع <a href="https://docs.python.org/3/library/functions.html#float">float</a> هستند. در ادامه آموزش اطلاعات بیشتری در مورد انواع عددی خواهیم دید.</p>
+<p>تقسیم (<code>/</code>) همیشه یک عدد اعشاری را برمی‌گرداند. برای انجام تقسیم طبقه و به دست آوردن نتیجه عدد صحیح می توانید از عملگر <code>//</code> استفاده کنید. برای محاسبه باقی مانده می توانید از <code>%</code> استفاده کنید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 17 / 3  # classic division returns a float
+5.666666666666667
+&gt;&gt;&gt; 17 // 3  # floor division discards the fractional part
+5
+&gt;&gt;&gt; 17 % 3  # the % operator returns the remainder of the division
+2
+&gt;&gt;&gt; 5 * 3 + 2  # floored quotient * divisor + remainder
+17
+</code></pre>
+<p>با پایتون، می توان از عملگر <code>**</code> برای محاسبه توان ها استفاده کرد [^1] :</p>
+<pre><code class="language-python">&gt;&gt;&gt; 5 ** 2  # 5 squared
+25
+&gt;&gt;&gt; 2 ** 7  # 2 to the power of 7
+128
+</code></pre>
+<p>علامت مساوی (<code>=</code>) برای اختصاص دادن یک مقدار به یک متغیر استفاده می‌شود. پس از آن، هیچ نتیجه‌ای قبل از نمایش اعلان تعاملی بعدی نشان داده نمی‌شود.</p>
+<pre><code class="language-python">&gt;&gt;&gt; width = 20
+&gt;&gt;&gt; height = 5 * 9
+&gt;&gt;&gt; width * height
+900
+</code></pre>
+<p>اگر یک متغیر "تعریف" نشده باشد (مقداری به آن اختصاص داده نشده باشد)، تلاش برای استفاده از آن باعث بروز خطا می‌شود.</p>
+<pre><code class="language-python">&gt;&gt;&gt; n  # try to access an undefined variable
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name 'n' is not defined
+</code></pre>
+<p>پشتیبانی کامل از اعداد اعشاری وجود دارد؛ عملگرهایی که با عملوندهای مختلط (عدد صحیح و اعشاری) کار می‌کنند، عملوند عدد صحیح را به عدد اعشاری تبدیل می‌کنند.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 4 * 3.75 - 1
+14.0
+</code></pre>
+<p>در حالت تعاملی، آخرین عبارت چاپ‌شده به متغیر <code>_</code> اختصاص داده می‌شود. این به این معناست که وقتی از پایتون به عنوان یک ماشین حساب رومیزی استفاده می‌کنید، ادامه دادن محاسبات تا حدودی آسان‌تر است. برای مثال:</p>
+<pre><code class="language-python">&gt;&gt;&gt; tax = 12.5 / 100
+&gt;&gt;&gt; price = 100.50
+&gt;&gt;&gt; price * tax
+12.5625
+&gt;&gt;&gt; price + _
+113.0625
+&gt;&gt;&gt; round(_, 2)
+113.06
+</code></pre>
+<p>این متغیر باید توسط کاربر به‌عنوان فقط خواندنی در نظر گرفته شود. به‌طور صریح مقداری به آن اختصاص ندهید—این کار یک متغیر محلی مستقل با همان نام ایجاد می‌کند که رفتار جادویی متغیر داخلی را مخفی می‌کند.</p>
+<p>علاوه بر <a href="https://docs.python.org/3/library/functions.html#int">int</a> و <a href="https://docs.python.org/3/library/functions.html#float">float</a>، پایتون از انواع دیگری از اعداد مانند <a href="https://docs.python.org/3/library/decimal.html#decimal.Decimal">Decimal</a> و <a href="https://docs.python.org/3/library/fractions.html#fractions.Fraction">Fraction</a> نیز پشتیبانی می‌کند. پایتون همچنین پشتیبانی داخلی از <a href="https://docs.python.org/3/library/stdtypes.html#typesnumeric">اعداد مختلط (complex)</a> دارد و از پسوند <code>j</code> یا <code>J</code> برای نشان دادن بخش موهومی استفاده می‌کند (مثلاً <code>3+5j</code>).</p>
+<h3 id="312">3.1.2. متن</h3>
+<p>پایتون می‌تواند متون (که با نوع <a href="https://docs.python.org/3/library/stdtypes.html#str">str</a> نمایش داده می‌شوند و به آن‌ها «رشته» گفته می‌شود) را همانند اعداد مدیریت کند. این شامل کاراکترهایی مانند "<code>!</code>"، کلماتی مانند "<code>rabbit</code>"، نام‌هایی مانند "<code>Paris</code>"، جملاتی مانند "<code>Got your back.</code>" و غیره، همچنین "<code>Yay! :)</code>". این متون می‌توانند درون گیومه‌های تکی (<code>'...'</code>) یا گیومه‌های دوتایی (<code>"..."</code>) قرار گیرند و نتیجه یکسانی داشته باشند [^2].</p>
+<pre><code class="language-python">&gt;&gt;&gt; 'spam eggs'  # single quotes
+'spam eggs'
+&gt;&gt;&gt; &quot;Paris rabbit got your back :)! Yay!&quot;  # double quotes
+'Paris rabbit got your back :)! Yay!'
+&gt;&gt;&gt; '1975'  # digits and numerals enclosed in quotes are also strings
+'1975'
+</code></pre>
+<p>برای نقل قول درون یک نقل قول، باید آن را با یک <code>\</code> "فاصله" دهیم (escape)، یعنی قبل از آن \ قرار دهیم. به‌طور جایگزین، می‌توانیم از نوع دیگر علامت نقل قول استفاده کنیم.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 'doesn\'t'  # use \' to escape the single quote...
+&quot;doesn't&quot;
+&gt;&gt;&gt; &quot;doesn't&quot;  # ...or use double quotes instead
+&quot;doesn't&quot;
+&gt;&gt;&gt; '&quot;Yes,&quot; they said.'
+'&quot;Yes,&quot; they said.'
+&gt;&gt;&gt; &quot;\&quot;Yes,\&quot; they said.&quot;
+'&quot;Yes,&quot; they said.'
+&gt;&gt;&gt; '&quot;Isn\'t,&quot; they said.'
+'&quot;Isn\'t,&quot; they said.'
+</code></pre>
+<p>در شل پایتون، تعریف رشته و خروجی رشته می‌تواند متفاوت به نظر برسد. تابع <code>print()</code> خروجی قابل‌خواندنی‌تری تولید می‌کند، با حذف گیومه‌های دور رشته و چاپ کاراکترهای فرار و کاراکترهای ویژه.</p>
+<pre><code class="language-python">&gt;&gt;&gt; s = 'First line.\nSecond line.'  # \n means newline
+&gt;&gt;&gt; s  # without print(), special characters are included in the string
+'First line.\nSecond line.'
+&gt;&gt;&gt; print(s)  # with print(), special characters are interpreted, so \n produces new line
+First line.
+Second line.
+</code></pre>
+<p>اگر نمی‌خواهید کاراکترهایی که با <code>\</code> آغاز می‌شوند به‌عنوان کاراکترهای ویژه تفسیر شوند، می‌توانید از رشته‌های خام استفاده کنید و با افزودن <code>r</code> قبل از اولین گیومه این کار را انجام دهید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; print('C:\some\name')  # here \n means newline!
+C:\some
+ame
+&gt;&gt;&gt; print(r'C:\some\name')  # note the r before the quote
+C:\some\name
+</code></pre>
+<p>یک جنبه ظریف در رشته‌های خام وجود دارد: یک رشته خام نمی‌تواند با یک تعداد فرد از کاراکترهای <code>\</code> خاتمه یابد؛ برای اطلاعات بیشتر و راه‌حل‌ها به بخش <a href="https://docs.python.org/3/faq/programming.html#faq-programming-raw-string-backslash">پرسش‌های متداول</a> مراجعه کنید.</p>
+<p>لیترال‌های رشته‌ای می‌توانند شامل چندین خط باشند. یکی از روش‌ها استفاده از گیومه‌های سه‌گانه است: <code>"""..."""</code> یا <code>'''...'''</code>. پایان خط‌ها به‌طور خودکار در رشته گنجانده می‌شوند، اما می‌توان با افزودن یک <code>\</code> در انتهای خط، از این کار جلوگیری کرد. در مثال زیر، خط جدید اولیه شامل نمی‌شود:</p>
+<pre><code class="language-python">&gt;&gt;&gt; print(&quot;&quot;&quot;\
+... Usage: thingy [OPTIONS]
+...      -h                        Display this usage message
+...      -H hostname               Hostname to connect to
+... &quot;&quot;&quot;)
+Usage: thingy [OPTIONS]
+     -h                        Display this usage message
+     -H hostname               Hostname to connect to
+</code></pre>
+<p>رشته‌ها می‌توانند با عملگر <code>+</code> به هم متصل (چسبانده) شوند و با <code>*</code> تکرار شوند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; # 3 times 'un', followed by 'ium'
+&gt;&gt;&gt; 3 * 'un' + 'ium'
+'unununium'
+</code></pre>
+<p>دو یا چند لیترال رشته‌ای (یعنی آن‌هایی که بین گیومه‌ها قرار دارند) که در کنار یکدیگر قرار دارند، به‌طور خودکار به هم متصل می‌شوند.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 'Py' 'thon'
+'Python'
+</code></pre>
+<p>این ویژگی به‌ویژه زمانی مفید است که بخواهید رشته‌های طولانی را بشکنید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; text = ('Put several strings within parentheses '
+...         'to have them joined together.')
+&gt;&gt;&gt; text
+'Put several strings within parentheses to have them joined together.'
+</code></pre>
+<p>این تنها با دو لیترال کار می‌کند، نه با متغیرها یا عبارات:</p>
+<pre><code class="language-python">&gt;&gt;&gt; prefix = 'Py'
+&gt;&gt;&gt; prefix 'thon'  # can't concatenate a variable and a string literal
+  File &quot;&lt;stdin&gt;&quot;, line 1
+    prefix 'thon'
+           ^^^^^^
+SyntaxError: invalid syntax
+&gt;&gt;&gt; ('un' * 3) 'ium'
+  File &quot;&lt;stdin&gt;&quot;, line 1
+    ('un' * 3) 'ium'
+               ^^^^^
+SyntaxError: invalid syntax
+</code></pre>
+<p>اگر می‌خواهید متغیرها یا یک متغیر و یک لیترال را به هم متصل کنید، از ‍<code>+</code> استفاده کنید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; prefix + 'thon'
+'Python'
+</code></pre>
+<p>رشته‌ها می‌توانند ایندکس‌گذاری (زیرنویس‌گذاری) شوند، به‌طوری که اولین کاراکتر دارای ایندکس 0 باشد. نوع جداگانه‌ای برای کاراکتر وجود ندارد؛ یک کاراکتر در واقع یک رشته با اندازه یک است:</p>
+<pre><code class="language-python">&gt;&gt;&gt; word = 'Python'
+&gt;&gt;&gt; word[0]  # character in position 0
+'P'
+&gt;&gt;&gt; word[5]  # character in position 5
+'n'
+</code></pre>
+<p>ایندکس‌ها همچنین می‌توانند اعداد منفی باشند تا شمارش از سمت راست آغاز شود:</p>
+<pre><code class="language-python">&gt;&gt;&gt; word[-1]  # last character
+'n'
+&gt;&gt;&gt; word[-2]  # second-last character
+'o'
+&gt;&gt;&gt; word[-6]
+'P'
+</code></pre>
+<p>توجه داشته باشید که از آنجایی که -0 با 0 برابر است، ایندکس‌های منفی از -1 آغاز می‌شوند.</p>
+<p>علاوه بر ایندکس‌گذاری، برش (slicing) نیز پشتیبانی می‌شود. در حالی که ایندکس‌گذاری برای به‌دست‌آوردن کاراکترهای فردی استفاده می‌شود، برش به شما این امکان را می‌دهد که یک زیررشته (substring) به‌دست آورید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; word[0:2]  # characters from position 0 (included) to 2 (excluded)
+'Py'
+&gt;&gt;&gt; word[2:5]  # characters from position 2 (included) to 5 (excluded)
+'tho'
+</code></pre>
+<p>ایندکس‌های برش دارای مقادیر پیش‌فرض مفیدی هستند؛ اگر ایندکس اول حذف شود، به‌طور پیش‌فرض به صفر تنظیم می‌شود و اگر ایندکس دوم حذف شود، به اندازه رشته‌ای که برش می‌خورد تنظیم می‌شود.</p>
+<pre><code class="language-python">&gt;&gt;&gt; word[:2]   # character from the beginning to position 2 (excluded)
+'Py'
+&gt;&gt;&gt; word[4:]   # characters from position 4 (included) to the end
+'on'
+&gt;&gt;&gt; word[-2:]  # characters from the second-last (included) to the end
+'on'
+</code></pre>
+<p>توجه داشته باشید که شروع همیشه شامل می‌شود و انتها همیشه مستثنی است. این اطمینان حاصل می‌کند که <code>s[:i] + s[i:]</code> همیشه برابر با <code>s</code> است:+</p>
+<pre><code class="language-python">&gt;&gt;&gt; word[:2] + word[2:]
+'Python'
+&gt;&gt;&gt; word[:4] + word[4:]
+'Python'
+</code></pre>
+<p>یکی از راه‌های به خاطر سپردن نحوه کار برش‌ها این است که به ایندکس‌ها به‌عنوان اشاره‌گرهایی بین کاراکترها فکر کنید، به‌طوری که لبه چپ اولین کاراکتر شماره 0 داشته باشد. سپس لبه راست آخرین کاراکتر یک رشته با n کاراکتر، ایندکس n را دارد. برای مثال:</p>
+<pre><code class="language-python"> +---+---+---+---+---+---+
+ | P | y | t | h | o | n |
+ +---+---+---+---+---+---+
+ 0   1   2   3   4   5   6
+-6  -5  -4  -3  -2  -1
+</code></pre>
+<p>ردیف اول اعداد، موقعیت ایندکس‌های 0…6 در رشته را نشان می‌دهد؛ ردیف دوم ایندکس‌های منفی متناظر را می‌دهد. برش از i تا j شامل تمام کاراکترهای بین لبه‌های مشخص‌شده با i و j به ترتیب است.</p>
+<p>برای ایندکس‌های غیرمنفی، طول یک برش برابر با تفاوت ایندکس‌هاست، به شرطی که هر دو در محدوده مجاز باشند. برای مثال، طول <code>word[1:3]</code> برابر با 2 است.</p>
+<p>تلاش برای استفاده از ایندکسی که بیش از حد بزرگ است، منجر به بروز خطا خواهد شد:</p>
+<pre><code class="language-python">&gt;&gt;&gt; word[42]  # the word only has 6 characters
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+IndexError: string index out of range
+</code></pre>
+<p>با این حال، ایندکس‌های برش خارج از محدوده به‌خوبی مدیریت می‌شوند وقتی برای برش استفاده شوند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; word[4:42]
+'on'
+&gt;&gt;&gt; word[42:]
+''
+</code></pre>
+<p>رشته‌های پایتون قابل تغییر نیستند — آن‌ها غیرقابل تغییر <a href="https://docs.python.org/3/glossary.html#term-immutable">immutable</a> هستند. بنابراین، اختصاص دادن مقداری به یک موقعیت ایندکس‌شده در رشته منجر به بروز خطا می‌شود:</p>
+<pre><code class="language-python">&gt;&gt;&gt; word[0] = 'J'
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: 'str' object does not support item assignment
+&gt;&gt;&gt; word[2:] = 'py'
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: 'str' object does not support item assignment
+</code></pre>
+<p>اگر به یک رشته متفاوت نیاز دارید، باید یک رشته جدید ایجاد کنید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 'J' + word[1:]
+'Jython'
+&gt;&gt;&gt; word[:2] + 'py'
+'Pypy'
+</code></pre>
+<p>تابع داخلی <code>len()</code> طول یک رشته را برمی‌گرداند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; s = 'supercalifragilisticexpialidocious'
+&gt;&gt;&gt; len(s)
+34
+</code></pre>
+<p><strong>همچنین ببینید</strong></p>
+<ul>
+<li>
+<p><a href="../library/stdtypes.html#textseq">نوع دنباله متن — str</a>: 
+  رشته‌ها نمونه‌هایی از <em>نوع‌های دنباله‌ای</em> هستند و عملیات‌های مشترکی که توسط این نوع‌ها پشتیبانی می‌شوند را پشتیبانی می‌کنند.</p>
+</li>
+<li>
+<p><a href="../library/stdtypes.html#string-methods">روش‌های رشته</a>: 
+  رشته‌ها از تعداد زیادی روش برای تبدیل‌های پایه و جستجو پشتیبانی می‌کنند.</p>
+</li>
+<li>
+<p><a href="../reference/lexical_analysis.html#f-strings">اف-استرینگ (f-strings)</a>: 
+  ادبیات رشته‌ای که شامل عبارات تو در تو است.</p>
+</li>
+<li>
+<p><a href="../library/string.html#formatstrings">نحو فرمت رشته</a>: 
+  اطلاعاتی درباره فرمت‌بندی رشته با استفاده از <a href="../library/stdtypes.html#str.format"><code>str.format()</code></a>.</p>
+</li>
+<li>
+<p><a href="../library/stdtypes.html#old-string-formatting">فرمت‌بندی رشته به سبک printf</a>: 
+  عملیات‌های فرمت‌بندی قدیمی که زمانی که رشته‌ها عملوند چپ اپراتور <code>%</code> هستند فراخوانی می‌شوند، در اینجا به تفصیل توضیح داده شده است.</p>
+</li>
+</ul>
+<h3 id="313">3.1.3. لیست‌ها</h3>
+<p>پایتون چندین نوع داده مرکب را می‌شناسد که برای گروه‌بندی مقادیر دیگر استفاده می‌شوند. متنوع‌ترین نوع آن لیست است که می‌توان آن را به‌صورت فهرستی از مقادیر جداشده با کاما (آیتم‌ها) بین کروشه نوشت. لیست‌ها ممکن است آیتم‌هایی از انواع مختلف را شامل شوند، اما معمولاً همه آیتم‌ها از یک نوع هستند.</p>
+<pre><code class="language-python">&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
+&gt;&gt;&gt; squares
+[1, 4, 9, 16, 25]
+</code></pre>
+<p>مانند رشته‌ها (و تمامی انواع دنباله‌های توکار دیگر)، لیست‌ها نیز قابل اندیس‌گذاری و برش هستند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; squares[0]  # indexing returns the item
+1
+&gt;&gt;&gt; squares[-1]
+25
+&gt;&gt;&gt; squares[-3:]  # slicing returns a new list
+[9, 16, 25]
+</code></pre>
+<p>لیست‌ها همچنین از عملگرهایی مانند الحاق (ترکیب) پشتیبانی می‌کنند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</code></pre>
+<p>برخلاف رشته‌ها که تغییرناپذیر (<a href="https://docs.python.org/3/glossary.html#term-immutable">immutable</a>) هستند، لیست‌ها نوعی قابل‌تغییر (<a href="https://docs.python.org/3/glossary.html#term-mutable">mutable</a>) هستند، به این معنا که امکان تغییر محتوای آن‌ها وجود دارد:</p>
+<pre><code class="language-python">&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125]  # something's wrong here
+&gt;&gt;&gt; 4 ** 3  # the cube of 4 is 64, not 65!
+64
+&gt;&gt;&gt; cubes[3] = 64  # replace the wrong value
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125]
+</code></pre>
+<p>همچنین می‌توانید با استفاده از متد <code>list.append()</code> آیتم‌های جدیدی را به انتهای لیست اضافه کنید (بعداً بیشتر درباره متدها صحبت خواهیم کرد):</p>
+<pre><code class="language-python">&gt;&gt;&gt; cubes.append(216)  # add the cube of 6
+&gt;&gt;&gt; cubes.append(7 ** 3)  # and the cube of 7
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125, 216, 343]
+</code></pre>
+<p>در پایتون، انتساب ساده هرگز داده‌ها را کپی نمی‌کند. وقتی یک لیست را به یک متغیر اختصاص می‌دهید، آن متغیر به لیست موجود اشاره می‌کند. هر تغییری که از طریق یک متغیر روی لیست اعمال کنید، از طریق همه متغیرهای دیگری که به آن لیست اشاره می‌کنند، قابل مشاهده خواهد بود.</p>
+<pre><code class="language-python">&gt;&gt;&gt; rgb = [&quot;Red&quot;, &quot;Green&quot;, &quot;Blue&quot;]
+&gt;&gt;&gt; rgba = rgb
+&gt;&gt;&gt; id(rgb) == id(rgba)  # they reference the same object
+True
+&gt;&gt;&gt; rgba.append(&quot;Alph&quot;)
+&gt;&gt;&gt; rgb
+[&quot;Red&quot;, &quot;Green&quot;, &quot;Blue&quot;, &quot;Alph&quot;]
+</code></pre>
+<p>تمام عملیات برش (slicing) یک لیست جدید حاوی عناصر درخواست‌شده را برمی‌گردانند. این بدان معناست که برش زیر یک کپی سطحی (<a href="https://docs.python.org/3/library/copy.html#shallow-vs-deep-copy">shallow copy</a>) از لیست را برمی‌گرداند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; correct_rgba = rgba[:]
+&gt;&gt;&gt; correct_rgba[-1] = &quot;Alpha&quot;
+&gt;&gt;&gt; correct_rgba
+[&quot;Red&quot;, &quot;Green&quot;, &quot;Blue&quot;, &quot;Alpha&quot;]
+&gt;&gt;&gt; rgba
+[&quot;Red&quot;, &quot;Green&quot;, &quot;Blue&quot;, &quot;Alph&quot;]
+</code></pre>
+<p>اختصاص دادن به برش‌ها نیز ممکن است، و این کار حتی می‌تواند اندازه لیست را تغییر دهد یا آن را به‌طور کامل خالی کند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; # replace some values
+&gt;&gt;&gt; letters[2:5] = ['C', 'D', 'E']
+&gt;&gt;&gt; letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+&gt;&gt;&gt; # now remove them
+&gt;&gt;&gt; letters[2:5] = []
+&gt;&gt;&gt; letters
+['a', 'b', 'f', 'g']
+&gt;&gt;&gt; # clear the list by replacing all the elements with an empty list
+&gt;&gt;&gt; letters[:] = []
+&gt;&gt;&gt; letters
+[]
+</code></pre>
+<p>تابع داخلی <code>len()</code> همچنین برای لیست‌ها قابل استفاده است:</p>
+<pre><code class="language-python">&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd']
+&gt;&gt;&gt; len(letters)
+4
+</code></pre>
+<p>امکان تو در تو کردن لیست‌ها (ایجاد لیست‌هایی که شامل لیست‌های دیگر هستند) وجود دارد، برای مثال:</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = ['a', 'b', 'c']
+&gt;&gt;&gt; n = [1, 2, 3]
+&gt;&gt;&gt; x = [a, n]
+&gt;&gt;&gt; x
+[['a', 'b', 'c'], [1, 2, 3]]
+&gt;&gt;&gt; x[0]
+['a', 'b', 'c']
+&gt;&gt;&gt; x[0][1]
+'b'
+</code></pre>
+<h2 id="32">3.2. اولین قدم‌ها به‌سوی برنامه‌نویسی</h2>
+<p>البته، می‌توانیم از پایتون برای انجام وظایف پیچیده‌تر از جمع کردن دو و دو استفاده کنیم. به عنوان مثال، می‌توانیم یک زیررشته ابتدایی از دنباله فیبوناچی را به صورت زیر بنویسیم:</p>
+<pre><code class="language-python">&gt;&gt;&gt; # Fibonacci series:
+&gt;&gt;&gt; # the sum of two elements defines the next
+&gt;&gt;&gt; a, b = 0, 1
+&gt;&gt;&gt; while a &lt; 10:
+...     print(a)
+...     a, b = b, a+b
+... 
+0
+1
+1
+2
+3
+5
+8
+</code></pre>
+<p>این مثال چند ویژگی جدید را معرفی می‌کند.</p>
+<ul>
+<li>
+<p><strong>اختصاص چندگانه</strong>: خط اول شامل یک اختصاص چندگانه است: متغیرهای <code>a</code> و <code>b</code> به‌طور همزمان مقادیر جدید 0 و 1 را دریافت می‌کنند. در خط آخر این دوباره استفاده می‌شود، و نشان می‌دهد که عبارات در سمت راست ابتدا همه ارزیابی می‌شوند قبل از اینکه هیچ‌یک از انتساب‌ها انجام شود. عبارات سمت راست از چپ به راست ارزیابی می‌شوند.</p>
+</li>
+<li>
+<p><strong>حلقه while</strong>: حلقه <a href="https://docs.python.org/3/reference/compound_stmts.html#while">while</a> تا زمانی که شرط (در اینجا: <code>a &lt; 10</code>) درست باقی بماند اجرا می‌شود. در پایتون، مانند زبان C، هر مقدار صحیح غیرصفر درست است؛ صفر نادرست است. شرط ممکن است یک رشته یا مقدار لیست باشد، در واقع هر توالی؛ هر چیزی با طول غیرصفر درست است و توالی‌های خالی نادرست هستند. تست استفاده‌شده در این مثال یک مقایسه ساده است. اپراتورهای مقایسه استاندارد به همان صورت که در C نوشته می‌شوند: <code>&lt;</code> (کمتر از)، <code>&gt;</code> (بیشتر از)، <code>==</code> (برابر با)، <code>&lt;=</code> (کمتر یا برابر با)، <code>&gt;=</code> (بیشتر یا برابر با) و <code>!=</code> (نابرابر با).</p>
+</li>
+<li>
+<p><strong>بدنه حلقه</strong>: بدنه حلقه تو رفتگی دارد: تو رفتگی روش پایتون برای گروه‌بندی دستورات است. در پرامپت تعاملی، شما باید برای هر خط تو رفته یک تب یا فاصله (space) وارد کنید. در عمل، شما ورودی‌های پیچیده‌تری برای پایتون با یک ویرایشگر متن آماده خواهید کرد؛ همه ویرایشگرهای متن خوب دارای قابلیت خودکار کردن تو رفتگی هستند. وقتی یک دستور ترکیبی به‌طور تعاملی وارد می‌شود، باید با یک خط خالی به پایان برسد تا نشان‌دهنده اتمام آن باشد (زیرا تحلیل‌گر نمی‌تواند حدس بزند که شما آخرین خط را وارد کرده‌اید). توجه داشته باشید که هر خط درون یک بلوک پایه باید به یک میزان تو رفته باشد.</p>
+</li>
+<li>
+<p><strong>تابع print()</strong>: تابع <a href="https://docs.python.org/3/library/functions.html#print">print()</a> مقدار آرگومان(ها)ی داده شده را می‌نویسد. این تابع از نوشتن صرفاً بیانیه‌ای که می‌خواهید بنویسید (همانطور که در مثال‌های ماشین حساب انجام دادیم) در نحوه مدیریت آرگومان‌های متعدد، مقادیر شناور، و رشته‌ها متفاوت است. رشته‌ها بدون کوتیشن چاپ می‌شوند و یک فاصله بین آیتم‌ها وارد می‌شود، بنابراین می‌توانید چیزها را به‌خوبی قالب‌بندی کنید، مانند این:</p>
+</li>
+</ul>
+<pre><code class="language-python">&gt;&gt;&gt; i = 256*256
+&gt;&gt;&gt; print('The value of i is', i)
+The value of i is 65536
+</code></pre>
+<p>آرگومان کلیدی <code>end</code> می‌تواند برای جلوگیری از ایجاد خط جدید بعد از خروجی استفاده شود، یا می‌تواند خروجی را با یک رشته متفاوت به پایان برساند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; a, b = 0, 1
+&gt;&gt;&gt; while a &lt; 1000:
+...     print(a, end=',')
+...     a, b = b, a+b
+...
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
+</code></pre>
+<h3 id="_1">پانویس‌ها</h3>
+<p>[^1]: از آنجا که <code>**</code> اولویت بالاتری نسبت به <code>-</code> دارد، <code>-3**2</code> به عنوان <code>-(3**2)</code> تفسیر می‌شود و در نتیجه به <code>-9</code> منجر می‌شود. برای جلوگیری از این موضوع و دریافت <code>9</code>، می‌توانید از <code>(-3)**2</code> استفاده کنید.</p>
+<p>[^2]: بر خلاف سایر زبان‌ها، کاراکترهای ویژه‌ای مانند <code>\n</code> با هر دو نوع کوتیشن (تک <code>'...'</code> و دوگانه <code>"..."</code>) دارای همان معنی هستند. تنها تفاوت بین این دو این است که در کوتیشن‌های تک نیازی به فرار دادن <code>"</code> نیست (اما باید <code>\</code> را فرار دهید) و برعکس. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1014 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A simple static site for your documentation.">
+      
+      
+        <meta name="author" content="Your Name">
+      
+      
+      
+        <link rel="prev" href="../../5/datastructures/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Modules - My Documentation Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Documentation Site" class="md-header__button md-logo" aria-label="My Documentation Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Documentation Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Documentation Site" class="md-nav__button md-logo" aria-label="My Documentation Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Documentation Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/appetite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appetite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2/interpreter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpreter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4/controlflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5/datastructures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. اطلاعات بیشتر در مورد ماژول‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1. اطلاعات بیشتر در مورد ماژول‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1. اجرای ماژول‌ها به‌عنوان اسکریپت
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2. مسیر جستجوی ماژول
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3. فایل‌های پایتون «کامپایل‌شده»
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. ماژول‌های استاندارد
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. تابع dir()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. بسته‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4. بسته‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1. وارد کردن * از یک بسته
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2. ارجاعات درون بسته‌ای
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3. بسته‌ها در دایرکتوری‌های متعدد
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      پانویس
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. اطلاعات بیشتر در مورد ماژول‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1. اطلاعات بیشتر در مورد ماژول‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1. اجرای ماژول‌ها به‌عنوان اسکریپت
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2. مسیر جستجوی ماژول
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3. فایل‌های پایتون «کامپایل‌شده»
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. ماژول‌های استاندارد
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. تابع dir()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4. بسته‌ها
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4. بسته‌ها">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1. وارد کردن * از یک بسته
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2. ارجاعات درون بسته‌ای
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3. بسته‌ها در دایرکتوری‌های متعدد
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      پانویس
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="6">6. ماژول‌ها</h1>
+<p>اگر از مفسر پایتون خارج شده و دوباره وارد شوید، تمام تعاریفی که ساخته‌اید (شامل توابع و متغیرها) از بین خواهند رفت. بنابراین اگر قصد نوشتن برنامه‌ای طولانی‌تر دارید، بهتر است از یک ویرایشگر متن برای تهیه ورودی مفسر استفاده کنید و سپس فایل ورودی را اجرا کنید. این فرآیند به عنوان ایجاد یک اسکریپت شناخته می‌شود. هر چه برنامه طولانی‌تر شود، ممکن است بخواهید آن را به چندین فایل تقسیم کنید تا نگهداری آن آسان‌تر شود. همچنین ممکن است بخواهید از یک تابع مفید در چند برنامه مختلف بدون نیاز به کپی کردن تعریف آن استفاده کنید.</p>
+<p>برای پشتیبانی از این موضوع، پایتون روشی دارد که تعاریف را در یک فایل ذخیره کرده و در یک اسکریپت یا یک نمونه تعاملی از مفسر استفاده می‌کند. این فایل به عنوان یک ماژول شناخته می‌شود؛ تعاریف موجود در یک ماژول می‌توانند به ماژول‌های دیگر یا به ماژول اصلی (مجموعه متغیرهایی که در سطح بالای یک اسکریپت و در حالت ماشین‌حساب اجرا می‌شوند) وارد شوند.</p>
+<p>یک ماژول، فایلی است که شامل تعاریف و دستورات پایتون است. نام فایل همان نام ماژول با پسوند <code>.py</code> است. داخل یک ماژول، نام ماژول به عنوان یک رشته به عنوان مقدار متغیر سراسری <code>__name__</code> در دسترس است. مثلاً می‌توانید با استفاده از ویرایشگر متن دلخواه خود یک فایل به نام <code>fibo.py</code> در پوشه جاری ایجاد کنید و محتوای زیر را در آن قرار دهید:</p>
+<pre><code class="language-python"># Fibonacci numbers module
+
+def fib(n):    # write Fibonacci series up to n
+    a, b = 0, 1
+    while a &lt; n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
+def fib2(n):   # return Fibonacci series up to n
+    result = []
+    a, b = 0, 1
+    while a &lt; n:
+        result.append(a)
+        a, b = b, a+b
+    return result
+</code></pre>
+<p>حالا وارد مفسر پایتون شوید و این ماژول را با دستور زیر وارد کنید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; import fibo
+</code></pre>
+<p>این دستور نام توابع تعریف‌شده در <code>fibo</code> را مستقیماً به فضای نام فعلی اضافه نمی‌کند؛ بلکه فقط نام ماژول <code>fibo</code> را به آنجا اضافه می‌کند. با استفاده از نام ماژول می‌توانید به توابع دسترسی پیدا کنید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; fibo.fib(1000)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+&gt;&gt;&gt; fibo.fib2(100)
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+&gt;&gt;&gt; fibo.__name__
+'fibo'
+</code></pre>
+<p>اگر می‌خواهید یک تابع را مکرراً استفاده کنید، می‌توانید آن را به یک نام محلی اختصاص دهید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; fib = fibo.fib
+&gt;&gt;&gt; fib(500)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+</code></pre>
+<h2 id="61">6.1. اطلاعات بیشتر در مورد ماژول‌ها</h2>
+<p>یک ماژول می‌تواند شامل دستورات اجرایی و همچنین تعریف توابع باشد. این دستورات برای مقداردهی اولیه ماژول در نظر گرفته شده‌اند. این دستورات تنها اولین باری که نام ماژول در یک عبارت واردات (<a href="https://docs.python.org/3/reference/simple_stmts.html#import">import</a>) با آن برخورد می‌کند، اجرا می‌شوند. [^1] (این دستورات همچنین در صورتی که فایل به عنوان یک اسکریپت اجرا شود، نیز اجرا می‌شوند.)</p>
+<p>هر ماژول فضای نام خصوصی خودش را دارد که به عنوان فضای نام سراسری توسط تمام توابع تعریف شده در ماژول استفاده می‌شود. بنابراین، نویسنده یک ماژول می‌تواند از متغیرهای سراسری در ماژول استفاده کند بدون اینکه نگران تداخل تصادفی با متغیرهای سراسری کاربر باشد. از سوی دیگر، اگر بدانید چه می‌کنید، می‌توانید به متغیرهای سراسری یک ماژول با همان نشانه‌گذاری که برای اشاره به توابع آن استفاده می‌شود، دسترسی پیدا کنید: <code>modname.itemname</code>.</p>
+<p>ماژول‌ها می‌توانند ماژول‌های دیگری را وارد کنند. به طور معمول، اما نه لزوماً، همه دستورات واردات (<a href="https://docs.python.org/3/reference/simple_stmts.html#import">import</a>) در ابتدای یک ماژول (یا اسکریپت) قرار می‌گیرند. نام ماژول‌های وارد شده، اگر در سطح بالای یک ماژول (خارج از هر تابع یا کلاسی) قرار گیرند، به فضای نام سراسری ماژول اضافه می‌شوند.</p>
+<p>یک نوع از عبارت واردات وجود دارد که نام‌ها را مستقیماً از یک ماژول به فضای نام ماژول واردکننده وارد می‌کند. برای مثال:</p>
+<pre><code class="language-python">&gt;&gt;&gt; from fibo import fib, fib2
+&gt;&gt;&gt; fib(500)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+</code></pre>
+<p>این روش نام ماژولی که واردات از آن انجام می‌شود را به فضای نام محلی معرفی نمی‌کند (بنابراین، در مثال، نام <code>fibo</code> تعریف نشده است).</p>
+<p>حتی یک نوع دیگر نیز وجود دارد که تمام نام‌هایی را که یک ماژول تعریف می‌کند، وارد می‌کند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; from fibo import *
+&gt;&gt;&gt; fib(500)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+</code></pre>
+<p>این دستور همه نام‌ها به‌جز آن‌هایی که با زیرخط (<code>_</code>) شروع می‌شوند را وارد می‌کند. در بیشتر موارد، برنامه‌نویسان پایتون از این قابلیت استفاده نمی‌کنند، زیرا مجموعه‌ای نامشخص از نام‌ها را وارد محیط مفسر می‌کند که ممکن است برخی از چیزهایی که قبلاً تعریف کرده‌اید را پنهان کند.</p>
+<p>توجه داشته باشید که به طور کلی استفاده از <code>*</code> برای وارد کردن از یک ماژول یا بسته توصیه نمی‌شود، زیرا اغلب منجر به کدهایی می‌شود که خوانایی کمی دارند. با این حال، در جلسات تعاملی برای صرفه‌جویی در تایپ، استفاده از آن بلامانع است.</p>
+<p>اگر پس از نام ماژول از <code>as</code> استفاده شود، نامی که پس از <code>as</code> می‌آید مستقیماً به ماژول وارد شده ارجاع داده می‌شود.</p>
+<pre><code class="language-python">&gt;&gt;&gt; import fibo as fib
+&gt;&gt;&gt; fib.fib(500)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+</code></pre>
+<p>این روش به‌طور مؤثری ماژول را به همان شیوه‌ای وارد می‌کند که <code>import fibo</code> انجام می‌دهد، با این تفاوت که اکنون با نام <code>fib</code> در دسترس است.</p>
+<p>این روش را می‌توان هنگام استفاده از <code>from</code> نیز به‌کار برد و اثرات مشابهی خواهد داشت:</p>
+<pre><code class="language-python">&gt;&gt;&gt; from fibo import fib as fibonacci
+&gt;&gt;&gt; fibonacci(500)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+</code></pre>
+<h3 id="611">6.1.1. اجرای ماژول‌ها به‌عنوان اسکریپت</h3>
+<p>هنگامی که یک ماژول پایتون را با اجرا کنید :</p>
+<pre><code class="language-bash">python fibo.py &lt;arguments&gt;
+</code></pre>
+<p>کد موجود در ماژول اجرا خواهد شد، درست مانند زمانی که آن را وارد (import) می‌کنید، اما با این تفاوت که مقدار <code>__name__</code> برابر با <code>"__main__"</code> تنظیم می‌شود. این بدان معناست که با افزودن این کد در انتهای ماژول خود:</p>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    import sys
+    fib(int(sys.argv[1]))
+</code></pre>
+<p>می‌توانید فایل را هم به‌عنوان یک اسکریپت و هم به‌عنوان یک ماژول واردشدنی قابل استفاده کنید، زیرا کدی که فرمان‌های خط فرمان را تجزیه می‌کند، تنها زمانی اجرا می‌شود که ماژول به‌عنوان فایل «اصلی» اجرا شود.</p>
+<pre><code class="language-python">&gt;&gt;&gt; python fibo.py 50
+0 1 1 2 3 5 8 13 21 34
+</code></pre>
+<p>اگر ماژول وارد شده باشد، کد اجرا نمی شود:</p>
+<pre><code class="language-python">&gt;&gt;&gt; import fibo
+&gt;&gt;&gt;
+</code></pre>
+<p>این معمولاً برای ارائه یک رابط کاربری مناسب برای یک ماژول یا برای اهداف آزمایشی استفاده می‌شود (اجرای ماژول به‌عنوان یک اسکریپت، یک مجموعه تست را اجرا می‌کند).</p>
+<h3 id="612">6.1.2. مسیر جستجوی ماژول</h3>
+<p>هنگامی که یک ماژول به نام <em>spam</em> وارد می‌شود (import می‌شود)، مفسر ابتدا به دنبال یک ماژول داخلی با همان نام می‌گردد. نام این ماژول‌های داخلی در <a href="https://docs.python.org/3/library/sys.html#sys.builtin_module_names">sys.builtin_module_names</a> فهرست شده‌اند. اگر چنین ماژولی پیدا نشود، مفسر به دنبال فایلی با نام <code>spam.py</code> در فهرستی از پوشه‌ها که توسط متغیر <a href="https://docs.python.org/3/library/sys.html#sys.path">sys.path</a> تعیین شده است، می‌گردد. <a href="https://docs.python.org/3/library/sys.html#sys.path">sys.path</a> از مکان‌های زیر مقداردهی اولیه می‌شود:</p>
+<ul>
+<li>پوشه‌ای که اسکریپت ورودی در آن قرار دارد (یا پوشه فعلی اگر هیچ فایلی مشخص نشده باشد).</li>
+<li>متغیر <a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">PYTHONPATH</a> (که شامل فهرستی از نام پوشه‌ها است و دارای همان سینتکس متغیر <code>PATH</code> در شل است).</li>
+<li>پوشه پیش‌فرض وابسته به نصب (که به طور قراردادی شامل یک پوشه به نام <code>site-packages</code> است و توسط ماژول <a href="https://docs.python.org/3/library/site.html#module-site">site</a> مدیریت می‌شود).</li>
+</ul>
+<p>جزئیات بیشتر در مستندات «<a href="https://docs.python.org/3/library/sys_path_init.html#sys-path-init">مقداردهی اولیه مسیر جستجوی ماژول sys.path</a>» وجود دارد.</p>
+<blockquote>
+<p>نکته
+در سیستم‌های فایلی که از لینک‌های نمادین (symlinks) پشتیبانی می‌کنند، پوشه حاوی اسکریپت ورودی پس از دنبال کردن لینک نمادین محاسبه می‌شود. به عبارت دیگر، پوشه‌ای که لینک نمادین در آن قرار دارد به مسیر جستجوی ماژول اضافه نمی‌شود. </p>
+</blockquote>
+<p>پس از مقداردهی اولیه، برنامه‌های پایتون می‌توانند <a href="https://docs.python.org/3/library/sys.html#sys.path">sys.path</a> را تغییر دهند. پوشه‌ای که اسکریپت اجرا شده در آن قرار دارد در ابتدای مسیر جستجو قرار می‌گیرد، جلوتر از مسیر کتابخانه استاندارد. این بدان معناست که اسکریپت‌های آن پوشه به جای ماژول‌هایی با همان نام در پوشه کتابخانه بارگذاری خواهند شد. این کار یک خطا محسوب می‌شود مگر اینکه جایگزینی عمداً صورت گرفته باشد. برای اطلاعات بیشتر، بخش «<a href="https://docs.python.org/3/tutorial/modules.html#tut-standardmodules">ماژول‌های استاندارد</a>» را ببینید.</p>
+<h3 id="613">6.1.3. فایل‌های پایتون «کامپایل‌شده»</h3>
+<p>برای سرعت بخشیدن به بارگذاری ماژول‌ها، پایتون نسخه کامپایل‌شده هر ماژول را در پوشه <code>__pycache__</code> ذخیره می‌کند. این فایل با نام <code>module.version.pyc</code> ذخیره می‌شود، که <code>version</code> نشان‌دهنده فرمت فایل کامپایل‌شده است و معمولاً شامل شماره نسخه پایتون است. برای مثال، در نسخه 3.3 از CPython، نسخه کامپایل‌شده <code>spam.py</code> به صورت <code>__pycache__/spam.cpython-33.pyc</code> ذخیره می‌شود. این روش نام‌گذاری به ماژول‌های کامپایل‌شده اجازه می‌دهد که از نسخه‌ها و نسخه‌های مختلف پایتون در کنار یکدیگر وجود داشته باشند.</p>
+<p>پایتون تاریخ تغییرات سورس را با نسخه کامپایل‌شده مقایسه می‌کند تا ببیند آیا نیاز به کامپایل مجدد دارد یا نه. این فرایند به صورت کاملاً خودکار انجام می‌شود. همچنین، ماژول‌های کامپایل‌شده مستقل از پلتفرم هستند، بنابراین همان کتابخانه را می‌توان در سیستم‌هایی با معماری‌های مختلف به اشتراک گذاشت.</p>
+<p>پایتون در دو حالت حافظه کش را بررسی نمی‌کند. اول، زمانی که ماژول مستقیماً از خط فرمان بارگذاری می‌شود، همیشه آن را کامپایل کرده و نتیجه را ذخیره نمی‌کند. دوم، اگر هیچ ماژول سورسی وجود نداشته باشد، کش را بررسی نمی‌کند. برای پشتیبانی از توزیع‌های بدون سورس (فقط کامپایل‌شده)، ماژول کامپایل‌شده باید در پوشه سورس قرار گیرد و نباید هیچ ماژول سورسی وجود داشته باشد.</p>
+<p>نکاتی برای افراد حرفه‌ای:</p>
+<ul>
+<li>
+<p>می‌توانید از گزینه‌های <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-O">-O</a> یا <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-OO">-OO</a> در فرمان پایتون استفاده کنید تا اندازه یک ماژول کامپایل‌شده را کاهش دهید. گزینه <code>-O</code> عبارت‌های <code>assert</code> را حذف می‌کند و گزینه <code>-OO</code> هم عبارت‌های <code>assert</code> و هم رشته‌های <code>__doc__</code> را حذف می‌کند. از آنجا که برخی از برنامه‌ها ممکن است به این موارد نیاز داشته باشند، تنها زمانی از این گزینه‌ها استفاده کنید که بدانید چه کاری انجام می‌دهید. ماژول‌های «بهینه‌شده» دارای تگ <code>opt-</code> هستند و معمولاً کوچکترند. نسخه‌های آینده ممکن است اثرات این بهینه‌سازی را تغییر دهند.</p>
+</li>
+<li>
+<p>برنامه‌ای که از فایل <code>.pyc</code> خوانده می‌شود، سریع‌تر از وقتی که از فایل <code>.py</code> خوانده می‌شود اجرا نمی‌شود؛ تنها مزیت فایل‌های <code>.pyc</code> سرعت بارگذاری آن‌هاست.</p>
+</li>
+<li>
+<p>ماژول <a href="https://docs.python.org/3/library/compileall.html#module-compileall">compileall</a> می‌تواند فایل‌های <code>.pyc</code> را برای همه ماژول‌های موجود در یک پوشه ایجاد کند.</p>
+</li>
+<li>
+<p>جزئیات بیشتری درباره این فرایند، شامل یک نمودار جریان تصمیمات، در <a href="https://peps.python.org/pep-3147/">PEP 3147</a> موجود است.</p>
+</li>
+</ul>
+<h2 id="62">6.2. ماژول‌های استاندارد</h2>
+<p>پایتون همراه با یک کتابخانه از ماژول‌های استاندارد ارائه می‌شود که در سند جداگانه‌ای به نام <em>مرجع کتابخانه پایتون</em> (که در ادامه به آن «مرجع کتابخانه» گفته می‌شود) توصیف شده است. برخی از این ماژول‌ها در مفسر پایتون تعبیه شده‌اند؛ این ماژول‌ها به عملیات‌هایی دسترسی می‌دهند که بخشی از هسته زبان نیستند اما برای بهبود کارایی یا دسترسی به توابع پایه سیستم عامل، مانند فراخوانی‌های سیستمی، به صورت داخلی پیاده‌سازی شده‌اند. مجموعه این ماژول‌ها به عنوان یک گزینه پیکربندی محسوب می‌شود و همچنین به پلتفرم زیرین بستگی دارد. برای مثال، ماژول <code>winreg</code> فقط در سیستم‌های ویندوز ارائه می‌شود.</p>
+<p>یک ماژول خاص که شایسته توجه است، <code>sys</code> نام دارد که در هر مفسر پایتون تعبیه شده است. متغیرهای <code>sys.ps1</code> و <code>sys.ps2</code> رشته‌هایی را تعریف می‌کنند که به ترتیب به عنوان اعلان اولیه و اعلان ثانویه استفاده می‌شوند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.ps1
+'&gt;&gt;&gt; '
+&gt;&gt;&gt; sys.ps2
+'... '
+&gt;&gt;&gt; sys.ps1 = 'C&gt; '
+C&gt; print('Yuck!')
+Yuck!
+C&gt;
+</code></pre>
+<p>این دو متغیر فقط زمانی تعریف می‌شوند که مفسر در حالت تعاملی (interactive mode) باشد.</p>
+<p>متغیر <code>sys.path</code> یک فهرست از رشته‌ها است که مسیر جستجوی مفسر برای ماژول‌ها را تعیین می‌کند. این متغیر با مسیری پیش‌فرض که از متغیر محیطی <a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">PYTHONPATH</a> گرفته می‌شود (یا در صورت تنظیم نشدن <a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">PYTHONPATH</a>، از یک مقدار پیش‌فرض داخلی)، مقداردهی اولیه می‌شود. شما می‌توانید آن را با استفاده از عملیات استاندارد لیست‌ها تغییر دهید:</p>
+<pre><code class="language-python">&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.path.append('/ufs/guido/lib/python')
+</code></pre>
+<h2 id="63-dir">6.3. تابع <a href="https://docs.python.org/3/library/functions.html#dir">dir()</a></h2>
+<p>تابع داخلی <a href="https://docs.python.org/3/library/functions.html#dir">dir()</a> برای یافتن نام‌هایی که یک ماژول تعریف می‌کند، استفاده می‌شود. این تابع یک فهرست مرتب از رشته‌ها را برمی‌گرداند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; import fibo, sys
+&gt;&gt;&gt; dir(fibo)
+['__name__', 'fib', 'fib2']
+&gt;&gt;&gt; dir(sys)  
+['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',
+ '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',
+ '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',
+ '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',
+ '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',
+ 'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',
+ 'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',
+ 'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',
+ 'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',
+ 'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',
+ 'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',
+ 'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',
+ 'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',
+ 'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',
+ 'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',
+ 'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',
+ 'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',
+ 'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',
+ 'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',
+ 'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',
+ 'warnoptions']
+</code></pre>
+<p>بدون آرگومان، تابع <a href="https://docs.python.org/3/library/functions.html#dir">dir()</a> نام‌هایی را که در حال حاضر تعریف کرده‌اید، فهرست می‌کند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = [1, 2, 3, 4, 5]
+&gt;&gt;&gt; import fibo
+&gt;&gt;&gt; fib = fibo.fib
+&gt;&gt;&gt; dir()
+['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']
+</code></pre>
+<p>توجه داشته باشید که این تابع تمام انواع نام‌ها را فهرست می‌کند: متغیرها، ماژول‌ها، توابع و غیره.</p>
+<p>تابع <code>dir()</code> نام توابع و متغیرهای داخلی را فهرست نمی‌کند. اگر فهرستی از این موارد می‌خواهید، آن‌ها در ماژول استاندارد <code>builtins</code> تعریف شده‌اند:</p>
+<pre><code class="language-python">&gt;&gt;&gt; import builtins
+&gt;&gt;&gt; dir(builtins)  
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',
+ 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',
+ 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',
+ 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',
+ 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',
+ 'FileExistsError', 'FileNotFoundError', 'FloatingPointError',
+ 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',
+ 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',
+ 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',
+ 'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',
+ 'NotImplementedError', 'OSError', 'OverflowError',
+ 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',
+ 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',
+ 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',
+ 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',
+ 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',
+ 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',
+ 'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',
+ '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',
+ 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',
+ 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',
+ 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',
+ 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',
+ 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',
+ 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',
+ 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',
+ 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',
+ 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',
+ 'zip']
+</code></pre>
+<h2 id="64">6.4. بسته‌ها</h2>
+<p>پکیج‌ها راهی برای ساختاربندی فضای نام ماژول‌های پایتون با استفاده از «نام‌های نقطه‌دار ماژول» هستند. برای مثال، نام ماژول <code>A.B</code> یک زیرماژول به نام <code>B</code> را در یک پکیج به نام <code>A</code> مشخص می‌کند. همان‌طور که استفاده از ماژول‌ها نویسندگان مختلف را از نگرانی درباره تداخل نام متغیرهای سراسری بی‌نیاز می‌کند، استفاده از نام‌های نقطه‌دار در ماژول‌ها، نویسندگان پکیج‌های چندماژوله مانند NumPy یا Pillow را از نگرانی درباره تداخل نام ماژول‌ها بی‌نیاز می‌کند.</p>
+<p>فرض کنید می‌خواهید مجموعه‌ای از ماژول‌ها (یک «پکیج») را برای مدیریت یکنواخت فایل‌های صوتی و داده‌های صوتی طراحی کنید. فرمت‌های مختلفی برای فایل‌های صوتی وجود دارند (که معمولاً از طریق پسوندشان شناسایی می‌شوند، برای مثال: <code>.wav</code>، <code>.aiff</code>، <code>.au</code>)، بنابراین ممکن است نیاز به ایجاد و نگهداری مجموعه‌ای رو به رشد از ماژول‌ها برای تبدیل بین این فرمت‌ها داشته باشید. همچنین عملیات مختلفی وجود دارند که ممکن است بخواهید روی داده‌های صوتی انجام دهید (مانند میکس کردن، اضافه کردن اکو، اعمال یک تابع اکولایزر، ایجاد یک افکت استریوی مصنوعی). بنابراین، در کنار آن، به نوشتن مجموعه‌ای مداوم از ماژول‌ها برای انجام این عملیات نیاز خواهید داشت. ساختار احتمالی برای پکیج شما می‌تواند به صورت زیر باشد (که به صورت یک سیستم فایل سلسله‌مراتبی بیان شده است):</p>
+<pre><code class="language-ascii">sound/                          Top-level package
+      __init__.py               Initialize the sound package
+      formats/                  Subpackage for file format conversions
+              __init__.py
+              wavread.py
+              wavwrite.py
+              aiffread.py
+              aiffwrite.py
+              auread.py
+              auwrite.py
+              ...
+      effects/                  Subpackage for sound effects
+              __init__.py
+              echo.py
+              surround.py
+              reverse.py
+              ...
+      filters/                  Subpackage for filters
+              __init__.py
+              equalizer.py
+              vocoder.py
+              karaoke.py
+              ...
+</code></pre>
+<p>هنگام وارد کردن (import) یک پکیج، پایتون پوشه‌های موجود در <code>sys.path</code> را جستجو می‌کند تا پوشه زیرمجموعه پکیج را پیدا کند.</p>
+<p>فایل‌های <code>__init__.py</code> برای این لازم هستند که پایتون پوشه‌هایی که این فایل را دارند به عنوان پکیج در نظر بگیرد (مگر اینکه از <a href="https://docs.python.org/3/glossary.html#term-namespace-package">namespace packages</a> استفاده شود، که یک ویژگی نسبتاً پیشرفته است). این کار مانع از آن می‌شود که پوشه‌هایی با نام‌های رایج، مانند <code>string</code>، به‌طور ناخواسته ماژول‌های معتبر دیگری که در مسیر جستجوی ماژول قرار دارند را پنهان کنند. در ساده‌ترین حالت، <code>__init__.py</code> می‌تواند یک فایل خالی باشد، اما همچنین می‌تواند کد اولیه برای پکیج اجرا کند یا متغیر <code>__all__</code> را تنظیم کند که بعداً توضیح داده خواهد شد.</p>
+<p>کاربران پکیج می‌توانند ماژول‌های مجزا را از درون پکیج ایمپورت کنند، برای مثال:</p>
+<pre><code class="language-python">import sound.effects.echo
+</code></pre>
+<p>این دستور زیرماژول <code>sound.effects.echo</code> را بارگذاری می‌کند. برای استفاده از آن، باید به‌طور کامل با نام کاملش ارجاع داده شود.</p>
+<pre><code class="language-python">sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
+</code></pre>
+<p>یک روش جایگزین برای وارد کردن زیرماژول به شکل زیر است:</p>
+<pre><code class="language-python">from sound.effects import echo
+</code></pre>
+<p>این روش همچنین زیرماژول <code>echo</code> را بارگذاری می‌کند و آن را بدون پیشوند پکیج در دسترس قرار می‌دهد، بنابراین می‌توان از آن به صورت زیر استفاده کرد:</p>
+<pre><code class="language-python">echo.echofilter(input, output, delay=0.7, atten=4)
+</code></pre>
+<p>یکی دیگر از روش‌ها این است که تابع یا متغیر مورد نظر را به‌طور مستقیم وارد کنید:</p>
+<pre><code class="language-python">from sound.effects.echo import echofilter
+</code></pre>
+<p>باز هم، این روش زیرماژول <code>echo</code> را بارگذاری می‌کند، اما این بار تابع <code>echofilter()</code> را به‌طور مستقیم در دسترس قرار می‌دهد:</p>
+<pre><code class="language-python">echofilter(input, output, delay=0.7, atten=4)
+</code></pre>
+<p>توجه داشته باشید که هنگام استفاده از دستور <code>from package import item</code>، آیتم می‌تواند یا یک زیرماژول (یا زیرپکیج) از پکیج باشد، یا نام دیگری که در پکیج تعریف شده است، مانند یک تابع، کلاس یا متغیر. دستور وارد کردن ابتدا بررسی می‌کند که آیا آیتم در پکیج تعریف شده است یا خیر؛ اگر تعریف نشده باشد، فرض می‌کند که آیتم یک ماژول است و سعی می‌کند آن را بارگذاری کند. اگر نتواند آن را پیدا کند، یک استثنا به نام <a href="https://docs.python.org/3/library/exceptions.html#ImportError">ImportError</a> رخ می‌دهد.</p>
+<p>برعکس، هنگام استفاده از سینتکس‌هایی مانند <code>import item.subitem.subsubitem</code>، هر آیتم به جز آخرین باید یک پکیج باشد؛ آخرین آیتم می‌تواند یک ماژول یا پکیج باشد، اما نمی‌تواند یک کلاس یا تابع یا متغیر تعریف شده در آیتم قبلی باشد.</p>
+<h3 id="641">6.4.1. وارد کردن * از یک بسته</h3>
+<p>حال، وقتی کاربر دستور <code>from sound.effects import *</code> را می‌نویسد، چه اتفاقی می‌افتد؟ ایده‌آل این است که امیدوار باشیم این دستور به‌طور خودکار به سیستم فایل مراجعه کند، زیرماژول‌های موجود در پکیج را پیدا کند و همه آن‌ها را وارد کند. این فرآیند ممکن است زمان زیادی ببرد و وارد کردن زیرماژول‌ها ممکن است عوارض جانبی ناخواسته‌ای داشته باشد که تنها باید زمانی رخ دهند که زیرماژول به‌طور صریح وارد شود.</p>
+<p>تنها راه حل این است که نویسنده پکیج یک فهرست صریح از پکیج فراهم کند. دستور <a href="https://docs.python.org/3/reference/simple_stmts.html#import">وارد</a> کردن از این روش پیروی می‌کند: اگر کد <code>__init__.py</code> یک پکیج، فهرستی به نام <code>__all__</code> تعریف کند، این فهرست به‌عنوان فهرست نام‌های ماژول‌هایی در نظر گرفته می‌شود که باید زمانی که دستور <code>from package import *</code> اجرا می‌شود، وارد شوند. به عهده نویسنده پکیج است که این فهرست را هنگام انتشار نسخه جدید پکیج به‌روز نگه دارد. نویسندگان پکیج‌ها همچنین ممکن است تصمیم بگیرند که این قابلیت را پشتیبانی نکنند، اگر نیازی به وارد کردن * از پکیج خود نبینند. به عنوان مثال، فایل <code>sound/effects/__init__.py</code> می‌تواند شامل کد زیر باشد:</p>
+<pre><code class="language-python">__all__ = [&quot;echo&quot;, &quot;surround&quot;, &quot;reverse&quot;]
+</code></pre>
+<p>این بدین معناست که دستور <code>from sound.effects import *</code> سه زیرماژول نام‌برده شده از پکیج <code>sound.effects</code> را وارد می‌کند.</p>
+<p>توجه داشته باشید که زیرماژول‌ها ممکن است توسط نام‌های تعریف‌شده به صورت محلی پنهان شوند. برای مثال، اگر یک تابع <code>reverse</code> را به فایل <code>sound/effects/__init__.py</code> اضافه کنید، دستور <code>from sound.effects import *</code> تنها زیرماژول‌های <code>echo</code> و <code>surround</code> را وارد خواهد کرد، اما زیرماژول <code>reverse</code> وارد نمی‌شود زیرا توسط تابع <code>reverse</code> که به‌طور محلی تعریف شده، پنهان شده است:</p>
+<pre><code class="language-python">__all__ = [
+    &quot;echo&quot;,      # refers to the 'echo.py' file
+    &quot;surround&quot;,  # refers to the 'surround.py' file
+    &quot;reverse&quot;,   # !!! refers to the 'reverse' function now !!!
+]
+
+def reverse(msg: str):  # &lt;-- this name shadows the 'reverse.py' submodule
+    return msg[::-1]    #     in the case of a 'from sound.effects import *'
+</code></pre>
+<p>اگر <code>__all__</code> تعریف نشده باشد، عبارت <code>from sound.effects import *</code> تمام زیرماژول‌های بسته‌ی <code>sound.effects</code> را به فضای نام جاری وارد نمی‌کند؛ بلکه فقط اطمینان می‌دهد که بسته‌ی <code>sound.effects</code> وارد شده است (و احتمالاً کدهای اولیه در <code>__init__.py</code> اجرا می‌شوند) و سپس هر نامی که در بسته تعریف شده باشد را وارد می‌کند. این شامل هر نامی است که (و هر زیرماژولی که به‌طور صریح بارگذاری شده باشد) توسط <code>__init__.py</code> تعریف شده باشد. همچنین شامل هر زیرماژولی از بسته می‌شود که با دستورات وارد کردن قبلی به‌طور صریح بارگذاری شده باشد. به این کد توجه کنید:</p>
+<pre><code class="language-python">import sound.effects.echo
+import sound.effects.surround
+from sound.effects import *
+</code></pre>
+<p>در این مثال، ماژول‌های <code>echo</code> و <code>surround</code> در فضای نام جاری وارد می‌شوند، زیرا هنگام اجرای عبارت <code>from...import</code> در بسته‌ی <code>sound.effects</code> تعریف شده‌اند. (این روش وقتی <code>__all__</code> هم تعریف شده باشد، عمل می‌کند.)</p>
+<p>اگرچه برخی ماژول‌ها طوری طراحی شده‌اند که هنگام استفاده از <code>import *</code> فقط نام‌هایی که از الگوهای خاصی پیروی می‌کنند را صادر کنند، اما همچنان استفاده از این روش در کد تولیدی به عنوان یک روش نامناسب در نظر گرفته می‌شود.</p>
+<p>به یاد داشته باشید، استفاده از <code>from package import specific_submodule</code> هیچ اشکالی ندارد! در واقع، این روش توصیه‌شده است، مگر اینکه ماژول واردکننده نیاز داشته باشد زیرماژول‌هایی با نام مشابه از بسته‌های مختلف استفاده کند.</p>
+<h3 id="642">6.4.2. ارجاعات درون بسته‌ای</h3>
+<p>وقتی بسته‌ها به زیر‌بسته‌ها تقسیم می‌شوند (همانند بسته‌ی <code>sound</code> در مثال)، می‌توانید از واردات مطلق برای ارجاع به زیرماژول‌های بسته‌های هم‌رده استفاده کنید. برای مثال، اگر ماژول <code>sound.filters.vocoder</code> نیاز داشته باشد که از ماژول <code>echo</code> در بسته‌ی <code>sound.effects</code> استفاده کند، می‌تواند از عبارت <code>from sound.effects import echo</code> استفاده کند.</p>
+<p>همچنین می‌توانید از واردات نسبی استفاده کنید، با استفاده از عبارت <code>from module import name</code>. این واردات از نقطه‌های ابتدایی برای مشخص کردن بسته‌های جاری و والد در واردات نسبی استفاده می‌کنند. برای مثال، از ماژول <code>surround</code> می‌توانید به این صورت بنویسید:</p>
+<pre><code class="language-python">from . import echo
+from .. import formats
+from ..filters import equalizer
+</code></pre>
+<p>توجه داشته باشید که واردات نسبی براساس نام ماژول جاری انجام می‌شود. از آنجا که نام ماژول اصلی همیشه <code>"__main__"</code> است، ماژول‌هایی که به‌عنوان ماژول اصلی در یک برنامه‌ی پایتون استفاده می‌شوند، باید همیشه از واردات مطلق استفاده کنند.</p>
+<h3 id="643">6.4.3. بسته‌ها در دایرکتوری‌های متعدد</h3>
+<p>ترجمه:</p>
+<p>بسته‌ها از یک ویژگی ویژه‌ی دیگر به نام <a href="https://docs.python.org/3/reference/datamodel.html#module.__path__"><code>__path__</code></a> نیز پشتیبانی می‌کنند. این ویژگی به‌صورت یک <a href="https://docs.python.org/3/glossary.html#term-sequence">دنباله‌</a>ای از رشته‌ها مقداردهی اولیه می‌شود که شامل نام پوشه‌ای است که فایل <code>__init__.py</code> بسته را نگه می‌دارد، پیش از آنکه کد موجود در آن فایل اجرا شود. این متغیر قابل تغییر است؛ و با تغییر آن، جستجوهای بعدی برای ماژول‌ها و زیر‌بسته‌های موجود در بسته تحت تأثیر قرار می‌گیرد.</p>
+<p>با این که این ویژگی به ندرت مورد نیاز است، اما می‌تواند برای گسترش مجموعه‌ی ماژول‌های موجود در یک بسته استفاده شود.</p>
+<h3 id="_1">پانویس</h3>
+<p>[^1]: در واقع، تعریف توابع نیز «دستورات»ی هستند که «اجرا» می‌شوند؛ اجرای یک تعریف تابع در سطح ماژول، نام تابع را به فضای نام سراسری ماژول اضافه می‌کند.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
