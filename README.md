@@ -69,14 +69,14 @@
 6. **[ماژول‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#6-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7)**
    - 6.1 **[اطلاعات بیشتر در مورد ماژول‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#61-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1-%D8%AF%D8%B1-%D9%85%D9%88%D8%B1%D8%AF-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7)**
       - 6.1.1 **[اجرای ماژول‌ها به‌عنوان اسکریپت](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#611-%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7-%D8%A8%D9%87%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA)**
-      - 6.1.2 **مسیر جستجوی ماژول**
-      - 6.1.3 **فایل‌های پایتون «کامپایل‌شده»**
-   - 6.2 **ماژول‌های استاندارد**
-   - 6.3 **تابع dir()**
-   - 6.4 **بسته‌ها**
-      - 6.4.1 **وارد کردن * از یک بسته**
-      - 6.4.2 **ارجاعات درون بسته‌ای**
-      - 6.4.3 **بسته‌ها در دایرکتوری‌های متعدد**
+      - 6.1.2 **[مسیر جستجوی ماژول](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#612-%D9%85%D8%B3%DB%8C%D8%B1-%D8%AC%D8%B3%D8%AA%D8%AC%D9%88%DB%8C-%D9%85%D8%A7%DA%98%D9%88%D9%84)**
+      - 6.1.3 **[فایل‌های پایتون «کامپایل‌شده»](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#613-%D9%81%D8%A7%DB%8C%D9%84%D9%87%D8%A7%DB%8C-%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B4%D8%AF%D9%87)**
+   - 6.2 **[ماژول‌های استاندارد](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#62-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1%D8%AF)**
+   - 6.3 **[تابع dir()](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#62-%D9%85%D8%A7%DA%98%D9%88%D9%84%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1%D8%AF)**
+   - 6.4 **[بسته‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#64-%D8%A8%D8%B3%D8%AA%D9%87%D9%87%D8%A7)**
+      - 6.4.1 **[وارد کردن * از یک بسته](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#641-%D9%88%D8%A7%D8%B1%D8%AF-%DA%A9%D8%B1%D8%AF%D9%86--%D8%A7%D8%B2-%DB%8C%DA%A9-%D8%A8%D8%B3%D8%AA%D9%87)**
+      - 6.4.2 **[ارجاعات درون بسته‌ای](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#642-%D8%A7%D8%B1%D8%AC%D8%A7%D8%B9%D8%A7%D8%AA-%D8%AF%D8%B1%D9%88%D9%86-%D8%A8%D8%B3%D8%AA%D9%87%D8%A7%DB%8C)**
+      - 6.4.3 **[بسته‌ها در دایرکتوری‌های متعدد](https://github.com/BDadmehr0/Docs-Python-3/blob/main/6/modules.md#643-%D8%A8%D8%B3%D8%AA%D9%87%D9%87%D8%A7-%D8%AF%D8%B1-%D8%AF%D8%A7%DB%8C%D8%B1%DA%A9%D8%AA%D9%88%D8%B1%DB%8C%D9%87%D8%A7%DB%8C-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF)**
 7. **ورودی و خروجی**
    - 7.1 **فرمت‌بندی خروجی پیشرفته‌تر**
       - 7.1.1 **رشته‌های فرمت‌شده**
