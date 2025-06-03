@@ -16,7 +16,7 @@
 
 # فهرست مطالب
 
-1. **[تحریک اشتها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/1/appetite.md)**
+1. **[تحریک اشتیاق](https://github.com/BDadmehr0/Docs-Python-3/blob/main/1/appetite.md)**
 2. **[استفاده از مفسر پایتون](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md)**
    - 2.1 **[فراخوانی مفسر](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#21-%D9%81%D8%B1%D8%A7%D8%AE%D9%88%D8%A7%D9%86%DB%8C-%D9%85%D9%81%D8%B3%D8%B1)**
       - 2.1.1 **[انتقال آرگومان‌ها](https://github.com/BDadmehr0/Docs-Python-3/blob/main/2/interpreter.md#211-%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84-%D8%A2%D8%B1%DA%AF%D9%88%D9%85%D8%A7%D9%86%D9%87%D8%A7)**
