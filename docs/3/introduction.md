@@ -30,7 +30,7 @@ text = "# This is not a comment because it's inside quotes."
 20
 >>> (50 - 5*6) / 4
 5.0
->>> 8 / 5  # تقسیم همیشه یک عدد ممیز شناور(اعشاری - float) را برمی گرداند
+>>> 8 / 5  # Division always returns a floating-point (decimal) number.
 1.6
 ```
 
