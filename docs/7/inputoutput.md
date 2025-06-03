@@ -2,14 +2,15 @@
 
 چندین روش برای ارائه خروجی یک برنامه وجود دارد؛ داده‌ها می‌توانند به صورت قابل خواندن برای انسان چاپ شوند یا برای استفاده در آینده در یک فایل نوشته شوند. این فصل به برخی از این امکانات خواهد پرداخت.
 
-## 7.1 فرمت‌بندی خروجی پیشرفته‌تر 
+## 7.1 فرمت‌بندی خروجی پیشرفته‌تر
 
 تا کنون با دو روش برای نوشتن مقادیر آشنا شده‌ایم: دستورات بیان (expression statements) و تابع [print()](https://docs.python.org/3/library/functions.html#print)‎. (روش سوم استفاده از متد ‎[write()‎](https://docs.python.org/3/library/io.html#io.TextIOBase.write) برای اشیای فایل است؛ فایل خروجی استاندارد را می‌توان به عنوان ‎`sys.stdout`‎ ارجاع داد. برای اطلاعات بیشتر به **مرجع کتابخانه** مراجعه کنید.)
 
 اغلب، ممکن است بخواهید کنترل بیشتری بر فرمت‌بندی خروجی خود داشته باشید تا صرفاً چاپ مقادیر جدا شده با فاصله. چندین روش برای فرمت‌بندی خروجی وجود دارد:
 
 - برای استفاده از **رشته‌های قالب‌بندی‌شده** ([formatted string literals](https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings))، رشته را با ‎`f`‎ یا ‎`F`‎ قبل از علامت نقل قول آغاز کنید. داخل این رشته، می‌توانید یک عبارت پایتونی را بین کاراکترهای ‎`{`‎ و ‎`}`‎ بنویسید که می‌تواند به متغیرها یا مقادیر ثابت اشاره کند.
-``` python
+
+```python
 >>> year = 2016
 >>> event = 'Referendum'
 >>> f'Results of the {year} {event}'
@@ -18,7 +19,7 @@
 
 - متد [‎str.format()‎](https://docs.python.org/3/library/stdtypes.html#str.format) برای رشته‌ها نیاز به تلاش بیشتری به صورت دستی دارد. همچنان از ‎`{`‎ و ‎`}`‎ برای مشخص کردن محل جایگزینی یک متغیر استفاده می‌کنید و می‌توانید دستورالعمل‌های دقیق‌تری برای فرمت‌دهی ارائه دهید، اما همچنین باید اطلاعاتی که قرار است فرمت شوند را به‌طور صریح فراهم کنید. در بلوک کد زیر دو مثال از چگونگی فرمت‌دهی متغیرها آورده شده است:
 
-``` python
+```python
 >>> yes_votes = 42_572_654
 >>> total_votes = 85_705_149
 >>> percentage = yes_votes / total_votes
@@ -36,7 +37,7 @@
 
 برخی مثال‌ها:
 
-``` python
+```python
 >>> s = 'Hello, world.'
 >>> str(s)
 'Hello, world.'
@@ -89,9 +90,9 @@ Dcab       ==>       7678
 
 می‌توانید از اصلاح‌کننده‌های دیگری نیز استفاده کنید تا مقدار پیش از قالب‌بندی به نوعی دیگر تبدیل شود. برای مثال:
 
-* `!a` تابع [ascii()](https://docs.python.org/3/library/functions.html#ascii) را اعمال می‌کند،
-* `!s` تابع [str()](https://docs.python.org/3/library/stdtypes.html#str) را اعمال می‌کند،
-* `!r` تابع [repr()](https://docs.python.org/3/library/functions.html#repr) را اعمال می‌کند:
+- `!a` تابع [ascii()](https://docs.python.org/3/library/functions.html#ascii) را اعمال می‌کند،
+- `!s` تابع [str()](https://docs.python.org/3/library/stdtypes.html#str) را اعمال می‌کند،
+- `!r` تابع [repr()](https://docs.python.org/3/library/functions.html#repr) را اعمال می‌کند:
 
 ```python
 >>> animals = 'eels'
@@ -112,6 +113,5 @@ Debugging bugs='roaches' count=13 area='living room'
 ```
 
 برای اطلاعات بیشتر درباره [عبارت‌های خودمستند](https://docs.python.org/3/whatsnew/3.8.html#bpo-36817-whatsnew) (self-documenting expressions)، به بخش مربوطه مراجعه کنید. همچنین برای راهنمای کامل مشخص‌کننده‌های قالب، به [راهنمای مختصر زبان قالب‌بندی](https://docs.python.org/3/library/string.html#formatspec) (Format Specification Mini-Language) مراجعه کنید.
-
 
 https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method

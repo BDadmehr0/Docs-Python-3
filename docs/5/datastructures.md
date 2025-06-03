@@ -2,58 +2,59 @@
 
 این فصل برخی از چیزهایی که قبلاً یاد گرفته‌اید را با جزئیات بیشتری توضیح می‌دهد و همچنین موارد جدیدی را نیز اضافه می‌کند.
 
-## 5.1. اطلاعات بیشتر در مورد لیست‌ها 
+## 5.1. اطلاعات بیشتر در مورد لیست‌ها
 
 نوع داده لیست تعدادی متدهای بیشتری دارد. در اینجا تمام متدهای مربوط به اشیاء لیست آمده است:
 
-**list.append(x)**  
+**list.append(x)**
 
 یک آیتم را به انتهای لیست اضافه می‌کند. معادل است با `a[len(a):] = [x]`.
 
-**list.extend(iterable)**  
+**list.extend(iterable)**
 
 لیست را با افزودن تمام آیتم‌های قابل پیمایش (iterable) گسترش می‌دهد. معادل است با `a[len(a):] = iterable`.
 
-**list.insert(i, x)**  
+**list.insert(i, x)**
 
 یک آیتم را در موقعیت مشخص‌شده قرار می‌دهد. اولین آرگومان اندیس عنصری است که قبل از آن باید درج شود، بنابراین `a.insert(0, x)` آیتم را در ابتدای لیست درج می‌کند و `a.insert(len(a), x)` معادل با `a.append(x)` است.
 
-**list.remove(x)**  
+**list.remove(x)**
 
 اولین آیتمی که مقدار آن برابر با x باشد را از لیست حذف می‌کند. اگر چنین آیتمی وجود نداشته باشد، خطای [ValueError](https://docs.python.org/3/library/exceptions.html#ValueError) ایجاد می‌شود.
 
-**list.pop([i])**  
+**list.pop([i])**
 
 آیتم موجود در موقعیت مشخص‌شده را از لیست حذف کرده و آن را برمی‌گرداند. اگر اندیسی مشخص نشود، `a.pop()` آخرین آیتم لیست را حذف کرده و برمی‌گرداند. اگر لیست خالی باشد یا اندیس خارج از محدوده باشد، خطای [IndexError](https://docs.python.org/3/library/exceptions.html#IndexError) رخ می‌دهد.
 
-**list.clear()**  
+**list.clear()**
 
 همه آیتم‌های لیست را حذف می‌کند. معادل با `del a[:]`.
 
-**list.index(x[, start[, end]])**  
+**list.index(x\[, start[, end]\])**
 
 اندیس اولین آیتمی که مقدار آن برابر با x باشد را بازمی‌گرداند. اگر چنین آیتمی وجود نداشته باشد، خطای [ValueError](https://docs.python.org/3/library/exceptions.html#ValueError) رخ می‌دهد.
 
 آرگومان‌های اختیاری `start` و `end` مشابه با نحو برش (slice notation) تفسیر می‌شوند و برای محدود کردن جستجو به زیرمجموعه‌ای از لیست استفاده می‌شوند. اندیس بازگشتی نسبت به ابتدای دنباله کامل محاسبه می‌شود و نه آرگومان `start`.
 
-**list.count(x)**  
+**list.count(x)**
 
 تعداد دفعاتی که x در لیست ظاهر شده را بازمی‌گرداند.
 
-**list.sort(*, key=None, reverse=False)**  
+**list.sort(\*, key=None, reverse=False)**
 
 آیتم‌های لیست را به صورت محلی مرتب می‌کند (آرگومان‌ها می‌توانند برای سفارشی‌سازی مرتب‌سازی استفاده شوند، برای توضیح آن‌ها به تابع [sorted()](https://docs.python.org/3/library/functions.html#sorted) مراجعه کنید).
 
-**list.reverse()**  
+**list.reverse()**
 
 عناصر لیست را به صورت محلی معکوس می‌کند.
 
-**list.copy()**  
+**list.copy()**
 
 یک نسخه سطحی (shallow copy) از لیست را بازمی‌گرداند. معادل با `a[:]`.
 
 مثالی که از اکثر متدهای لیست استفاده می کند:
-``` python
+
+```python
 >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
 >>> fruits.count('apple')
 2
@@ -84,7 +85,7 @@
 
 متدهای لیست استفاده از لیست به عنوان یک پشته (stack) را بسیار آسان می‌کنند، جایی که آخرین عنصر اضافه شده اولین عنصری است که بازیابی می‌شود ("آخرین ورودی، اولین خروجی"). برای اضافه کردن یک آیتم به بالای پشته از `append()` استفاده کنید. برای بازیابی یک آیتم از بالای پشته، از `pop()` بدون مشخص کردن اندیس استفاده کنید. برای مثال:
 
-``` python
+```python
 >>> stack = [3, 4, 5]
 >>> stack.append(6)
 >>> stack.append(7)
@@ -108,7 +109,7 @@
 
 برای پیاده‌سازی یک صف، از [collections.deque](https://docs.python.org/3/library/collections.html#collections.deque) استفاده کنید که برای افزودن و حذف سریع از هر دو طرف طراحی شده است. به عنوان مثال:
 
-``` python
+```python
 >>> from collections import deque
 >>> queue = deque(["Eric", "John", "Michael"])
 >>> queue.append("Terry")           # Terry arrives
@@ -127,7 +128,7 @@ deque(['Michael', 'Terry', 'Graham'])
 
 به عنوان مثال، فرض کنید می‌خواهیم لیستی از مربعات اعداد ایجاد کنیم، مانند:
 
-``` python
+```python
 >>> squares = []
 >>> for x in range(10):
 ...     squares.append(x**2)
@@ -138,13 +139,13 @@ deque(['Michael', 'Terry', 'Graham'])
 
 توجه داشته باشید که این کد یک متغیر به نام `x` ایجاد می‌کند (یا آن را بازنویسی می‌کند) که پس از اتمام حلقه هنوز وجود دارد. می‌توانیم لیست مربعات را بدون هیچ گونه اثر جانبی محاسبه کنیم با استفاده از:
 
-``` python
+```python
 squares = list(map(lambda x: x**2, range(10)))
 ```
 
 یا به طور معادل:
 
-``` python
+```python
 squares = [x**2 for x in range(10)]
 ```
 
@@ -152,14 +153,14 @@ squares = [x**2 for x in range(10)]
 
 یک تعبیر لیستی (list comprehension) شامل براکت‌هایی است که یک عبارت را در خود دارند و پس از آن یک جمله `for`، و سپس صفر یا چند جمله `for` یا `if` قرار می‌گیرد. نتیجه یک لیست جدید خواهد بود که از ارزیابی عبارت در زمینه جملات `for` و `if` که پس از آن آمده‌اند، به دست می‌آید. به عنوان مثال، این تعبیر لیستی (listcomp) عناصری از دو لیست را ترکیب می‌کند اگر آن‌ها برابر نباشند:
 
-``` python
+```python
 >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
 [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
 ```
 
 و معادل با:
 
-``` python
+```python
 >>> combs = []
 >>> for x in [1,2,3]:
 ...     for y in [3,1,4]:
@@ -174,7 +175,7 @@ squares = [x**2 for x in range(10)]
 
 اگر عبارت یک زوج مرتب (tuple) باشد (به عنوان مثال، `(x, y)` در مثال قبلی)، باید در پرانتز قرار گیرد.
 
-``` python
+```python
 >>> vec = [-4, -2, 0, 2, 4]
 >>> # create a new list with the values doubled
 >>> [x*2 for x in vec]
@@ -206,7 +207,7 @@ SyntaxError: did you forget parentheses around the comprehension target?
 
 تعبیرهای لیستی می‌توانند شامل عبارات پیچیده و توابع تو در تو باشند:
 
-``` python
+```python
 >>> from math import pi
 >>> [str(round(pi, i)) for i in range(1, 6)]
 ['3.1', '3.14', '3.142', '3.1416', '3.14159']
@@ -218,7 +219,7 @@ SyntaxError: did you forget parentheses around the comprehension target?
 
 به مثال زیر از یک ماتریس ۳ در ۴ توجه کنید که به عنوان یک لیست از ۳ لیست با طول ۴ پیاده‌سازی شده است:
 
-``` python
+```python
 >>> matrix = [
 ...     [1, 2, 3, 4],
 ...     [5, 6, 7, 8],
@@ -228,14 +229,14 @@ SyntaxError: did you forget parentheses around the comprehension target?
 
 تعبیر لیستی زیر ردیف‌ها و ستون‌ها را جابجا (ترانهاده) می‌کند:
 
-``` python
+```python
 >>> [[row[i] for row in matrix] for i in range(4)]
 [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 ```
 
 همان‌طور که در بخش قبلی مشاهده کردیم، تعبیر لیستی درونی در زمینه جملۀ [for](https://docs.python.org/3/reference/compound_stmts.html#for) که پس از آن آمده است، ارزیابی می‌شود، بنابراین این مثال معادل با:
 
-``` python
+```python
 >>> transposed = []
 >>> for i in range(4):
 ...     transposed.append([row[i] for row in matrix])
@@ -246,7 +247,7 @@ transposed
 
 که به نوبه خود، معادل با:
 
-``` python
+```python
 >>> transposed = []
 >>> for i in range(4):
 ...    # the following 3 lines implement the nested listcomp
@@ -261,19 +262,18 @@ transposed
 
 در دنیای واقعی، باید به جای استفاده از عبارات کنترلی پیچیده، از توابع داخلی استفاده کنید. تابع [zip()](https://docs.python.org/3/library/functions.html#zip) برای این مورد بسیار مناسب است:
 
-``` python
+```python
 >>> list(zip(*matrix))
 [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
 ```
 
-برای جزئیات بیشتر در مورد ستاره (*) در این خط، به بخش "[Unpacking Argument Lists](https://docs.python.org/3/tutorial/controlflow.html#tut-unpacking-arguments)" مراجعه کنید.
-
+برای جزئیات بیشتر در مورد ستاره (\*) در این خط، به بخش "[Unpacking Argument Lists](https://docs.python.org/3/tutorial/controlflow.html#tut-unpacking-arguments)" مراجعه کنید.
 
 ## 5.2. عبارت del
 
 راهی برای حذف یک آیتم از یک لیست با استفاده از **اندیس** آن، به جای مقدار آن وجود دارد: دستور [del](https://docs.python.org/3/reference/simple_stmts.html#del). این روش با متد `pop()` تفاوت دارد، چرا که `pop()` مقداری را بازمی‌گرداند. از دستور del همچنین می‌توان برای حذف چندین عنصر به صورت یک **بازه** از لیست یا پاک کردن کامل لیست استفاده کرد (که قبلاً این کار را با تخصیص یک لیست خالی به بازه انجام دادیم). برای مثال:
 
-``` python
+```python
 >>> a = [-1, 1, 66.25, 333, 333, 1234.5]
 >>> del a[0]
 >>> a
@@ -287,7 +287,8 @@ transposed
 ```
 
 از دستور `del` همچنین می‌توان برای حذف کامل یک **متغیر** استفاده کرد :
-``` python
+
+```python
 >> del a
 ```
 
@@ -299,7 +300,7 @@ transposed
 
 یک تاپل شامل تعدادی مقدار است که با کاما از یکدیگر جدا شده‌اند، برای مثال:
 
-``` python
+```python
 >>> t = 12345, 54321, 'hello!'
 >>> t[0]
 12345
@@ -326,8 +327,7 @@ TypeError: 'tuple' object does not support item assignment
 
 یک مشکل خاص، ساخت تاپل‌هایی با 0 یا 1 آیتم است: این نحو نکات ظریفی دارد که باید رعایت شوند. تاپل‌های خالی با یک جفت پرانتز خالی ساخته می‌شوند؛ یک تاپل با یک آیتم از طریق دنبال کردن یک مقدار با یک کاما ساخته می‌شود (قرار دادن یک مقدار منفرد در پرانتز کافی نیست). این روش شاید نامتعارف باشد، اما مؤثر است. برای مثال:
 
-
-``` python
+```python
 >>> empty = ()
 >>> singleton = 'hello',    # <-- note trailing comma
 >>> len(empty)
@@ -339,7 +339,8 @@ TypeError: 'tuple' object does not support item assignment
 ```
 
 عبارت `t = 12345, 54321, 'hello!'` نمونه‌ای از **بسته‌بندی تاپل** (tuple packing) است: مقادیر `12345`، `54321` و `'hello!'` در یک تاپل با هم بسته‌بندی شده‌اند. **عملیات معکوس** نیز ممکن است:
-``` python
+
+```python
 >>> x, y, z = t
 ```
 
@@ -353,7 +354,7 @@ TypeError: 'tuple' object does not support item assignment
 
 در اینجا یک نمایش مختصر آورده شده است:
 
-``` python
+```python
 >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 >>> print(basket)                      # show that duplicates have been removed
 {'orange', 'banana', 'pear', 'apple'}
@@ -380,7 +381,7 @@ False
 
 به‌طور مشابه با **درک لیست‌ها** ([list comprehensions](https://docs.python.org/3/tutorial/datastructures.html#tut-listcomps))، **درک مجموعه‌ها** (set comprehensions) نیز راحت تر می‌شود:
 
-``` python
+```python
 >>> a = {x for x in 'abracadabra' if x not in 'abc'}
 >>> a
 {'r', 'd'}
@@ -398,7 +399,7 @@ False
 
 در اینجا یک مثال کوچک با استفاده از دیکشنری آورده شده است:
 
-``` python
+```python
 >>> tel = {'jack': 4098, 'sape': 4139}
 >>> tel['guido'] = 4127
 >>> tel
@@ -421,21 +422,21 @@ False
 
 سازنده‌ی [dict()](https://docs.python.org/3/library/stdtypes.html#dict) دیکشنری‌ها را مستقیماً از دنباله‌ای از زوج‌های **کلید-مقدار** می‌سازد:
 
-``` python
+```python
 >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
 {'sape': 4139, 'guido': 4127, 'jack': 4098}
 ```
 
 علاوه بر این، از **درک دیکشنری**‌ها (dict comprehensions) می‌توان برای ایجاد دیکشنری‌ها از عبارات دلخواه کلید و مقدار استفاده کرد:
 
-``` python
+```python
 >>> {x: x**2 for x in (2, 4, 6)}
 {2: 4, 4: 16, 6: 36}
 ```
 
 هنگامی که کلیدها رشته‌های ساده هستند، گاهی اوقات مشخص‌کردن زوج‌ها با استفاده از **آرگومان‌های کلیدی** (keyword arguments) آسان‌تر است:
 
-``` python
+```python
 >>> dict(sape=4139, guido=4127, jack=4098)
 {'sape': 4139, 'guido': 4127, 'jack': 4098}
 ```
@@ -444,7 +445,7 @@ False
 
 هنگام پیمایش در دیکشنری‌ها، می‌توان **کلید** و **مقدار متناظر** را به‌طور هم‌زمان با استفاده از متد [items()](https://docs.python.org/3/library/stdtypes.html#dict.items) بازیابی کرد.
 
-``` python
+```python
 >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 >>> for k, v in knights.items():
 ...     print(k, v)
@@ -455,7 +456,7 @@ robin the brave
 
 هنگام پیمایش در یک دنباله، می‌توان **اندیس موقعیت** و **مقدار متناظر** را به‌طور هم‌زمان با استفاده از تابع [enumerate()](https://docs.python.org/3/library/functions.html#enumerate) بازیابی کرد.
 
-``` python
+```python
 >>> for i, v in enumerate(['tic', 'tac', 'toe']):
 ...     print(i, v)
 ...
@@ -466,7 +467,7 @@ robin the brave
 
 برای پیمایش هم‌زمان در دو یا چند دنباله، می‌توان ورودی‌ها را با استفاده از تابع [zip()](https://docs.python.org/3/library/functions.html#zip) جفت کرد.
 
-``` python
+```python
 >>> questions = ['name', 'quest', 'favorite color']
 >>> answers = ['lancelot', 'the holy grail', 'blue']
 >>> for q, a in zip(questions, answers):
@@ -479,7 +480,7 @@ What is your favorite color?  It is blue.
 
 برای پیمایش در یک دنباله به‌صورت معکوس، ابتدا دنباله را در جهت عادی مشخص کرده و سپس از تابع [reversed()](https://docs.python.org/3/library/functions.html#reversed) استفاده کنید.
 
-``` python
+```python
 >>> for i in reversed(range(1, 10, 2)):
 ...     print(i)
 ...
@@ -492,7 +493,7 @@ What is your favorite color?  It is blue.
 
 برای پیمایش در یک دنباله به ترتیب مرتب‌شده، از تابع [sorted()](https://docs.python.org/3/library/functions.html#sorted) استفاده کنید که یک لیست مرتب جدید برمی‌گرداند و منبع اصلی را بدون تغییر باقی می‌گذارد.
 
-``` python
+```python
 >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 >>> for i in sorted(basket):
 ...    print(i)
@@ -507,7 +508,7 @@ pear
 
 استفاده از [set()](https://docs.python.org/3/library/stdtypes.html#set) روی یک دنباله، عناصر تکراری را حذف می‌کند. استفاده ترکیبی از [sorted()](https://docs.python.org/3/library/functions.html#sorted) و [set()](https://docs.python.org/3/library/stdtypes.html#set) روی یک دنباله، یک روش ایده‌آل برای پیمایش بر روی عناصر یکتای دنباله به ترتیب مرتب‌شده است.
 
-``` python
+```python
 >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 >>> for f in sorted(set(basket)):
 ...    print(f)
@@ -520,7 +521,7 @@ pear
 
 گاهی وسوسه‌انگیز است که در حین پیمایش بر روی یک لیست، آن را تغییر دهید؛ اما اغلب ایجاد یک لیست جدید ساده‌تر و ایمن‌تر است.
 
-``` python
+```python
 >>> import math
 >>> raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]
 >>> filtered_data = []
@@ -545,7 +546,8 @@ pear
 عملگرهای **Boolean** **and** و **or** به عنوان **عملگرهای کوتاه‌مدت** (short-circuit operators) شناخته می‌شوند: آرگومان‌های آن‌ها از چپ به راست ارزیابی می‌شوند و ارزیابی به محض تعیین نتیجه متوقف می‌شود. به عنوان مثال، اگر `A` و `C` درست باشند اما `B` نادرست باشد، `A and B and C` عبارت `C` را ارزیابی نمی‌کند. هنگامی که به عنوان یک مقدار عمومی و نه به عنوان یک Boolean استفاده می‌شود، مقدار بازگشتی یک عملگر کوتاه‌مدت، آخرین آرگومان ارزیابی‌شده است.
 
 امکان اختصاص نتیجه یک مقایسه یا دیگر عبارات Boolean به یک متغیر وجود دارد. برای مثال:
-``` python
+
+```python
 >>> string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 >>> non_null = string1 or string2 or string3
 >>> non_null
@@ -556,11 +558,11 @@ pear
 
 ## 5.8. مقایسه دنباله‌ها و سایر انواع
 
-اشیاء دنباله‌ای معمولاً می‌توانند با سایر اشیاء از همان نوع دنباله مقایسه شوند. این مقایسه از **ترتیب لکسیکوگرافی** (lexicographical ordering) استفاده می‌کند: ابتدا دو عنصر اول مقایسه می‌شوند و اگر متفاوت باشند، نتیجه مقایسه تعیین می‌شود؛ اگر برابر باشند، دو عنصر بعدی مقایسه می‌شوند و به همین ترتیب ادامه می‌یابد تا یکی از دنباله‌ها تمام شود. اگر دو عنصر که باید مقایسه شوند خود دنباله‌هایی از همان نوع باشند، مقایسه لکسیکوگرافی به‌صورت بازگشتی انجام می‌شود. اگر تمام عناصر دو دنباله برابر باشند، دنباله‌ها برابر در نظر گرفته می‌شوند. اگر یکی از دنباله‌ها زیر دنباله اولیه دیگری باشد، دنباله کوتاه‌تر به‌عنوان دنباله کوچکتر (lesser) در نظر گرفته می‌شود. ترتیب لکسیکوگرافی برای رشته‌ها از شماره نقطه کد **یونی‌کد** (Unicode) برای مرتب‌سازی کاراکترهای فردی استفاده می‌کند. 
+اشیاء دنباله‌ای معمولاً می‌توانند با سایر اشیاء از همان نوع دنباله مقایسه شوند. این مقایسه از **ترتیب لکسیکوگرافی** (lexicographical ordering) استفاده می‌کند: ابتدا دو عنصر اول مقایسه می‌شوند و اگر متفاوت باشند، نتیجه مقایسه تعیین می‌شود؛ اگر برابر باشند، دو عنصر بعدی مقایسه می‌شوند و به همین ترتیب ادامه می‌یابد تا یکی از دنباله‌ها تمام شود. اگر دو عنصر که باید مقایسه شوند خود دنباله‌هایی از همان نوع باشند، مقایسه لکسیکوگرافی به‌صورت بازگشتی انجام می‌شود. اگر تمام عناصر دو دنباله برابر باشند، دنباله‌ها برابر در نظر گرفته می‌شوند. اگر یکی از دنباله‌ها زیر دنباله اولیه دیگری باشد، دنباله کوتاه‌تر به‌عنوان دنباله کوچکتر (lesser) در نظر گرفته می‌شود. ترتیب لکسیکوگرافی برای رشته‌ها از شماره نقطه کد **یونی‌کد** (Unicode) برای مرتب‌سازی کاراکترهای فردی استفاده می‌کند.
 
 در اینجا چند مثال از مقایسه‌ها بین دنباله‌هایی از همان نوع آورده شده است:
 
-``` python
+```python
 (1, 2, 3)              < (1, 2, 4)
 [1, 2, 3]              < [1, 2, 4]
 'ABC' < 'C' < 'Pascal' < 'Python'
@@ -574,4 +576,4 @@ pear
 
 ### پانویس
 
-[^1]: زبان‌های دیگر ممکن است شیء تغییر یافته را بازگردانند، که این امکان را برای **زنجیره‌سازی متدها** (method chaining) فراهم می‌کند، مانند `d->insert("a")->remove("b")->sort();`.
+\[^1\]: زبان‌های دیگر ممکن است شیء تغییر یافته را بازگردانند، که این امکان را برای **زنجیره‌سازی متدها** (method chaining) فراهم می‌کند، مانند `d->insert("a")->remove("b")->sort();`.

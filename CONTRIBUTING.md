@@ -5,9 +5,11 @@ Welcome! If you would like to help translate Python documentation into Persian, 
 ## How to Contribute
 
 1. **Fork the Repository**
+
    - Click the "Fork" button in the upper right corner of the page to create a copy of this repository in your GitHub account.
 
-2. **Clone the Repository**
+1. **Clone the Repository**
+
    - Clone your forked repository to your local machine:
      ```bash
      git clone https://github.com/BDadmehr0/Docs-Python-3.git
@@ -17,34 +19,40 @@ Welcome! If you would like to help translate Python documentation into Persian, 
      cd REPOSITORY_NAME
      ```
 
-3. **Create a New Branch**
+1. **Create a New Branch**
+
    - Before you start working, create a new branch for your feature or changes:
      ```bash
      git checkout -b feature/your-feature-name
      ```
 
-4. **Make Changes**
+1. **Make Changes**
+
    - Apply your changes to the relevant documents. Be sure to adhere to writing conventions and document structure.
 
-5. **Stage Changes**
+1. **Stage Changes**
+
    - Stage your changes:
      ```bash
      git add .
      ```
 
-6. **Commit Changes**
+1. **Commit Changes**
+
    - Commit your changes:
      ```bash
      git commit -m "Brief description of changes"
      ```
 
-7. **Push Changes**
+1. **Push Changes**
+
    - Push your changes to your forked repository:
      ```bash
      git push origin feature/your-feature-name
      ```
 
-8. **Create a Pull Request**
+1. **Create a Pull Request**
+
    - Return to the original repository and create a new Pull Request.
 
 ## Tips

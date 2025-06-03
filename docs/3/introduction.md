@@ -8,7 +8,7 @@
 
 چند مثال:
 
-``` python
+```python
 # this is the first comment
 spam = 1  # and this is the second comment
           # ... and now a third!
@@ -23,7 +23,7 @@ text = "# This is not a comment because it's inside quotes."
 
 مفسر مانند یک ماشین حساب ساده عمل می‌کند: می‌توانید یک عبارت را در آن تایپ کنید و مفسر مقدار آن را نمایش می‌دهد. نحو (سینتکس) عبارات ساده است: از عملگرهای `+`، `-`، `*` و `/` می‌توان برای انجام عملیات ریاضی استفاده کرد؛ پرانتزها (`()`) نیز برای گروه‌بندی به‌کار می‌روند. مثلا:
 
-``` python
+```python
 >>> 2 + 2
 4
 >>> 50 - 5*6
@@ -33,12 +33,12 @@ text = "# This is not a comment because it's inside quotes."
 >>> 8 / 5  # تقسیم همیشه یک عدد ممیز شناور(اعشاری - float) را برمی گرداند
 1.6
 ```
-اعداد صحیح (به عنوان مثال `2`، `4`، `20`) دارای نوع [int](https://docs.python.org/3/library/functions.html#int) هستند، آنهایی که دارای قسمت کسری هستند (به عنوان مثال `5.0`، `1.6`) دارای نوع [float](https://docs.python.org/3/library/functions.html#float) هستند. در ادامه آموزش اطلاعات بیشتری در مورد انواع عددی خواهیم دید.
 
+اعداد صحیح (به عنوان مثال `2`، `4`، `20`) دارای نوع [int](https://docs.python.org/3/library/functions.html#int) هستند، آنهایی که دارای قسمت کسری هستند (به عنوان مثال `5.0`، `1.6`) دارای نوع [float](https://docs.python.org/3/library/functions.html#float) هستند. در ادامه آموزش اطلاعات بیشتری در مورد انواع عددی خواهیم دید.
 
 تقسیم (`/`) همیشه یک عدد اعشاری را برمی‌گرداند. برای انجام تقسیم طبقه و به دست آوردن نتیجه عدد صحیح می توانید از عملگر `//` استفاده کنید. برای محاسبه باقی مانده می توانید از `%` استفاده کنید:
 
-``` python
+```python
 >>> 17 / 3  # classic division returns a float
 5.666666666666667
 >>> 17 // 3  # floor division discards the fractional part
@@ -51,7 +51,7 @@ text = "# This is not a comment because it's inside quotes."
 
 با پایتون، می توان از عملگر `**` برای محاسبه توان ها استفاده کرد [^1] :
 
-``` python
+```python
 >>> 5 ** 2  # 5 squared
 25
 >>> 2 ** 7  # 2 to the power of 7
@@ -60,7 +60,7 @@ text = "# This is not a comment because it's inside quotes."
 
 علامت مساوی (`=`) برای اختصاص دادن یک مقدار به یک متغیر استفاده می‌شود. پس از آن، هیچ نتیجه‌ای قبل از نمایش اعلان تعاملی بعدی نشان داده نمی‌شود.
 
-``` python
+```python
 >>> width = 20
 >>> height = 5 * 9
 >>> width * height
@@ -69,7 +69,7 @@ text = "# This is not a comment because it's inside quotes."
 
 اگر یک متغیر "تعریف" نشده باشد (مقداری به آن اختصاص داده نشده باشد)، تلاش برای استفاده از آن باعث بروز خطا می‌شود.
 
-``` python
+```python
 >>> n  # try to access an undefined variable
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -78,14 +78,14 @@ NameError: name 'n' is not defined
 
 پشتیبانی کامل از اعداد اعشاری وجود دارد؛ عملگرهایی که با عملوندهای مختلط (عدد صحیح و اعشاری) کار می‌کنند، عملوند عدد صحیح را به عدد اعشاری تبدیل می‌کنند.
 
-``` python
+```python
 >>> 4 * 3.75 - 1
 14.0
 ```
 
 در حالت تعاملی، آخرین عبارت چاپ‌شده به متغیر `_` اختصاص داده می‌شود. این به این معناست که وقتی از پایتون به عنوان یک ماشین حساب رومیزی استفاده می‌کنید، ادامه دادن محاسبات تا حدودی آسان‌تر است. برای مثال:
 
-``` python
+```python
 >>> tax = 12.5 / 100
 >>> price = 100.50
 >>> price * tax
@@ -104,7 +104,7 @@ NameError: name 'n' is not defined
 
 پایتون می‌تواند متون (که با نوع [str](https://docs.python.org/3/library/stdtypes.html#str) نمایش داده می‌شوند و به آن‌ها «رشته» گفته می‌شود) را همانند اعداد مدیریت کند. این شامل کاراکترهایی مانند "`!`"، کلماتی مانند "`rabbit`"، نام‌هایی مانند "`Paris`"، جملاتی مانند "`Got your back.`" و غیره، همچنین "`Yay! :)`". این متون می‌توانند درون گیومه‌های تکی (`'...'`) یا گیومه‌های دوتایی (`"..."`) قرار گیرند و نتیجه یکسانی داشته باشند [^2].
 
-``` python
+```python
 >>> 'spam eggs'  # single quotes
 'spam eggs'
 >>> "Paris rabbit got your back :)! Yay!"  # double quotes
@@ -113,9 +113,9 @@ NameError: name 'n' is not defined
 '1975'
 ```
 
-برای نقل قول درون یک نقل قول، باید آن را با یک `\` "فاصله" دهیم (escape)، یعنی قبل از آن \ قرار دهیم. به‌طور جایگزین، می‌توانیم از نوع دیگر علامت نقل قول استفاده کنیم.
+برای نقل قول درون یک نقل قول، باید آن را با یک `\` "فاصله" دهیم (escape)، یعنی قبل از آن \\ قرار دهیم. به‌طور جایگزین، می‌توانیم از نوع دیگر علامت نقل قول استفاده کنیم.
 
-``` python
+```python
 >>> 'doesn\'t'  # use \' to escape the single quote...
 "doesn't"
 >>> "doesn't"  # ...or use double quotes instead
@@ -129,7 +129,8 @@ NameError: name 'n' is not defined
 ```
 
 در شل پایتون، تعریف رشته و خروجی رشته می‌تواند متفاوت به نظر برسد. تابع `print()` خروجی قابل‌خواندنی‌تری تولید می‌کند، با حذف گیومه‌های دور رشته و چاپ کاراکترهای فرار و کاراکترهای ویژه.
-``` python
+
+```python
 >>> s = 'First line.\nSecond line.'  # \n means newline
 >>> s  # without print(), special characters are included in the string
 'First line.\nSecond line.'
@@ -140,7 +141,7 @@ Second line.
 
 اگر نمی‌خواهید کاراکترهایی که با `\` آغاز می‌شوند به‌عنوان کاراکترهای ویژه تفسیر شوند، می‌توانید از رشته‌های خام استفاده کنید و با افزودن `r` قبل از اولین گیومه این کار را انجام دهید:
 
-``` python
+```python
 >>> print('C:\some\name')  # here \n means newline!
 C:\some
 ame
@@ -152,8 +153,7 @@ C:\some\name
 
 لیترال‌های رشته‌ای می‌توانند شامل چندین خط باشند. یکی از روش‌ها استفاده از گیومه‌های سه‌گانه است: `"""..."""` یا `'''...'''`. پایان خط‌ها به‌طور خودکار در رشته گنجانده می‌شوند، اما می‌توان با افزودن یک `\` در انتهای خط، از این کار جلوگیری کرد. در مثال زیر، خط جدید اولیه شامل نمی‌شود:
 
-
-``` python
+```python
 >>> print("""\
 ... Usage: thingy [OPTIONS]
 ...      -h                        Display this usage message
@@ -166,7 +166,7 @@ Usage: thingy [OPTIONS]
 
 رشته‌ها می‌توانند با عملگر `+` به هم متصل (چسبانده) شوند و با `*` تکرار شوند:
 
-``` python
+```python
 >>> # 3 times 'un', followed by 'ium'
 >>> 3 * 'un' + 'ium'
 'unununium'
@@ -174,14 +174,14 @@ Usage: thingy [OPTIONS]
 
 دو یا چند لیترال رشته‌ای (یعنی آن‌هایی که بین گیومه‌ها قرار دارند) که در کنار یکدیگر قرار دارند، به‌طور خودکار به هم متصل می‌شوند.
 
-``` python
+```python
 >>> 'Py' 'thon'
 'Python'
 ```
 
 این ویژگی به‌ویژه زمانی مفید است که بخواهید رشته‌های طولانی را بشکنید:
 
-``` python
+```python
 >>> text = ('Put several strings within parentheses '
 ...         'to have them joined together.')
 >>> text
@@ -190,7 +190,7 @@ Usage: thingy [OPTIONS]
 
 این تنها با دو لیترال کار می‌کند، نه با متغیرها یا عبارات:
 
-``` python
+```python
 >>> prefix = 'Py'
 >>> prefix 'thon'  # can't concatenate a variable and a string literal
   File "<stdin>", line 1
@@ -206,14 +206,14 @@ SyntaxError: invalid syntax
 
 اگر می‌خواهید متغیرها یا یک متغیر و یک لیترال را به هم متصل کنید، از ‍`+` استفاده کنید:
 
-``` python
+```python
 >>> prefix + 'thon'
 'Python'
 ```
 
 رشته‌ها می‌توانند ایندکس‌گذاری (زیرنویس‌گذاری) شوند، به‌طوری که اولین کاراکتر دارای ایندکس 0 باشد. نوع جداگانه‌ای برای کاراکتر وجود ندارد؛ یک کاراکتر در واقع یک رشته با اندازه یک است:
 
-``` python
+```python
 >>> word = 'Python'
 >>> word[0]  # character in position 0
 'P'
@@ -223,7 +223,7 @@ SyntaxError: invalid syntax
 
 ایندکس‌ها همچنین می‌توانند اعداد منفی باشند تا شمارش از سمت راست آغاز شود:
 
-``` python
+```python
 >>> word[-1]  # last character
 'n'
 >>> word[-2]  # second-last character
@@ -236,7 +236,7 @@ SyntaxError: invalid syntax
 
 علاوه بر ایندکس‌گذاری، برش (slicing) نیز پشتیبانی می‌شود. در حالی که ایندکس‌گذاری برای به‌دست‌آوردن کاراکترهای فردی استفاده می‌شود، برش به شما این امکان را می‌دهد که یک زیررشته (substring) به‌دست آورید:
 
-``` python
+```python
 >>> word[0:2]  # characters from position 0 (included) to 2 (excluded)
 'Py'
 >>> word[2:5]  # characters from position 2 (included) to 5 (excluded)
@@ -245,7 +245,7 @@ SyntaxError: invalid syntax
 
 ایندکس‌های برش دارای مقادیر پیش‌فرض مفیدی هستند؛ اگر ایندکس اول حذف شود، به‌طور پیش‌فرض به صفر تنظیم می‌شود و اگر ایندکس دوم حذف شود، به اندازه رشته‌ای که برش می‌خورد تنظیم می‌شود.
 
-``` python
+```python
 >>> word[:2]   # character from the beginning to position 2 (excluded)
 'Py'
 >>> word[4:]   # characters from position 4 (included) to the end
@@ -256,7 +256,7 @@ SyntaxError: invalid syntax
 
 توجه داشته باشید که شروع همیشه شامل می‌شود و انتها همیشه مستثنی است. این اطمینان حاصل می‌کند که `s[:i] + s[i:]` همیشه برابر با `s` است:+
 
-``` python
+```python
 >>> word[:2] + word[2:]
 'Python'
 >>> word[:4] + word[4:]
@@ -265,7 +265,7 @@ SyntaxError: invalid syntax
 
 یکی از راه‌های به خاطر سپردن نحوه کار برش‌ها این است که به ایندکس‌ها به‌عنوان اشاره‌گرهایی بین کاراکترها فکر کنید، به‌طوری که لبه چپ اولین کاراکتر شماره 0 داشته باشد. سپس لبه راست آخرین کاراکتر یک رشته با n کاراکتر، ایندکس n را دارد. برای مثال:
 
-``` python
+```python
  +---+---+---+---+---+---+
  | P | y | t | h | o | n |
  +---+---+---+---+---+---+
@@ -279,7 +279,7 @@ SyntaxError: invalid syntax
 
 تلاش برای استفاده از ایندکسی که بیش از حد بزرگ است، منجر به بروز خطا خواهد شد:
 
-``` python
+```python
 >>> word[42]  # the word only has 6 characters
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -288,7 +288,7 @@ IndexError: string index out of range
 
 با این حال، ایندکس‌های برش خارج از محدوده به‌خوبی مدیریت می‌شوند وقتی برای برش استفاده شوند:
 
-``` python
+```python
 >>> word[4:42]
 'on'
 >>> word[42:]
@@ -297,7 +297,7 @@ IndexError: string index out of range
 
 رشته‌های پایتون قابل تغییر نیستند — آن‌ها غیرقابل تغییر [immutable](https://docs.python.org/3/glossary.html#term-immutable) هستند. بنابراین، اختصاص دادن مقداری به یک موقعیت ایندکس‌شده در رشته منجر به بروز خطا می‌شود:
 
-``` python
+```python
 >>> word[0] = 'J'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -310,7 +310,7 @@ TypeError: 'str' object does not support item assignment
 
 اگر به یک رشته متفاوت نیاز دارید، باید یک رشته جدید ایجاد کنید:
 
-``` python
+```python
 >>> 'J' + word[1:]
 'Jython'
 >>> word[:2] + 'py'
@@ -319,7 +319,7 @@ TypeError: 'str' object does not support item assignment
 
 تابع داخلی `len()` طول یک رشته را برمی‌گرداند:
 
-``` python
+```python
 >>> s = 'supercalifragilisticexpialidocious'
 >>> len(s)
 34
@@ -327,27 +327,26 @@ TypeError: 'str' object does not support item assignment
 
 **همچنین ببینید**
 
-- [نوع دنباله متن — str](../library/stdtypes.html#textseq): 
+- [نوع دنباله متن — str](../library/stdtypes.html#textseq):
   رشته‌ها نمونه‌هایی از *نوع‌های دنباله‌ای* هستند و عملیات‌های مشترکی که توسط این نوع‌ها پشتیبانی می‌شوند را پشتیبانی می‌کنند.
 
-- [روش‌های رشته](../library/stdtypes.html#string-methods): 
+- [روش‌های رشته](../library/stdtypes.html#string-methods):
   رشته‌ها از تعداد زیادی روش برای تبدیل‌های پایه و جستجو پشتیبانی می‌کنند.
 
-- [اف-استرینگ (f-strings)](../reference/lexical_analysis.html#f-strings): 
+- [اف-استرینگ (f-strings)](../reference/lexical_analysis.html#f-strings):
   ادبیات رشته‌ای که شامل عبارات تو در تو است.
 
-- [نحو فرمت رشته](../library/string.html#formatstrings): 
+- [نحو فرمت رشته](../library/string.html#formatstrings):
   اطلاعاتی درباره فرمت‌بندی رشته با استفاده از [`str.format()`](../library/stdtypes.html#str.format).
 
-- [فرمت‌بندی رشته به سبک printf](../library/stdtypes.html#old-string-formatting): 
+- [فرمت‌بندی رشته به سبک printf](../library/stdtypes.html#old-string-formatting):
   عملیات‌های فرمت‌بندی قدیمی که زمانی که رشته‌ها عملوند چپ اپراتور `%` هستند فراخوانی می‌شوند، در اینجا به تفصیل توضیح داده شده است.
-
 
 ### 3.1.3. لیست‌ها
 
 پایتون چندین نوع داده مرکب را می‌شناسد که برای گروه‌بندی مقادیر دیگر استفاده می‌شوند. متنوع‌ترین نوع آن لیست است که می‌توان آن را به‌صورت فهرستی از مقادیر جداشده با کاما (آیتم‌ها) بین کروشه نوشت. لیست‌ها ممکن است آیتم‌هایی از انواع مختلف را شامل شوند، اما معمولاً همه آیتم‌ها از یک نوع هستند.
 
-``` python
+```python
 >>> squares = [1, 4, 9, 16, 25]
 >>> squares
 [1, 4, 9, 16, 25]
@@ -355,7 +354,7 @@ TypeError: 'str' object does not support item assignment
 
 مانند رشته‌ها (و تمامی انواع دنباله‌های توکار دیگر)، لیست‌ها نیز قابل اندیس‌گذاری و برش هستند:
 
-``` python
+```python
 >>> squares[0]  # indexing returns the item
 1
 >>> squares[-1]
@@ -366,14 +365,14 @@ TypeError: 'str' object does not support item assignment
 
 لیست‌ها همچنین از عملگرهایی مانند الحاق (ترکیب) پشتیبانی می‌کنند:
 
-``` python
+```python
 >>> squares + [36, 49, 64, 81, 100]
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
 
 برخلاف رشته‌ها که تغییرناپذیر ([immutable](https://docs.python.org/3/glossary.html#term-immutable)) هستند، لیست‌ها نوعی قابل‌تغییر ([mutable](https://docs.python.org/3/glossary.html#term-mutable)) هستند، به این معنا که امکان تغییر محتوای آن‌ها وجود دارد:
 
-``` python
+```python
 >>> cubes = [1, 8, 27, 65, 125]  # something's wrong here
 >>> 4 ** 3  # the cube of 4 is 64, not 65!
 64
@@ -384,7 +383,7 @@ TypeError: 'str' object does not support item assignment
 
 همچنین می‌توانید با استفاده از متد `list.append()` آیتم‌های جدیدی را به انتهای لیست اضافه کنید (بعداً بیشتر درباره متدها صحبت خواهیم کرد):
 
-``` python
+```python
 >>> cubes.append(216)  # add the cube of 6
 >>> cubes.append(7 ** 3)  # and the cube of 7
 >>> cubes
@@ -393,7 +392,7 @@ TypeError: 'str' object does not support item assignment
 
 در پایتون، انتساب ساده هرگز داده‌ها را کپی نمی‌کند. وقتی یک لیست را به یک متغیر اختصاص می‌دهید، آن متغیر به لیست موجود اشاره می‌کند. هر تغییری که از طریق یک متغیر روی لیست اعمال کنید، از طریق همه متغیرهای دیگری که به آن لیست اشاره می‌کنند، قابل مشاهده خواهد بود.
 
-``` python
+```python
 >>> rgb = ["Red", "Green", "Blue"]
 >>> rgba = rgb
 >>> id(rgb) == id(rgba)  # they reference the same object
@@ -405,7 +404,7 @@ True
 
 تمام عملیات برش (slicing) یک لیست جدید حاوی عناصر درخواست‌شده را برمی‌گردانند. این بدان معناست که برش زیر یک کپی سطحی ([shallow copy](https://docs.python.org/3/library/copy.html#shallow-vs-deep-copy)) از لیست را برمی‌گرداند:
 
-``` python
+```python
 >>> correct_rgba = rgba[:]
 >>> correct_rgba[-1] = "Alpha"
 >>> correct_rgba
@@ -416,7 +415,7 @@ True
 
 اختصاص دادن به برش‌ها نیز ممکن است، و این کار حتی می‌تواند اندازه لیست را تغییر دهد یا آن را به‌طور کامل خالی کند:
 
-``` python
+```python
 >>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 >>> letters
 ['a', 'b', 'c', 'd', 'e', 'f', 'g']
@@ -436,7 +435,7 @@ True
 
 تابع داخلی `len()` همچنین برای لیست‌ها قابل استفاده است:
 
-``` python
+```python
 >>> letters = ['a', 'b', 'c', 'd']
 >>> len(letters)
 4
@@ -444,7 +443,7 @@ True
 
 امکان تو در تو کردن لیست‌ها (ایجاد لیست‌هایی که شامل لیست‌های دیگر هستند) وجود دارد، برای مثال:
 
-``` python
+```python
 >>> a = ['a', 'b', 'c']
 >>> n = [1, 2, 3]
 >>> x = [a, n]
@@ -460,7 +459,7 @@ True
 
 البته، می‌توانیم از پایتون برای انجام وظایف پیچیده‌تر از جمع کردن دو و دو استفاده کنیم. به عنوان مثال، می‌توانیم یک زیررشته ابتدایی از دنباله فیبوناچی را به صورت زیر بنویسیم:
 
-``` python
+```python
 >>> # Fibonacci series:
 >>> # the sum of two elements defines the next
 >>> a, b = 0, 1
@@ -487,7 +486,7 @@ True
 
 - **تابع print()**: تابع [print()](https://docs.python.org/3/library/functions.html#print) مقدار آرگومان(ها)ی داده شده را می‌نویسد. این تابع از نوشتن صرفاً بیانیه‌ای که می‌خواهید بنویسید (همانطور که در مثال‌های ماشین حساب انجام دادیم) در نحوه مدیریت آرگومان‌های متعدد، مقادیر شناور، و رشته‌ها متفاوت است. رشته‌ها بدون کوتیشن چاپ می‌شوند و یک فاصله بین آیتم‌ها وارد می‌شود، بنابراین می‌توانید چیزها را به‌خوبی قالب‌بندی کنید، مانند این:
 
-``` python
+```python
 >>> i = 256*256
 >>> print('The value of i is', i)
 The value of i is 65536
@@ -495,7 +494,7 @@ The value of i is 65536
 
 آرگومان کلیدی `end` می‌تواند برای جلوگیری از ایجاد خط جدید بعد از خروجی استفاده شود، یا می‌تواند خروجی را با یک رشته متفاوت به پایان برساند:
 
-``` python
+```python
 >>> a, b = 0, 1
 >>> while a < 1000:
 ...     print(a, end=',')
@@ -506,6 +505,6 @@ The value of i is 65536
 
 ### پانویس‌ها
 
-[^1]: از آنجا که `**` اولویت بالاتری نسبت به `-` دارد، `-3**2` به عنوان `-(3**2)` تفسیر می‌شود و در نتیجه به `-9` منجر می‌شود. برای جلوگیری از این موضوع و دریافت `9`، می‌توانید از `(-3)**2` استفاده کنید.
+\[^1\]: از آنجا که `**` اولویت بالاتری نسبت به `-` دارد، `-3**2` به عنوان `-(3**2)` تفسیر می‌شود و در نتیجه به `-9` منجر می‌شود. برای جلوگیری از این موضوع و دریافت `9`، می‌توانید از `(-3)**2` استفاده کنید.
 
-[^2]: بر خلاف سایر زبان‌ها، کاراکترهای ویژه‌ای مانند `\n` با هر دو نوع کوتیشن (تک `'...'` و دوگانه `"..."`) دارای همان معنی هستند. تنها تفاوت بین این دو این است که در کوتیشن‌های تک نیازی به فرار دادن `"` نیست (اما باید `\` را فرار دهید) و برعکس. 
+\[^2\]: بر خلاف سایر زبان‌ها، کاراکترهای ویژه‌ای مانند `\n` با هر دو نوع کوتیشن (تک `'...'` و دوگانه `"..."`) دارای همان معنی هستند. تنها تفاوت بین این دو این است که در کوتیشن‌های تک نیازی به فرار دادن `"` نیست (اما باید `\` را فرار دهید) و برعکس.
