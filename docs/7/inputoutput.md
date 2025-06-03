@@ -61,4 +61,55 @@ The value of x is 32.5, and y is 40000...
 
 ماژول [string](https://docs.python.org/3/library/string.html#module-string) شامل کلاسی به نام [Template](https://docs.python.org/3/library/string.html#string.Template) است که روشی دیگر برای جایگزینی مقادیر در رشته‌ها ارائه می‌دهد. در این روش، از نگهدارنده‌هایی (placeholders) مانند ‎`$X`‎ استفاده می‌شود و این نگهدارنده‌ها با مقادیر موجود در یک دیکشنری جایگزین می‌شوند. با این حال، این روش کنترل بسیار کمتری روی فرمت‌بندی خروجی در مقایسه با سایر روش‌ها فراهم می‌کند.
 
-https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals
+در اینجا ترجمه فارسی بخش "Formatted String Literals" (رشته‌های قالب‌بندی‌شده یا f-strings) را می‌خوانید:
+
+### ۷.۱.۱. رشته‌های قالب‌بندی‌شده (Formatted String Literals)
+
+[رشته‌های قالب‌بندی‌شده](https://docs.python.org/3/reference/lexical_analysis.html#f-strings) (که به‌اختصار به آن‌ها f-string گفته می‌شود) به شما اجازه می‌دهند مقدار عبارات پایتون را درون یک رشته وارد کنید. این کار با پیشوند `f` یا `F` پیش از رشته و نوشتن عبارت‌ها در داخل `{expression}` انجام می‌شود.
+
+می‌توانید پس از عبارت، یک مشخص‌کننده قالب (format specifier) اختیاری قرار دهید. این ویژگی امکان کنترل بیشتر بر نحوه نمایش مقدار را فراهم می‌کند. مثلاً مثال زیر عدد π را تا سه رقم اعشار گرد می‌کند:
+
+```python
+>>> import math
+>>> print(f'The value of pi is approximately {math.pi:.3f}.')
+The value of pi is approximately 3.142.
+```
+
+اگر عددی بعد از `:` قرار دهید، آن فیلد حداقل به اندازه تعداد مشخص‌شده کاراکتر خواهد بود. این قابلیت برای مرتب کردن ستون‌ها کاربرد دارد:
+
+```python
+>>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
+>>> for name, phone in table.items():
+...     print(f'{name:10} ==> {phone:10d}')
+...
+Sjoerd     ==>       4127
+Jack       ==>       4098
+Dcab       ==>       7678
+```
+
+می‌توانید از اصلاح‌کننده‌های دیگری نیز استفاده کنید تا مقدار پیش از قالب‌بندی به نوعی دیگر تبدیل شود. برای مثال:
+
+* `!a` تابع [ascii()](https://docs.python.org/3/library/functions.html#ascii) را اعمال می‌کند،
+* `!s` تابع [str()](https://docs.python.org/3/library/stdtypes.html#str) را اعمال می‌کند،
+* `!r` تابع [repr()](https://docs.python.org/3/library/functions.html#repr) را اعمال می‌کند:
+
+```python
+>>> animals = 'eels'
+>>> print(f'My hovercraft is full of {animals}.')
+My hovercraft is full of eels.
+>>> print(f'My hovercraft is full of {animals!r}.')
+My hovercraft is full of 'eels'.
+```
+
+مشخص‌کننده `=` نیز وجود دارد که عبارت، علامت مساوی، و مقدار ارزیابی‌شده را چاپ می‌کند:
+
+```python
+>>> bugs = 'roaches'
+>>> count = 13
+>>> area = 'living room'
+>>> print(f'Debugging {bugs=} {count=} {area=}')
+Debugging bugs='roaches' count=13 area='living room'
+```
+
+برای اطلاعات بیشتر درباره [عبارت‌های خودمستند](https://docs.python.org/3/whatsnew/3.8.html#bpo-36817-whatsnew) (self-documenting expressions)، به بخش مربوطه مراجعه کنید. همچنین برای راهنمای کامل مشخص‌کننده‌های قالب، به [راهنمای مختصر زبان قالب‌بندی](https://docs.python.org/3/library/string.html#formatspec) (Format Specification Mini-Language) مراجعه کنید.
+
