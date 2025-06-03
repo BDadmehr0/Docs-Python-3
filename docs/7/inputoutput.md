@@ -65,7 +65,7 @@ The value of x is 32.5, and y is 40000...
 
 ### ۷.۱.۱. رشته‌های قالب‌بندی‌شده (Formatted String Literals)
 
-[رشته‌های قالب‌بندی‌شده](https://docs.python.org/3/reference/lexical_analysis.html#f-strings) (که به‌اختصار به آن‌ها f-string گفته می‌شود) به شما اجازه می‌دهند مقدار عبارات پایتون را درون یک رشته وارد کنید. این کار با پیشوند `f` یا `F` پیش از رشته و نوشتن عبارت‌ها در داخل `{expression}` انجام می‌شود.
+[رشته‌های قالب‌بندی‌شده](https://docs.python.org/3/reference/lexical_analysis.html#f-strings) (که به‌اختصار به آن‌ها f-string گفته می‌شود) به شما اجازه می‌دهند مقدار عبارات پایتون را درون یک رشته وارد کنید. این کار با پیشوند `f` یا `F` پیش از رشته و نوشتن عبارت‌ها در داخل `{عبارت}` انجام می‌شود.
 
 می‌توانید پس از عبارت، یک مشخص‌کننده قالب (format specifier) اختیاری قرار دهید. این ویژگی امکان کنترل بیشتر بر نحوه نمایش مقدار را فراهم می‌کند. مثلاً مثال زیر عدد π را تا سه رقم اعشار گرد می‌کند:
 
@@ -113,3 +113,5 @@ Debugging bugs='roaches' count=13 area='living room'
 
 برای اطلاعات بیشتر درباره [عبارت‌های خودمستند](https://docs.python.org/3/whatsnew/3.8.html#bpo-36817-whatsnew) (self-documenting expressions)، به بخش مربوطه مراجعه کنید. همچنین برای راهنمای کامل مشخص‌کننده‌های قالب، به [راهنمای مختصر زبان قالب‌بندی](https://docs.python.org/3/library/string.html#formatspec) (Format Specification Mini-Language) مراجعه کنید.
 
+
+https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method
